@@ -174,7 +174,7 @@ export function App() {
               <th>Read-Along Subtitles</th>
               <th>Sound Quality</th>
               <th>Newspaper Dates &amp; Cast</th>
-              <th>1 Item Per Episode</th>
+              <th>1 Item / Ep (Stremio SDK)</th>
             </tr>
           </thead>
           <tbody>
@@ -241,9 +241,9 @@ export function App() {
                       <span className="badge badge-no">— Unchecked</span>
                     )}
                   </td>
-                  <td data-label="1 Item Per Episode">
+                  <td data-label="1 Item / Ep (Stremio SDK)">
                     {s.specs.uuid_index ? (
-                      <span className="badge badge-yes">✓ UUID + IA Item</span>
+                      <span className="badge badge-yes">✓ IA Item + Stremio SDK</span>
                     ) : s.id === 'ia-otrr' ? (
                       <span className="badge badge-no">500+ MP3s / Zip</span>
                     ) : (
