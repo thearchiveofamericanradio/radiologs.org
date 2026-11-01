@@ -174,7 +174,7 @@ export function App() {
               <th>Read-Along Subtitles</th>
               <th>Sound Quality</th>
               <th>Newspaper Dates &amp; Cast</th>
-              <th>Universal Show ID</th>
+              <th>1 Item Per Episode</th>
             </tr>
           </thead>
           <tbody>
@@ -241,9 +241,11 @@ export function App() {
                       <span className="badge badge-no">— Unchecked</span>
                     )}
                   </td>
-                  <td data-label="Universal Show ID">
+                  <td data-label="1 Item Per Episode">
                     {s.specs.uuid_index ? (
-                      <span className="badge badge-yes">✓ Public UUID</span>
+                      <span className="badge badge-yes">✓ UUID + IA Item</span>
+                    ) : s.id === 'ia-otrr' ? (
+                      <span className="badge badge-no">500+ MP3s / Zip</span>
                     ) : (
                       <span className="badge badge-no">— No</span>
                     )}
@@ -282,16 +284,18 @@ export function App() {
         </div>
 
         <div className="info-card">
-          <h3>2. One Universal ID for Every Recording</h3>
+          <h3>2. Every Episode Is Its Own Individual Item (UUID + IA)</h3>
           <p>
-            Every broadcast has its own permanent Public Recording UUID (for example,{' '}
+            Instead of dumping 500 MP3s into one giant `.zip` folder, every single broadcast—like{' '}
             <a
               href="https://www.radioindex.org/listen?id=a1e49807-e053-4959-9460-a64a77177304"
               className="dotted-link"
             >
               The Diamond Quartet (Yours Truly, Johnny Dollar)
             </a>
-            ) that resolves the cleanest audio stream and matching subtitles in any player.
+            —has its own permanent UUID page on RadioIndex (<code>/listen?id=…</code>) and its own
+            individual item on the Internet Archive (<code>archive.org/details/…</code>) with
+            verified air date, cast, sponsor, and station metadata.
           </p>
         </div>
 
