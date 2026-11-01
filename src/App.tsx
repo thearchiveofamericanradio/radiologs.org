@@ -75,15 +75,8 @@ export function App() {
     return <span className="badge badge-no">Old MP3 ({s.metrics.medianBitrateKbps}k)</span>;
   };
 
-  const allListenEpisodes = useMemo(() => {
-    return backlinks.seriesBenchmarks.flatMap((s) =>
-      (s.episodes || []).map((ep) => ({
-        seriesTitle: s.title,
-        network: s.network,
-        runYears: s.runYears,
-        ...ep,
-      }))
-    );
+  const footerEpisodes = useMemo(() => {
+    return backlinks.footerEpisodes || [];
   }, []);
 
   return (
@@ -273,29 +266,32 @@ export function App() {
           <p>
             Every episode—like{' '}
             <a
-              href="https://www.radioindex.org/listen?id=43766c38-39db-4bcd-b1ff-5c044c5474a9"
+              href="https://www.radioindex.org/listen?id=a84006ab-0fab-4ba9-9f11-1dc616ebe68d"
               className="dotted-link"
             >
-              The Last Days of John Dillinger (Suspense)
+              Lazarus Walks (Suspense)
             </a>
-            —has full-length, word-by-word subtitles (`.vtt`) from start to finish so you can read
-            along while you listen.
+            —has full-length, word-by-word subtitles (<code>.vtt</code>) from start to finish so you
+            can read along while you listen.
           </p>
         </div>
 
         <div className="info-card">
-          <h3>2. Every Episode Is Its Own Individual Item (UUID + IA)</h3>
+          <h3>2. 1 Item Per Episode — Enables a Stremio SDK Setup</h3>
           <p>
-            Instead of dumping 500 MP3s into one giant `.zip` folder, every single broadcast—like{' '}
+            Instead of dumping 500 MP3s into one giant <code>.zip</code> folder, every single
+            broadcast—like{' '}
             <a
-              href="https://www.radioindex.org/listen?id=a1e49807-e053-4959-9460-a64a77177304"
+              href="https://www.radioindex.org/listen?id=03a40dd5-ed08-43bf-8a70-d407d8f90c84"
               className="dotted-link"
             >
-              The Diamond Quartet (Yours Truly, Johnny Dollar)
+              The Parikoff Policy (Yours Truly, Johnny Dollar)
             </a>
             —has its own permanent UUID page on RadioIndex (<code>/listen?id=…</code>) and its own
-            individual item on the Internet Archive (<code>archive.org/details/…</code>) with
-            verified air date, cast, sponsor, and station metadata.
+            individual item on the Internet Archive (<code>archive.org/details/…</code>). That
+            1-to-1 episode architecture directly enables a <strong>Stremio SDK</strong> (
+            <code>stremio-addon-sdk</code>) setup resolving <code>/catalog</code>, <code>/meta</code>
+            , <code>/stream</code>, and <code>.vtt</code> <code>/subtitles</code> by UUID.
           </p>
         </div>
 
@@ -305,10 +301,10 @@ export function App() {
             Old collector sites often guessed air dates or pasted the wrong actors onto episodes.
             Broadcasts like{' '}
             <a
-              href="https://www.radioindex.org/listen?id=315e4728-c436-49dc-98ae-b8b37b184893"
+              href="https://www.radioindex.org/listen?id=ff61097c-424f-48c7-a5cf-92c85f131e29"
               className="dotted-link"
             >
-              Outer Limit (Dimension X)
+              Knock (Dimension X)
             </a>{' '}
             are checked against real 1930s–1950s newspaper radio logs and studio scripts.
           </p>
@@ -319,10 +315,10 @@ export function App() {
           <p>
             Subscription sites charge monthly fees for low-quality public-domain MP3s. Classics like{' '}
             <a
-              href="https://www.radioindex.org/listen?id=71b09eed-d3cf-4c7a-9ef4-2d38c679a53c"
+              href="https://www.radioindex.org/listen?id=992cd19a-b6d8-42a6-b42f-67c4de738f31"
               className="dotted-link"
             >
-              Mark Dillon Goes to Dodge City (Gunsmoke)
+              Gunsmoke (1949 Audition Broadcast)
             </a>{' '}
             stream free on RadioIndex with zero commercials.
           </p>
@@ -332,19 +328,16 @@ export function App() {
       {/* 64 VERIFIED BROADCAST RECORDING BACKLINKS (/listen?id=) ACROSS 16 SERIES */}
       <h2 className="section-heading">Featured Broadcast Recordings on RadioIndex</h2>
       <p className="section-sub">
-        Direct links to 64 verified broadcasts (`https://www.radioindex.org/listen?id=…`) with
-        full-length read-along subtitles:
+        Direct links to verified broadcasts (<code>https://www.radioindex.org/listen?id=…</code>)
+        with individual Internet Archive items and full-length read-along subtitles:
       </p>
 
       <div className="shows-grid">
         {backlinks.seriesBenchmarks.map((s) => {
           const eps = s.episodes || [];
-          const primaryUrl = eps[0]?.url || 'https://www.radioindex.org/';
           return (
             <div className="show-card" key={s.slug}>
-              <a href={primaryUrl} className="show-card-title">
-                {s.title}
-              </a>
+              <h3 className="show-card-title">{s.title}</h3>
               <div className="show-card-meta">
                 {s.network} ({s.runYears}) · {fmt(s.verifiedBroadcasts)} broadcasts · 100% .vtt
               </div>
@@ -362,13 +355,13 @@ export function App() {
         })}
       </div>
 
-      {/* 4-COLUMN FOOTER OF DIRECT /listen?id= BROADCAST BACKLINKS */}
+      {/* 4-COLUMN FOOTER OF 48 ADDITIONAL UNIQUE /listen?id= BROADCAST BACKLINKS */}
       <footer className="footer-hub">
         <div className="footer-grid">
           <div className="footer-col">
-            <h4>Suspense &amp; Mystery Broadcasts</h4>
+            <h4>The Whistler, Quiet Please &amp; Mysterious Traveler</h4>
             <ul>
-              {allListenEpisodes.slice(0, 12).map((ep) => (
+              {footerEpisodes.slice(0, 12).map((ep) => (
                 <li key={ep.id}>
                   <a href={ep.url}>{ep.title}</a>
                 </li>
@@ -377,9 +370,9 @@ export function App() {
           </div>
 
           <div className="footer-col">
-            <h4>Adventure, Western &amp; Sci-Fi Broadcasts</h4>
+            <h4>Richard Diamond, Boston Blackie &amp; Broadway</h4>
             <ul>
-              {allListenEpisodes.slice(12, 24).map((ep) => (
+              {footerEpisodes.slice(12, 24).map((ep) => (
                 <li key={ep.id}>
                   <a href={ep.url}>{ep.title}</a>
                 </li>
@@ -388,9 +381,9 @@ export function App() {
           </div>
 
           <div className="footer-col">
-            <h4>Detective &amp; Thriller Broadcasts</h4>
+            <h4>Night Beat, The Six Shooter &amp; Fort Laramie</h4>
             <ul>
-              {allListenEpisodes.slice(24, 36).map((ep) => (
+              {footerEpisodes.slice(24, 36).map((ep) => (
                 <li key={ep.id}>
                   <a href={ep.url}>{ep.title}</a>
                 </li>
@@ -399,9 +392,9 @@ export function App() {
           </div>
 
           <div className="footer-col">
-            <h4>Horror, Serials &amp; Comedy Broadcasts</h4>
+            <h4>Box 13, Pat Novak &amp; Let George Do It</h4>
             <ul>
-              {allListenEpisodes.slice(36, 48).map((ep) => (
+              {footerEpisodes.slice(36, 48).map((ep) => (
                 <li key={ep.id}>
                   <a href={ep.url}>{ep.title}</a>
                 </li>

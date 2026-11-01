@@ -190,6 +190,12 @@ export interface SeriesBacklinksData {
       url: string;
     }>;
   }>;
+  footerEpisodes?: Array<{
+    id: string;
+    seriesTitle: string;
+    title: string;
+    url: string;
+  }>;
   uuidProtocol: {
     name: string;
     summary: string;
