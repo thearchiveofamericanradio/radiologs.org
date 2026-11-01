@@ -243,7 +243,8 @@ table.simple-table tbody tr.winner-row {
   background: var(--winner-bg);
 }
 
-.mobile-rank {
+/* Higher specificity than .rank-num (declared later) so only one rank badge shows per row */
+.rank-num.mobile-rank {
   display: none;
 }
 
@@ -273,7 +274,7 @@ table.simple-table tbody tr.winner-row {
   table.simple-table td.rank-cell {
     display: none;
   }
-  .mobile-rank {
+  .rank-num.mobile-rank {
     display: inline-flex;
   }
   table.simple-table td {
