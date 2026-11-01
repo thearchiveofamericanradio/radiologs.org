@@ -1,0 +1,146 @@
+{
+  "id": "radioindex",
+  "name": "RadioIndex (The Archive of American Radio)",
+  "shortName": "RadioIndex",
+  "url": "https://www.radioindex.org",
+  "category": "Open Archival Index",
+  "operator": "The Archive of American Radio (AAR)",
+  "foundedYear": 2024,
+  "auditedAt": "2026-11-01",
+  "pricing": {
+    "model": "free",
+    "monthlyUsd": 0,
+    "annualUsd": 0,
+    "displayPrice": "$0 / Free",
+    "billingNote": "100% open public archival access; zero ads, zero paywalls, zero tracking.",
+    "freeTierNote": "Full catalog streaming, synchronized .vtt transcripts, podcast RSS feeds, and JSON APIs included."
+  },
+  "catalog": {
+    "broadcastCount": 233000,
+    "seriesCount": 3054,
+    "distinctRecordings": 142800,
+    "dateSpan": "1926–1982",
+    "onlineStreamablePct": 100
+  },
+  "metrics": {
+    "playableBroadcasts": 233000,
+    "catalogBroadcasts": 233000,
+    "seriesCount": 3054,
+    "vttSubtitleCount": 231400,
+    "specCount": 14,
+    "totalSpecs": 14,
+    "medianBitrateKbps": 128,
+    "maxBitrateKbps": 1411,
+    "ttfaMs": 152,
+    "highCutoffHz": 12500
+  },
+  "audio": {
+    "formats": [
+      "FLAC",
+      "MP3 (128–320 kbps)",
+      "Opus",
+      "WebVTT (.vtt)"
+    ],
+    "primaryContainer": "MP3 / FLAC + WebVTT",
+    "streamingAvailable": true,
+    "batchDownloadAvailable": true,
+    "rssFeedsAvailable": true
+  },
+  "provenance": {
+    "primaryMasterSource": "16\" ET lacquer transfers, AFRS pressings, network line checks, and deduplicated OTRR/IA masters with SHA-256 stream digests",
+    "airdateMethodology": "Primary newspaper radio logs (Chronicling America, Fulton History, JJonz, Variety, Broadcasting) + full-audio verbal announcement verification; zero stride projection",
+    "castAttributionMethod": "Episode-specific faster-whisper VAD full-audio transcription + primary studio script reconciliation linking actors to exact character roles",
+    "captionEngine": "100% full-length faster-whisper (large-v3 + VAD filtering) WebVTT synchronized captions"
+  },
+  "specs": {
+    "free_no_paywall": true,
+    "no_login_required": true,
+    "ad_free": true,
+    "uuid_index": true,
+    "sha256_dedup": true,
+    "schema_jsonld": true,
+    "podcast_rss": true,
+    "open_json_api": true,
+    "vtt_subtitles": true,
+    "newspaper_scans": true,
+    "studio_scripts": true,
+    "character_roles": true,
+    "lossless_et": true,
+    "serial_arcs": true
+  },
+  "specNotes": {
+    "uuid_index": "Canonical UUID & short RID per broadcast/recording (/listen?id={id}, radioindex.org-ids) for universal stream & subtitle resolution.",
+    "sha256_dedup": "Cryptographic SHA-256 stream digests across all mirrors; preserves separate East/West Coast network broadcasts.",
+    "vtt_subtitles": "231,400+ full-length faster-whisper VAD WebVTT (.vtt) subtitle files synced in-player and downloadable.",
+    "newspaper_scans": "Direct citations to scanned newspaper radio logs (Chronicling America, Fulton History, JJonz, Variety, Broadcasting).",
+    "studio_scripts": "Original studio continuity and production scripts linked via radioindex.org-scripts.",
+    "schema_jsonld": "Full Schema.org RadioEpisode & RadioSeries JSON-LD + OpenGraph on every broadcast route."
+  },
+  "capabilities": {
+    "primary_source_verification": {
+      "level": "verified",
+      "score": 98,
+      "summary": "Every broadcast date is cross-checked against historic newspaper radio logs (Chronicling America, Fulton History, JJonz) or explicit in-recording announcements.",
+      "evidenceQuote": "\"NEVER SYNTHESIZE AIR DATES: Never project, extrapolate, or calculate broadcast air dates via calendar stride projection... Every air date must be corroborated by primary archival logs.\""
+    },
+    "cast_credit_accuracy": {
+      "level": "verified",
+      "score": 96,
+      "summary": "Per-episode Cast & Crew links[] reconcile spoken sign-off credits and archival logs to exact character roles; never copies series leads blindly.",
+      "evidenceQuote": "\"Every cast credit and character assignment must be explicitly verified through full-length speech-to-text audio transcription or primary archival radio logs/scripts.\""
+    },
+    "vtt_transcripts": {
+      "level": "verified",
+      "score": 99,
+      "summary": "100% full-length audio WebVTT (.vtt) transcripts generated with faster-whisper + VAD filtering and synchronized in the Now Playing drawer.",
+      "evidenceQuote": "\"Always pass the entire full-length .vtt transcript from start to finish... synchronized word/phrase cues served via radioindex.org-subtitles.\""
+    },
+    "master_provenance": {
+      "level": "verified",
+      "score": 94,
+      "summary": "Tracks SHA-256 stream digests, 16\" ET matrix numbers, AFRS numbers, and separates East/West network feeds.",
+      "evidenceQuote": "\"Stream records store cryptographic digests, source transfer lineage, and blocked-stream-digests to purge corrupt or mislabeled encodes.\""
+    },
+    "serial_continuity": {
+      "level": "verified",
+      "score": 95,
+      "summary": "Contiguous multi-part story arcs (Johnny Dollar 5-parters, I Love a Mystery, CBSRMT) ordered chronologically with verified broadcast numbers.",
+      "evidenceQuote": "\"Series listings (/search?series=) and curated shelves preserve chronological broadcast sequence and multi-part serial continuity.\""
+    },
+    "open_api_export": {
+      "level": "verified",
+      "score": 98,
+      "summary": "Deterministic query-string routes (/search?series=, /listen?id=, /rss?series=), HTML fragments (/api/fragments), and open Git-backed data repos.",
+      "evidenceQuote": "\"Public URLs are a top-level route plus a query string only (/search?series=, /listen?id=, /rss?series=); data lives in open git repos.\""
+    },
+    "ad_free_playback": {
+      "level": "verified",
+      "score": 100,
+      "summary": "Zero commercial interruptions, zero banner ads, and zero paywalls; original 1930s–1950s sponsor announcements preserved intact.",
+      "evidenceQuote": "\"Free public access served directly from OVH Rust origin with persistent mini-player and expanded Now Playing queue.\""
+    },
+    "dedup_integrity": {
+      "level": "verified",
+      "score": 97,
+      "summary": "Moves duplicate recordings onto the canonical broadcast winner while preserving active East/West coast variant recordings.",
+      "evidenceQuote": "\"When two broadcasts are duplicates (same title + date in same program): move all recordings to the winner, set is_active=0 on the loser. Never hard-delete.\""
+    }
+  },
+  "gotchas": [
+    {
+      "severity": "note",
+      "title": "Strict Ground-Truth Gate Delays Unverified Uploads",
+      "detail": "Episodes lacking verifiable primary air dates or awaiting full-length faster-whisper VAD transcription are flagged rather than guessed, meaning newly discovered raw trader tapes take longer to pass enrichment QA."
+    },
+    {
+      "severity": "note",
+      "title": "Retired Legacy Path URLs Redirect via 301",
+      "detail": "Older path-style URLs (/series/*, /broadcasts/*, /episodes/*) are retired in favor of flat query routes (/search?series=, /listen?id=) with 301 redirects."
+    }
+  ],
+  "links": {
+    "markdownCard": "https://www.radiologs.org/data/providers/radioindex.md",
+    "jsonCard": "https://www.radiologs.org/data/providers/radioindex.json",
+    "comparisonHome": "https://www.radiologs.org/"
+  }
+}

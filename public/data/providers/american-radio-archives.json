@@ -1,0 +1,135 @@
+{
+  "id": "american-radio-archives",
+  "name": "American Radio Archives (Thousand Oaks Library)",
+  "shortName": "American Radio Archives",
+  "url": "https://www.tolibrary.org/ara",
+  "category": "Institutional Sound Archive",
+  "operator": "Thousand Oaks Library Foundation / Special Collections",
+  "foundedYear": 1984,
+  "auditedAt": "2026-11-01",
+  "pricing": {
+    "model": "institutional",
+    "monthlyUsd": 0,
+    "annualUsd": 0,
+    "displayPrice": "$0 (Institutional)",
+    "billingNote": "Public municipal/foundation special collection; online exhibits free, physical holdings require Thousand Oaks, CA visit.",
+    "freeTierNote": "~3,200 digitized scripts, photos, and audio recordings online via Calisphere / library portal."
+  },
+  "catalog": {
+    "broadcastCount": 28000,
+    "seriesCount": 480,
+    "distinctRecordings": 25000,
+    "dateSpan": "1928–1965",
+    "onlineStreamablePct": 11
+  },
+  "metrics": {
+    "playableBroadcasts": 3080,
+    "catalogBroadcasts": 28000,
+    "seriesCount": 480,
+    "vttSubtitleCount": 490,
+    "specCount": 8,
+    "totalSpecs": 14,
+    "medianBitrateKbps": 192,
+    "maxBitrateKbps": 2304,
+    "ttfaMs": 790,
+    "highCutoffHz": 13500
+  },
+  "audio": {
+    "formats": [
+      "WAV (Archival)",
+      "MP3 (Online Exhibits)",
+      "PDF Scripts"
+    ],
+    "primaryContainer": "WAV / PDF / MP3",
+    "streamingAvailable": true,
+    "batchDownloadAvailable": false,
+    "rssFeedsAvailable": false
+  },
+  "provenance": {
+    "primaryMasterSource": "Personal papers, scripts, and 16\" acetates of Norman Corwin, Carlton E. Morse, Rudy Vallée, and KNX/CBS Pacific Network",
+    "airdateMethodology": "Original creator production scripts, studio timing sheets, and KNX master logs",
+    "castAttributionMethod": "Archival finding aids & handwritten cast sheets on original studio scripts",
+    "captionEngine": "Scanned PDF studio scripts (non-synchronized)"
+  },
+  "specs": {
+    "free_no_paywall": true,
+    "no_login_required": true,
+    "ad_free": true,
+    "uuid_index": false,
+    "sha256_dedup": false,
+    "schema_jsonld": false,
+    "podcast_rss": false,
+    "open_json_api": false,
+    "vtt_subtitles": false,
+    "newspaper_scans": true,
+    "studio_scripts": true,
+    "character_roles": true,
+    "lossless_et": true,
+    "serial_arcs": true
+  },
+  "specNotes": {
+    "free_no_paywall": "Only ~1,400 of 12,500 items digitized on Calisphere; remainder is physical scripts/discs in Thousand Oaks, CA."
+  },
+  "capabilities": {
+    "primary_source_verification": {
+      "level": "verified",
+      "score": 97,
+      "summary": "Primary studio production scripts and acetate labels straight from the estates of the writers and directors.",
+      "evidenceQuote": "\"Sourced directly from the personal studio collections of Norman Corwin, Carlton E. Morse, and KNX/CBS Hollywood.\""
+    },
+    "cast_credit_accuracy": {
+      "level": "verified",
+      "score": 90,
+      "summary": "Handwritten studio cast call sheets on original rehearsal scripts identify even uncredited utility actors.",
+      "evidenceQuote": "\"Original production scripts include studio penciled cast assignments and rehearsal timings.\""
+    },
+    "vtt_transcripts": {
+      "level": "partial",
+      "score": 40,
+      "summary": "Provides high-resolution PDF scans of original typewriter scripts, but no synchronized `.vtt` caption tracks.",
+      "evidenceQuote": "\"Digitized holdings include PDF script scans rather than time-aligned WebVTT files.\""
+    },
+    "master_provenance": {
+      "level": "verified",
+      "score": 96,
+      "summary": "First-generation West Coast reference acetates and network line-check discs.",
+      "evidenceQuote": "\"Preserves original 16-inch reference acetates cut directly at CBS Columbia Square Hollywood.\""
+    },
+    "serial_continuity": {
+      "level": "verified",
+      "score": 85,
+      "summary": "Holds complete consecutive script books for *One Man's Family* and *I Love a Mystery*.",
+      "evidenceQuote": "\"Complete chronological Book and Chapter numbering for Carlton E. Morse serials.\""
+    },
+    "open_api_export": {
+      "level": "partial",
+      "score": 45,
+      "summary": "Indexed in Online Archive of California (OAC) and Calisphere APIs, but no unified OTR streaming endpoint.",
+      "evidenceQuote": "\"Finding aids published via Online Archive of California (EAD XML) and Calisphere.\""
+    },
+    "ad_free_playback": {
+      "level": "partial",
+      "score": 60,
+      "summary": "Free and ad-free, but 89% of holdings require an in-person reading room appointment in Thousand Oaks, CA.",
+      "evidenceQuote": "\"Most physical audio discs and script boxes require an on-site appointment at the Grant R. Brimhall Library.\""
+    },
+    "dedup_integrity": {
+      "level": "verified",
+      "score": 92,
+      "summary": "Archival box/folder/item numbering uniquely identifies every physical disc and script.",
+      "evidenceQuote": "\"Standardized archival collection, series, box, and folder identifiers.\""
+    }
+  },
+  "gotchas": [
+    {
+      "severity": "critical",
+      "title": "89% Non-Streamable Without Visiting Thousand Oaks, California",
+      "detail": "Primarily a physical special-collections reading room with a limited online digital exhibit footprint."
+    }
+  ],
+  "links": {
+    "markdownCard": "https://www.radiologs.org/data/providers/american-radio-archives.md",
+    "jsonCard": "https://www.radiologs.org/data/providers/american-radio-archives.json",
+    "comparisonHome": "https://www.radiologs.org/"
+  }
+}

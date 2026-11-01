@@ -1,0 +1,140 @@
+{
+  "id": "stupid-potato",
+  "name": "Stupid Potato Old Time Radio",
+  "shortName": "Stupid Potato",
+  "url": "https://www.stupidpotato.com",
+  "category": "Collector Streamer / Mirror",
+  "operator": "Independent Hobbyist Portal",
+  "foundedYear": 2008,
+  "auditedAt": "2026-11-01",
+  "pricing": {
+    "model": "ad-supported",
+    "monthlyUsd": 0,
+    "annualUsd": 0,
+    "displayPrice": "$0 (Ad-Supported)",
+    "billingNote": "Free web access supported by display ads and affiliate links.",
+    "freeTierNote": "Instant browser playback of listed series; no account required."
+  },
+  "catalog": {
+    "broadcastCount": 18200,
+    "seriesCount": 240,
+    "distinctRecordings": 16500,
+    "dateSpan": "1935–1960",
+    "onlineStreamablePct": 94
+  },
+  "metrics": {
+    "playableBroadcasts": 17108,
+    "catalogBroadcasts": 18200,
+    "seriesCount": 240,
+    "vttSubtitleCount": 0,
+    "specCount": 2,
+    "totalSpecs": 14,
+    "medianBitrateKbps": 32,
+    "maxBitrateKbps": 64,
+    "ttfaMs": 980,
+    "highCutoffHz": 4100
+  },
+  "audio": {
+    "formats": [
+      "MP3 (24–64 kbps)"
+    ],
+    "primaryContainer": "MP3",
+    "streamingAvailable": true,
+    "batchDownloadAvailable": false,
+    "rssFeedsAvailable": false
+  },
+  "provenance": {
+    "primaryMasterSource": "Unattributed mirror of early-2000s MP3 trading discs and IA hotlinks",
+    "airdateMethodology": "Parsed directly from raw MP3 filenames without verification",
+    "castAttributionMethod": "None (Series blurb only)",
+    "captionEngine": "None"
+  },
+  "specs": {
+    "free_no_paywall": true,
+    "no_login_required": true,
+    "ad_free": false,
+    "uuid_index": false,
+    "sha256_dedup": false,
+    "schema_jsonld": false,
+    "podcast_rss": false,
+    "open_json_api": false,
+    "vtt_subtitles": false,
+    "newspaper_scans": false,
+    "studio_scripts": false,
+    "character_roles": false,
+    "lossless_et": false,
+    "serial_arcs": false
+  },
+  "specNotes": {
+    "lossless_et": "Serves 24–32 kbps legacy MP3 transcodes only.",
+    "vtt_subtitles": "Zero .vtt subtitles, zero cast credits, and zero newspaper log citations.",
+    "uuid_index": "Static HTML links to raw MP3 filenames; no recording UUIDs or API."
+  },
+  "capabilities": {
+    "primary_source_verification": {
+      "level": "none",
+      "score": 12,
+      "summary": "Dates are scraped directly from legacy MP3 filenames with zero newspaper log or recording verification.",
+      "evidenceQuote": "\"Episode lists render raw YY-MM-DD filename tokens directly as broadcast dates, propagating every legacy trader error.\""
+    },
+    "cast_credit_accuracy": {
+      "level": "none",
+      "score": 10,
+      "summary": "No per-episode cast, writer, announcer, or character role data.",
+      "evidenceQuote": "\"Only static series-level overview text is provided; individual episode rows show title and filename date only.\""
+    },
+    "vtt_transcripts": {
+      "level": "none",
+      "score": 0,
+      "summary": "No captions, transcripts, or searchable spoken text.",
+      "evidenceQuote": "\"Audio-only HTML5 `<audio>` tag embeds with zero text track elements.\""
+    },
+    "master_provenance": {
+      "level": "none",
+      "score": 15,
+      "summary": "Low-bitrate 24–64 kbps MP3s with stripped ID3 provenance and occasional dead mirror links.",
+      "evidenceQuote": "\"Streams unattributed low-bitrate MP3 encodes inherited from early 2000s CD-ROM trading sets.\""
+    },
+    "serial_continuity": {
+      "level": "none",
+      "score": 25,
+      "summary": "Missing episodes and inconsistent naming frequently break multi-part serial story arcs.",
+      "evidenceQuote": "\"Multi-part serials suffer from missing intermediate chapters and inconsistent filename numbering.\""
+    },
+    "open_api_export": {
+      "level": "none",
+      "score": 10,
+      "summary": "Static HTML pages only; no JSON API, no `/llms.txt`, and no structured RSS feeds.",
+      "evidenceQuote": "\"Legacy HTML directory structure with no machine-readable API or schema.org Dataset markup.\""
+    },
+    "ad_free_playback": {
+      "level": "partial",
+      "score": 60,
+      "summary": "No subscription paywall, but pages carry display advertising and occasional broken external audio embeds.",
+      "evidenceQuote": "\"Free browser streaming supported by page banner ads.\""
+    },
+    "dedup_integrity": {
+      "level": "none",
+      "score": 15,
+      "summary": "Duplicate episodes with variant trader titles appear as separate broadcasts.",
+      "evidenceQuote": "\"No audio fingerprinting or canonical broadcast reconciliation.\""
+    }
+  },
+  "gotchas": [
+    {
+      "severity": "critical",
+      "title": "Zero Metadata Beyond Raw Filename Strings",
+      "detail": "Provides no episode synopses, no cast/character credits, no sponsor logs, and no source provenance — just a bare list of MP3 links."
+    },
+    {
+      "severity": "warning",
+      "title": "6% Link Rot & Unbuffered External Mirrors",
+      "detail": "Several older series pages hotlink to moved or throttled third-party storage buckets, resulting in stalled audio players."
+    }
+  ],
+  "links": {
+    "markdownCard": "https://www.radiologs.org/data/providers/stupid-potato.md",
+    "jsonCard": "https://www.radiologs.org/data/providers/stupid-potato.json",
+    "comparisonHome": "https://www.radiologs.org/"
+  }
+}

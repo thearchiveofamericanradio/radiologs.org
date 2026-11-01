@@ -1,0 +1,134 @@
+{
+  "id": "umkc-marr",
+  "name": "UMKC Marr Sound Archives",
+  "shortName": "UMKC Marr Archives",
+  "url": "https://library.umkc.edu/marr",
+  "category": "Institutional Sound Archive",
+  "operator": "University of Missouri–Kansas City Libraries",
+  "foundedYear": 1986,
+  "auditedAt": "2026-11-01",
+  "pricing": {
+    "model": "institutional",
+    "monthlyUsd": 0,
+    "annualUsd": 0,
+    "displayPrice": "$0 (Institutional)",
+    "billingNote": "Public university special collection; select digital collections free online.",
+    "freeTierNote": "~6,500 digitized recordings streamable via UMKC Digital Commons; 350,000+ physical items on campus."
+  },
+  "catalog": {
+    "broadcastCount": 95000,
+    "seriesCount": 2200,
+    "distinctRecordings": 95000,
+    "dateSpan": "1925–1975",
+    "onlineStreamablePct": 7
+  },
+  "metrics": {
+    "playableBroadcasts": 6650,
+    "catalogBroadcasts": 95000,
+    "seriesCount": 2200,
+    "vttSubtitleCount": 60,
+    "specCount": 6,
+    "totalSpecs": 14,
+    "medianBitrateKbps": 192,
+    "maxBitrateKbps": 4608,
+    "ttfaMs": 830,
+    "highCutoffHz": 14500
+  },
+  "audio": {
+    "formats": [
+      "WAV (24-bit/96kHz)",
+      "MP3 (192 kbps Online)"
+    ],
+    "primaryContainer": "WAV / MP3",
+    "streamingAvailable": true,
+    "batchDownloadAvailable": false,
+    "rssFeedsAvailable": false
+  },
+  "provenance": {
+    "primaryMasterSource": "Physical home of the J. David Goldin 16\" ET Collection, CBS/KMOX discs, and Raymond R. Wile Collection",
+    "airdateMethodology": "Archival finding aids & physical 16\" disc label metadata",
+    "castAttributionMethod": "Library Dublin Core / MARC metadata from Goldin discography",
+    "captionEngine": "None (Select oral histories only)"
+  },
+  "specs": {
+    "free_no_paywall": true,
+    "no_login_required": true,
+    "ad_free": true,
+    "uuid_index": false,
+    "sha256_dedup": false,
+    "schema_jsonld": false,
+    "podcast_rss": false,
+    "open_json_api": false,
+    "vtt_subtitles": false,
+    "newspaper_scans": true,
+    "studio_scripts": false,
+    "character_roles": true,
+    "lossless_et": true,
+    "serial_arcs": false
+  },
+  "specNotes": {
+    "free_no_paywall": "Only ~1,250 of 18,000 holdings stream online; remainder requires Kansas City reading-room visit."
+  },
+  "capabilities": {
+    "primary_source_verification": {
+      "level": "verified",
+      "score": 95,
+      "summary": "Cataloged directly from physical 16\" transcription disc labels and institutional finding aids.",
+      "evidenceQuote": "\"Metadata derived directly from the physical 16-inch electrical transcriptions in the Goldin and KMOX collections.\""
+    },
+    "cast_credit_accuracy": {
+      "level": "verified",
+      "score": 88,
+      "summary": "Incorporates Goldin's detailed performer and production credits in archival finding aids.",
+      "evidenceQuote": "\"Finding aids preserve complete performer, announcer, and sponsor credits from the Goldin database.\""
+    },
+    "vtt_transcripts": {
+      "level": "none",
+      "score": 8,
+      "summary": "No synchronized WebVTT transcripts for dramatic/variety radio broadcasts.",
+      "evidenceQuote": "\"Digital Commons audio embeds do not include WebVTT timed caption files.\""
+    },
+    "master_provenance": {
+      "level": "verified",
+      "score": 99,
+      "summary": "Direct stylus-to-ADC transfers from original 16\" lacquer and vinyl pressings by professional audio engineers.",
+      "evidenceQuote": "\"Digitized in-house from original 16-inch transcription discs using custom archival turntables and stylus profiles.\""
+    },
+    "serial_continuity": {
+      "level": "partial",
+      "score": 60,
+      "summary": "Finding aids list episodes sequentially, but online digital exhibits feature curated highlights rather than full serial runs.",
+      "evidenceQuote": "\"Online Digital Commons portal hosts selected highlights rather than complete contiguous series runs.\""
+    },
+    "open_api_export": {
+      "level": "partial",
+      "score": 45,
+      "summary": "OAI-PMH library harvesting supported for metadata, but no public audio streaming API.",
+      "evidenceQuote": "\"Supports institutional OAI-PMH metadata harvesting via UMKC Digital Commons.\""
+    },
+    "ad_free_playback": {
+      "level": "partial",
+      "score": 65,
+      "summary": "Free and ad-free for the ~6,500 items online; remaining ~88,500 items require Kansas City reading-room access.",
+      "evidenceQuote": "\"On-site research access at Miller Nichols Library required for non-digitized or rights-restricted discs.\""
+    },
+    "dedup_integrity": {
+      "level": "verified",
+      "score": 94,
+      "summary": "Accession and disc matrix numbers uniquely identify every physical transcription disc.",
+      "evidenceQuote": "\"Unique institutional accession numbers mapped to physical disc shelves.\""
+    }
+  },
+  "gotchas": [
+    {
+      "severity": "critical",
+      "title": "93% of Holdings Require On-Site Kansas City Research Visit",
+      "detail": "While UMKC holds the physical 16\" discs behind RadioGOLDINdex, copyright policy restricts online streaming to a small subset of digitized exhibits."
+    }
+  ],
+  "links": {
+    "markdownCard": "https://www.radiologs.org/data/providers/umkc-marr.md",
+    "jsonCard": "https://www.radiologs.org/data/providers/umkc-marr.json",
+    "comparisonHome": "https://www.radiologs.org/"
+  }
+}

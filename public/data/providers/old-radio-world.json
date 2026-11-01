@@ -1,0 +1,139 @@
+{
+  "id": "old-radio-world",
+  "name": "Old Radio World",
+  "shortName": "Old Radio World",
+  "url": "https://www.oldradioworld.com",
+  "category": "Collector Streamer / Mirror",
+  "operator": "Old Radio World Webmaster",
+  "foundedYear": 2005,
+  "auditedAt": "2026-11-01",
+  "pricing": {
+    "model": "ad-supported",
+    "monthlyUsd": 0,
+    "annualUsd": 0,
+    "displayPrice": "$0 (Ad-Supported)",
+    "billingNote": "Free web streaming with AdSense display units.",
+    "freeTierNote": "Direct browser streaming and single-file MP3 downloads."
+  },
+  "catalog": {
+    "broadcastCount": 12500,
+    "seriesCount": 195,
+    "distinctRecordings": 11800,
+    "dateSpan": "1932–1962",
+    "onlineStreamablePct": 98
+  },
+  "metrics": {
+    "playableBroadcasts": 12250,
+    "catalogBroadcasts": 12500,
+    "seriesCount": 195,
+    "vttSubtitleCount": 0,
+    "specCount": 2,
+    "totalSpecs": 14,
+    "medianBitrateKbps": 32,
+    "maxBitrateKbps": 64,
+    "ttfaMs": 660,
+    "highCutoffHz": 4400
+  },
+  "audio": {
+    "formats": [
+      "MP3 (24–64 kbps)"
+    ],
+    "primaryContainer": "MP3",
+    "streamingAvailable": true,
+    "batchDownloadAvailable": false,
+    "rssFeedsAvailable": false
+  },
+  "provenance": {
+    "primaryMasterSource": "Legacy collector MP3 sets (mostly 32–48 kbps mono)",
+    "airdateMethodology": "Uncorroborated collector filename dates",
+    "castAttributionMethod": "None (Series-level intro paragraph only)",
+    "captionEngine": "None"
+  },
+  "specs": {
+    "free_no_paywall": true,
+    "no_login_required": true,
+    "ad_free": false,
+    "uuid_index": false,
+    "sha256_dedup": false,
+    "schema_jsonld": false,
+    "podcast_rss": false,
+    "open_json_api": false,
+    "vtt_subtitles": false,
+    "newspaper_scans": false,
+    "studio_scripts": false,
+    "character_roles": false,
+    "lossless_et": false,
+    "serial_arcs": false
+  },
+  "specNotes": {
+    "ad_free": "Serves third-party display ads alongside 32 kbps MP3 links.",
+    "vtt_subtitles": "Zero .vtt subtitles or episode-level cast verification."
+  },
+  "capabilities": {
+    "primary_source_verification": {
+      "level": "none",
+      "score": 15,
+      "summary": "Uses unverified dates from legacy collector MP3 filenames.",
+      "evidenceQuote": "\"Dates are displayed as static strings (`YYYY-MM-DD`) without archival log verification.\""
+    },
+    "cast_credit_accuracy": {
+      "level": "none",
+      "score": 10,
+      "summary": "Lists lead actor in the series summary paragraph only; zero episode-level cast or role data.",
+      "evidenceQuote": "\"Individual episode entries contain only Title, Date, and Play/Download links.\""
+    },
+    "vtt_transcripts": {
+      "level": "none",
+      "score": 0,
+      "summary": "No transcripts or captions.",
+      "evidenceQuote": "\"No text transcripts or closed captions provided.\""
+    },
+    "master_provenance": {
+      "level": "none",
+      "score": 20,
+      "summary": "Predominantly 32 kbps and 48 kbps mono MP3s from legacy CD-R trading pools.",
+      "evidenceQuote": "\"Audio files average 4–7 MB per 30-minute broadcast (32 kbps MP3) with no provenance tags.\""
+    },
+    "serial_continuity": {
+      "level": "partial",
+      "score": 40,
+      "summary": "Paginated episode tables list shows chronologically when dates are present, but omit missing-episode warnings in serials.",
+      "evidenceQuote": "\"Paginated tables of 50 episodes per page without serial arc grouping.\""
+    },
+    "open_api_export": {
+      "level": "none",
+      "score": 10,
+      "summary": "No JSON API, no RSS podcast feeds per series, and no bulk export.",
+      "evidenceQuote": "\"Server-rendered HTML tables only; no REST API or RSS feed auto-discovery.\""
+    },
+    "ad_free_playback": {
+      "level": "partial",
+      "score": 65,
+      "summary": "Free audio playback without mid-roll audio ads, supported by web page display banners.",
+      "evidenceQuote": "\"Free streaming with Google display ad banners surrounding the episode table.\""
+    },
+    "dedup_integrity": {
+      "level": "none",
+      "score": 20,
+      "summary": "Contains duplicate encodes under variant titles common to pre-certified OTRR sets.",
+      "evidenceQuote": "\"Un-deduplicated legacy series runs.\""
+    }
+  },
+  "gotchas": [
+    {
+      "severity": "warning",
+      "title": "Frozen Pre-Certification Audio Sets",
+      "detail": "Most series have not been updated with newer high-bitrate 16\" ET transfers discovered by the archival community over the past 15 years."
+    },
+    {
+      "severity": "critical",
+      "title": "No Searchable Episode Synopses or Credits",
+      "detail": "Users cannot search by guest actor, writer, sponsor, or plot keyword — only by series title and episode title."
+    }
+  ],
+  "links": {
+    "markdownCard": "https://www.radiologs.org/data/providers/old-radio-world.md",
+    "jsonCard": "https://www.radiologs.org/data/providers/old-radio-world.json",
+    "comparisonHome": "https://www.radiologs.org/"
+  }
+}

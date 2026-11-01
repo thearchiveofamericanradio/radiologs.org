@@ -1,0 +1,125 @@
+{
+  "id": "mystery-shows",
+  "name": "Mystery Shows (mysteryshows.com)",
+  "shortName": "MysteryShows.com",
+  "url": "https://www.mysteryshows.com",
+  "category": "Curated Hobbyist Portal",
+  "operator": "Mystery Shows",
+  "foundedYear": 2005,
+  "auditedAt": "2026-11-01",
+  "pricing": {
+    "model": "ad-supported",
+    "monthlyUsd": 0,
+    "annualUsd": 0,
+    "displayPrice": "Free",
+    "billingNote": "Static hobbyist mystery & thriller stream portal",
+    "freeTierNote": "Direct MP3 links"
+  },
+  "catalog": {
+    "broadcastCount": 8400,
+    "seriesCount": 65,
+    "distinctRecordings": 7900,
+    "dateSpan": "1935–1982",
+    "onlineStreamablePct": 100
+  },
+  "metrics": {
+    "playableBroadcasts": 8400,
+    "catalogBroadcasts": 8400,
+    "seriesCount": 65,
+    "vttSubtitleCount": 0,
+    "specCount": 2,
+    "totalSpecs": 14,
+    "medianBitrateKbps": 32,
+    "maxBitrateKbps": 64,
+    "ttfaMs": 950,
+    "highCutoffHz": 4500
+  },
+  "audio": {
+    "formats": [
+      "MP3 (24–48 kbps)"
+    ],
+    "primaryContainer": "MP3",
+    "streamingAvailable": true,
+    "batchDownloadAvailable": false,
+    "rssFeedsAvailable": false
+  },
+  "provenance": {
+    "primaryMasterSource": "Early-2000s low-bitrate MP3 encodes",
+    "airdateMethodology": "Unverified collector filenames",
+    "castAttributionMethod": "None",
+    "captionEngine": "None (0% .vtt)"
+  },
+  "specs": {
+    "free_no_paywall": true,
+    "no_login_required": true,
+    "ad_free": false,
+    "uuid_index": false,
+    "sha256_dedup": false,
+    "schema_jsonld": false,
+    "podcast_rss": false,
+    "open_json_api": false,
+    "vtt_subtitles": false,
+    "newspaper_scans": false,
+    "studio_scripts": false,
+    "character_roles": false,
+    "lossless_et": false,
+    "serial_arcs": false
+  },
+  "specNotes": {
+    "lossless_et": "24–32 kbps mono MP3 streams only; limited to mystery/detective shows."
+  },
+  "capabilities": {
+    "primary_source_verification": {
+      "level": "none",
+      "score": 20,
+      "summary": "Raw trader filenames only."
+    },
+    "cast_credit_accuracy": {
+      "level": "none",
+      "score": 5,
+      "summary": "No per-episode cast or character credits."
+    },
+    "vtt_transcripts": {
+      "level": "none",
+      "score": 0,
+      "summary": "0% transcripts."
+    },
+    "master_provenance": {
+      "level": "none",
+      "score": 15,
+      "summary": "Heavily compressed 24–48 kbps MP3s."
+    },
+    "serial_continuity": {
+      "level": "partial",
+      "score": 40,
+      "summary": "Basic static HTML lists."
+    },
+    "open_api_export": {
+      "level": "none",
+      "score": 10,
+      "summary": "No API or RSS."
+    },
+    "ad_free_playback": {
+      "level": "partial",
+      "score": 55,
+      "summary": "Dated static pages."
+    },
+    "dedup_integrity": {
+      "level": "none",
+      "score": 20,
+      "summary": "No deduplication."
+    }
+  },
+  "gotchas": [
+    {
+      "severity": "warning",
+      "title": "24–48 kbps Encodes & Zero Metadata",
+      "detail": "Lacks synopses, cast credits, newspaper date proof, and synchronized captions."
+    }
+  ],
+  "links": {
+    "markdownCard": "https://www.radiologs.org/data/providers/mystery-shows.md",
+    "jsonCard": "https://www.radiologs.org/data/providers/mystery-shows.json",
+    "comparisonHome": "https://www.radiologs.org/"
+  }
+}

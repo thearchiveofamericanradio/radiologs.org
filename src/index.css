@@ -367,9 +367,23 @@ html[data-theme="dark"] .winner-row .rank-num {
   color: var(--ink);
   display: block;
 }
+.site-title-plain:hover {
+  color: var(--blue);
+  text-decoration: underline;
+}
 .site-domain {
   font-size: 13px;
   color: var(--ink-sub);
+}
+.domain-link {
+  color: var(--ink-sub);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 3px;
+}
+.domain-link:hover {
+  color: var(--blue);
+  text-decoration-style: solid;
 }
 
 /* Visual Show Count Bar */
@@ -503,6 +517,13 @@ code {
   font-weight: 700;
   color: var(--ink);
 }
+.show-card-title-link {
+  color: var(--ink);
+}
+.show-card-title-link:hover {
+  color: var(--blue);
+  text-decoration: underline;
+}
 .show-card-meta {
   font-size: 13px;
   color: var(--ink-meta);
@@ -539,6 +560,79 @@ code {
 }
 .dotted-link:hover {
   text-decoration-style: solid;
+}
+
+/* Methodology & Agent-Readable Dataset Section (battleships.dev pattern) */
+.methodology-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+@media (max-width: 780px) {
+  .methodology-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.method-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--ink-sub);
+}
+.method-list strong {
+  color: var(--ink);
+}
+.agent-file-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin-top: 6px;
+}
+.agent-file-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 9px 0;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  color: var(--ink-sub);
+}
+.agent-file-list li:first-child {
+  border-top: 0;
+  padding-top: 2px;
+}
+.mono-link {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--blue);
+}
+.mono-link:hover {
+  text-decoration: underline;
+}
+.hub-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+.hub-pill {
+  padding: 4px 10px;
+  border-radius: 9999px;
+  background: var(--bg-subtle);
+  color: var(--ink-meta);
+  font-size: 12px;
+  font-weight: 500;
+}
+.hub-pill:hover {
+  color: var(--blue);
+  background: var(--bg-hover);
 }
 
 /* A-Z Series Directory Crawl Bar */

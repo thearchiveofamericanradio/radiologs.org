@@ -1,0 +1,127 @@
+{
+  "id": "oldtimeradiodownloads",
+  "name": "Old Time Radio Downloads",
+  "shortName": "OTR Downloads",
+  "url": "https://www.oldtimeradiodownloads.com",
+  "category": "Curated Hobbyist Portal",
+  "operator": "OldTimeRadioDownloads",
+  "foundedYear": 2012,
+  "auditedAt": "2026-11-01",
+  "pricing": {
+    "model": "ad-supported",
+    "monthlyUsd": 0,
+    "annualUsd": 0,
+    "displayPrice": "Free (Ad-Supported)",
+    "billingNote": "Heavy display advertising across series and episode pages",
+    "freeTierNote": "Direct MP3 downloads and browser playback"
+  },
+  "catalog": {
+    "broadcastCount": 36000,
+    "seriesCount": 410,
+    "distinctRecordings": 32000,
+    "dateSpan": "1930–1962",
+    "onlineStreamablePct": 100
+  },
+  "metrics": {
+    "playableBroadcasts": 36000,
+    "catalogBroadcasts": 36000,
+    "seriesCount": 410,
+    "vttSubtitleCount": 0,
+    "specCount": 2,
+    "totalSpecs": 14,
+    "medianBitrateKbps": 48,
+    "maxBitrateKbps": 96,
+    "ttfaMs": 820,
+    "highCutoffHz": 5500
+  },
+  "audio": {
+    "formats": [
+      "MP3 (32–64 kbps)"
+    ],
+    "primaryContainer": "MP3",
+    "streamingAvailable": true,
+    "batchDownloadAvailable": false,
+    "rssFeedsAvailable": false
+  },
+  "provenance": {
+    "primaryMasterSource": "Standard OTRR/trader MP3 sets",
+    "airdateMethodology": "Filename dates; no primary newspaper log citations",
+    "castAttributionMethod": "Generic show-level cast lists repeated across episodes",
+    "captionEngine": "None (0% .vtt transcripts)"
+  },
+  "specs": {
+    "free_no_paywall": true,
+    "no_login_required": true,
+    "ad_free": false,
+    "uuid_index": false,
+    "sha256_dedup": false,
+    "schema_jsonld": false,
+    "podcast_rss": false,
+    "open_json_api": false,
+    "vtt_subtitles": false,
+    "newspaper_scans": false,
+    "studio_scripts": false,
+    "character_roles": false,
+    "lossless_et": false,
+    "serial_arcs": false
+  },
+  "specNotes": {
+    "ad_free": "Pages embed heavy programmatic display banner ad networks.",
+    "character_roles": "Pastes generic series-level actor bios onto every episode page regardless of whether the actor appeared.",
+    "vtt_subtitles": "Zero synchronized .vtt subtitles."
+  },
+  "capabilities": {
+    "primary_source_verification": {
+      "level": "partial",
+      "score": 42,
+      "summary": "Uses trader filename dates without newspaper corroboration."
+    },
+    "cast_credit_accuracy": {
+      "level": "none",
+      "score": 15,
+      "summary": "Repeats series-level lead actors on episode pages regardless of actual appearance."
+    },
+    "vtt_transcripts": {
+      "level": "none",
+      "score": 0,
+      "summary": "0% WebVTT captions or full-length transcripts."
+    },
+    "master_provenance": {
+      "level": "none",
+      "score": 25,
+      "summary": "Low-bitrate MP3s without transfer lineage."
+    },
+    "serial_continuity": {
+      "level": "partial",
+      "score": 55,
+      "summary": "Chronological lists by filename date."
+    },
+    "open_api_export": {
+      "level": "none",
+      "score": 15,
+      "summary": "No JSON API or /llms.txt."
+    },
+    "ad_free_playback": {
+      "level": "none",
+      "score": 30,
+      "summary": "Cluttered with programmatic display banner ads."
+    },
+    "dedup_integrity": {
+      "level": "none",
+      "score": 30,
+      "summary": "Duplicates East/West feeds and syndicated re-titles."
+    }
+  },
+  "gotchas": [
+    {
+      "severity": "warning",
+      "title": "Series-Level Cast Pasted onto Individual Episodes",
+      "detail": "Credits series lead actors to episodes in which they never appeared, and lacks any synchronized .vtt transcripts."
+    }
+  ],
+  "links": {
+    "markdownCard": "https://www.radiologs.org/data/providers/oldtimeradiodownloads.md",
+    "jsonCard": "https://www.radiologs.org/data/providers/oldtimeradiodownloads.json",
+    "comparisonHome": "https://www.radiologs.org/"
+  }
+}

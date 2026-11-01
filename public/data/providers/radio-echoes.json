@@ -1,0 +1,140 @@
+{
+  "id": "radio-echoes",
+  "name": "Radio Echoes",
+  "shortName": "Radio Echoes",
+  "url": "https://www.radioechoes.com",
+  "category": "Collector Streamer / Mirror",
+  "operator": "Radio Echoes Collector Archive",
+  "foundedYear": 2012,
+  "auditedAt": "2026-11-01",
+  "pricing": {
+    "model": "free",
+    "monthlyUsd": 0,
+    "annualUsd": 0,
+    "displayPrice": "$0 / Free",
+    "billingNote": "Free collector-hosted web streaming and MP3 downloads.",
+    "freeTierNote": "Full access to ~92,000 MP3 files across 2,100+ series."
+  },
+  "catalog": {
+    "broadcastCount": 127000,
+    "seriesCount": 2150,
+    "distinctRecordings": 78000,
+    "dateSpan": "1926–1988",
+    "onlineStreamablePct": 100
+  },
+  "metrics": {
+    "playableBroadcasts": 127000,
+    "catalogBroadcasts": 127000,
+    "seriesCount": 2150,
+    "vttSubtitleCount": 0,
+    "specCount": 4,
+    "totalSpecs": 14,
+    "medianBitrateKbps": 56,
+    "maxBitrateKbps": 128,
+    "ttfaMs": 720,
+    "highCutoffHz": 5800
+  },
+  "audio": {
+    "formats": [
+      "MP3 (24–128 kbps)"
+    ],
+    "primaryContainer": "MP3",
+    "streamingAvailable": true,
+    "batchDownloadAvailable": false,
+    "rssFeedsAvailable": false
+  },
+  "provenance": {
+    "primaryMasterSource": "Aggregated collector hard drives including US, UK, Australian, and South African OTR transfers",
+    "airdateMethodology": "Collector filename dates (`YYYY-MM-DD`); mixes researched logs with unverified trader estimates",
+    "castAttributionMethod": "Series-level description only; no structured episode-level cast or character roles",
+    "captionEngine": "None"
+  },
+  "specs": {
+    "free_no_paywall": true,
+    "no_login_required": true,
+    "ad_free": true,
+    "uuid_index": false,
+    "sha256_dedup": false,
+    "schema_jsonld": false,
+    "podcast_rss": false,
+    "open_json_api": false,
+    "vtt_subtitles": false,
+    "newspaper_scans": false,
+    "studio_scripts": false,
+    "character_roles": false,
+    "lossless_et": false,
+    "serial_arcs": true
+  },
+  "specNotes": {
+    "sha256_dedup": "No cryptographic stream deduplication; duplicate and mislabeled trader episodes appear across series.",
+    "vtt_subtitles": "Zero .vtt caption tracks across 127,000+ MP3 files.",
+    "schema_jsonld": "Zero Schema.org JSON-LD markup or canonical recording UUIDs."
+  },
+  "capabilities": {
+    "primary_source_verification": {
+      "level": "partial",
+      "score": 45,
+      "summary": "Relies on collector MP3 filename dates without primary newspaper radio log citations.",
+      "evidenceQuote": "\"Dates are populated from collector file-naming conventions without primary source verification badges.\""
+    },
+    "cast_credit_accuracy": {
+      "level": "none",
+      "score": 20,
+      "summary": "Series header blurbs mention main stars, but individual episode rows lack cast or character credits.",
+      "evidenceQuote": "\"Episode rows display only date, episode number, title, duration, and MP3 play/download controls.\""
+    },
+    "vtt_transcripts": {
+      "level": "none",
+      "score": 0,
+      "summary": "Zero WebVTT transcripts or searchable spoken dialogue.",
+      "evidenceQuote": "\"No closed captions or transcripts available.\""
+    },
+    "master_provenance": {
+      "level": "partial",
+      "score": 48,
+      "summary": "Wide variance in audio quality: some rare 128k collector rips sit beside muffled 24–32 kbps multi-gen cassette transfers.",
+      "evidenceQuote": "\"Aggregates disparate collector sets without transfer lineage or bitrate floor enforcement.\""
+    },
+    "serial_continuity": {
+      "level": "verified",
+      "score": 80,
+      "summary": "Strong coverage of long-running Australian/UK/US multi-part serials (e.g., *Speed Gibson*, *Tarzan*, *2000 Plus*) in sequential order.",
+      "evidenceQuote": "\"Preserves sequential episode numbering across multi-hundred-episode Commonwealth and US serials.\""
+    },
+    "open_api_export": {
+      "level": "none",
+      "score": 20,
+      "summary": "Direct single-file MP3 download links, but no public JSON API, no RSS feeds, and AJAX-paginated DOM tables.",
+      "evidenceQuote": "\"Uses client-side paginated HTML views without a documented REST API or podcast RSS feeds.\""
+    },
+    "ad_free_playback": {
+      "level": "verified",
+      "score": 90,
+      "summary": "Free, ad-free playback and direct MP3 downloads.",
+      "evidenceQuote": "\"Free streaming and downloading with no subscription paywall or mid-roll ads.\""
+    },
+    "dedup_integrity": {
+      "level": "partial",
+      "score": 50,
+      "summary": "Organized into one page per series, but retains unverified 'aka' duplicate episodes within uncertified series.",
+      "evidenceQuote": "\"Single series page structure reduces container sprawl, though internal duplicate encodes persist.\""
+    }
+  },
+  "gotchas": [
+    {
+      "severity": "warning",
+      "title": "Zero Episode Synopses or Cast Credits on 90%+ of Catalog",
+      "detail": "Most episodes show only a bare title and date string, making it impossible to verify actors, characters, or plot details without listening."
+    },
+    {
+      "severity": "warning",
+      "title": "No Transcripts, RSS Feeds, or Programmatic API",
+      "detail": "Cannot subscribe to series in a podcast player or query metadata via JSON."
+    }
+  ],
+  "links": {
+    "markdownCard": "https://www.radiologs.org/data/providers/radio-echoes.md",
+    "jsonCard": "https://www.radiologs.org/data/providers/radio-echoes.json",
+    "comparisonHome": "https://www.radiologs.org/"
+  }
+}

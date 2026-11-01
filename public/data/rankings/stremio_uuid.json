@@ -1,0 +1,24 @@
+{
+  "presetId": "stremio_uuid",
+  "title": "1 Item Per Episode (Internet Archive + Stremio SDK UUID Resolution)",
+  "description": "Platforms assigning every broadcast its own permanent UUID (/listen?id={uuid}) and individual Internet Archive item (archive.org/details/{uuid}) for native stremio-addon-sdk resolution.",
+  "computedAt": "2026-11-01",
+  "totalMatched": 1,
+  "totalAudited": 22,
+  "rankings": [
+    {
+      "rank": 1,
+      "id": "radioindex",
+      "name": "RadioIndex (The Archive of American Radio)",
+      "url": "https://www.radioindex.org",
+      "displayPrice": "$0 / Free",
+      "playableBroadcasts": 233000,
+      "vttSubtitleCount": 231400,
+      "medianBitrateKbps": 128,
+      "uuidIndexAndStremioSdk": true,
+      "newspaperVerifiedDates": true,
+      "cardMd": "https://www.radiologs.org/data/providers/radioindex.md",
+      "cardJson": "https://www.radiologs.org/data/providers/radioindex.json"
+    }
+  ]
+}

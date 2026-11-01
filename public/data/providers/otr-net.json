@@ -1,0 +1,125 @@
+{
+  "id": "otr-net",
+  "name": "OTR.net (Old Time Radio Network)",
+  "shortName": "OTR.net",
+  "url": "https://www.otr.net",
+  "category": "Curated Hobbyist Portal",
+  "operator": "OTR.net",
+  "foundedYear": 1998,
+  "auditedAt": "2026-11-01",
+  "pricing": {
+    "model": "ad-supported",
+    "monthlyUsd": 0,
+    "annualUsd": 0,
+    "displayPrice": "Free (Ad-Supported)",
+    "billingNote": "Late-1990s web portal",
+    "freeTierNote": "Low-bitrate streams"
+  },
+  "catalog": {
+    "broadcastCount": 5200,
+    "seriesCount": 110,
+    "distinctRecordings": 5000,
+    "dateSpan": "1932–1960",
+    "onlineStreamablePct": 100
+  },
+  "metrics": {
+    "playableBroadcasts": 5200,
+    "catalogBroadcasts": 5200,
+    "seriesCount": 110,
+    "vttSubtitleCount": 0,
+    "specCount": 2,
+    "totalSpecs": 14,
+    "medianBitrateKbps": 24,
+    "maxBitrateKbps": 32,
+    "ttfaMs": 1100,
+    "highCutoffHz": 4000
+  },
+  "audio": {
+    "formats": [
+      "MP3 (16–32 kbps)"
+    ],
+    "primaryContainer": "MP3",
+    "streamingAvailable": true,
+    "batchDownloadAvailable": false,
+    "rssFeedsAvailable": false
+  },
+  "provenance": {
+    "primaryMasterSource": "1990s dial-up era RealAudio-to-MP3 transcodes",
+    "airdateMethodology": "Cryptic 8-character DOS filenames",
+    "castAttributionMethod": "None",
+    "captionEngine": "None (0% .vtt)"
+  },
+  "specs": {
+    "free_no_paywall": true,
+    "no_login_required": true,
+    "ad_free": false,
+    "uuid_index": false,
+    "sha256_dedup": false,
+    "schema_jsonld": false,
+    "podcast_rss": false,
+    "open_json_api": false,
+    "vtt_subtitles": false,
+    "newspaper_scans": false,
+    "studio_scripts": false,
+    "character_roles": false,
+    "lossless_et": false,
+    "serial_arcs": false
+  },
+  "specNotes": {
+    "lossless_et": "1990s dial-up era 16–32 kbps MP3 files with 4 kHz frequency ceiling."
+  },
+  "capabilities": {
+    "primary_source_verification": {
+      "level": "none",
+      "score": 15,
+      "summary": "Abbreviated 1990s filenames."
+    },
+    "cast_credit_accuracy": {
+      "level": "none",
+      "score": 0,
+      "summary": "Zero cast credits."
+    },
+    "vtt_transcripts": {
+      "level": "none",
+      "score": 0,
+      "summary": "Zero captions."
+    },
+    "master_provenance": {
+      "level": "none",
+      "score": 10,
+      "summary": "Dial-up era 16–32 kbps transcodes."
+    },
+    "serial_continuity": {
+      "level": "none",
+      "score": 25,
+      "summary": "Broken alphabetical/filename order."
+    },
+    "open_api_export": {
+      "level": "none",
+      "score": 5,
+      "summary": "Zero structured data."
+    },
+    "ad_free_playback": {
+      "level": "none",
+      "score": 30,
+      "summary": "Banner ads."
+    },
+    "dedup_integrity": {
+      "level": "none",
+      "score": 15,
+      "summary": "Unreconciled legacy files."
+    }
+  },
+  "gotchas": [
+    {
+      "severity": "critical",
+      "title": "Dial-Up Era 16–32 kbps Audio & Cryptic Abbreviations",
+      "detail": "Severely muffled audio transcoded from 1990s RealAudio files with zero metadata."
+    }
+  ],
+  "links": {
+    "markdownCard": "https://www.radiologs.org/data/providers/otr-net.md",
+    "jsonCard": "https://www.radiologs.org/data/providers/otr-net.json",
+    "comparisonHome": "https://www.radiologs.org/"
+  }
+}

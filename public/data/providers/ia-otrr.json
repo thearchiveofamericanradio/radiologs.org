@@ -1,0 +1,149 @@
+{
+  "id": "ia-otrr",
+  "name": "OTRR Multi-File Zip Uploads (Legacy Bundles)",
+  "shortName": "OTRR Multi-File Zips",
+  "url": "https://archive.org/details/oldtimeradio",
+  "category": "Public Digital Repository",
+  "operator": "Internet Archive (501c3) & OTRR Community Uploaders",
+  "foundedYear": 1996,
+  "auditedAt": "2026-11-01",
+  "pricing": {
+    "model": "free",
+    "monthlyUsd": 0,
+    "annualUsd": 0,
+    "displayPrice": "$0 / Free",
+    "billingNote": "Non-profit public digital library funded by donations and grants.",
+    "freeTierNote": "Unlimited HTTP downloads, Torrents, IA S3 CLI access, and in-browser BookReader/Audio playback."
+  },
+  "catalog": {
+    "broadcastCount": 95000,
+    "seriesCount": 1850,
+    "distinctRecordings": 64000,
+    "dateSpan": "1920–1990",
+    "onlineStreamablePct": 100
+  },
+  "metrics": {
+    "playableBroadcasts": 95000,
+    "catalogBroadcasts": 95000,
+    "seriesCount": 1850,
+    "vttSubtitleCount": 4200,
+    "specCount": 5,
+    "totalSpecs": 14,
+    "medianBitrateKbps": 64,
+    "maxBitrateKbps": 1411,
+    "ttfaMs": 1560,
+    "highCutoffHz": 8500
+  },
+  "audio": {
+    "formats": [
+      "MP3 (32–320 kbps)",
+      "FLAC",
+      "Ogg Vorbis",
+      "WAV"
+    ],
+    "primaryContainer": "MP3 / FLAC (Item-dependent)",
+    "streamingAvailable": true,
+    "batchDownloadAvailable": true,
+    "rssFeedsAvailable": true
+  },
+  "provenance": {
+    "primaryMasterSource": "Crowdsourced uploads ranging from pristine 16\" ET FLAC rips to 5th-gen 32 kbps MP3 cassette dubs",
+    "airdateMethodology": "Uploader-supplied filenames (YY-MM-DD); mixes OTRR Certified research with unverified trader logs",
+    "castAttributionMethod": "Free-text item description box; no structured episode-level cast or character schema",
+    "captionEngine": "Scattered OCR/auto-ASR on select items; >92% of OTR audio items lack synchronized .vtt files"
+  },
+  "specs": {
+    "free_no_paywall": true,
+    "no_login_required": true,
+    "ad_free": true,
+    "uuid_index": false,
+    "sha256_dedup": false,
+    "schema_jsonld": false,
+    "podcast_rss": false,
+    "open_json_api": true,
+    "vtt_subtitles": false,
+    "newspaper_scans": false,
+    "studio_scripts": false,
+    "character_roles": false,
+    "lossless_et": true,
+    "serial_arcs": false
+  },
+  "specNotes": {
+    "uuid_index": "Uses uploader-chosen folder slugs (/details/{slug}) with 50–500 MP3s bundled into one item; no per-broadcast canonical UUID.",
+    "sha256_dedup": "File-level MD5/SHA1 per upload bucket, but identical broadcasts are duplicated across dozens of overlapping uploader items.",
+    "vtt_subtitles": "Over 95% of OTR audio files have no .vtt caption track.",
+    "schema_jsonld": "No Schema.org RadioEpisode JSON-LD markup on item pages."
+  },
+  "capabilities": {
+    "primary_source_verification": {
+      "level": "partial",
+      "score": 58,
+      "summary": "OTRR Certified uploads include researcher log PDFs, but thousands of older user uploads rely on unverified 1990s trader filenames.",
+      "evidenceQuote": "\"Metadata is user-contributed per item; single episodes frequently appear across 6+ items with conflicting YY-MM-DD filename prefixes.\""
+    },
+    "cast_credit_accuracy": {
+      "level": "none",
+      "score": 25,
+      "summary": "Item-level XML (`_meta.xml`) applies to whole 200-episode ZIP buckets rather than individual episodes or character roles.",
+      "evidenceQuote": "\"Creator and description tags live at the collection/item container level, not per MP3 track inside a multi-file upload.\""
+    },
+    "vtt_transcripts": {
+      "level": "none",
+      "score": 15,
+      "summary": "No systematic WebVTT caption corpus across OTR collections; web player streams raw MP3/Ogg without synchronized dialogue text.",
+      "evidenceQuote": "\"Audio items contain derivative .mp3 and .ogg files plus waveform .pngs, with no synchronized .vtt track derivatives.\""
+    },
+    "master_provenance": {
+      "level": "partial",
+      "score": 68,
+      "summary": "Hosts some extraordinary direct 16\" transcription disc transfers (e.g., AFRS, NBC, Goldin/Marr donations) alongside undocumented 32k re-encodes.",
+      "evidenceQuote": "\"Includes lossless 16-bit/44.1kHz and 24-bit/96kHz FLAC transfers when uploaded by preservationists, mixed with legacy 32 kbps MP3s.\""
+    },
+    "serial_continuity": {
+      "level": "partial",
+      "score": 60,
+      "summary": "Works when filenames strictly obey `YYMMDD_Ep#` sorting inside a single item, but breaks when episodes span multiple uploader items.",
+      "evidenceQuote": "\"Track order in the JWPlayer playlist depends entirely on ASCII sorting of filenames in `_files.xml`.\""
+    },
+    "open_api_export": {
+      "level": "verified",
+      "score": 90,
+      "summary": "Full `ia` CLI, Advanced Search JSON API, S3-like bucket URLs (`/download/<item>/`), and torrent manifests.",
+      "evidenceQuote": "\"Internet Archive Metadata API (`/metadata/{identifier}`) exposes full file lists, SHA1/MD5 hashes, and direct HTTP download links.\""
+    },
+    "ad_free_playback": {
+      "level": "verified",
+      "score": 95,
+      "summary": "100% free and ad-free, though high-file-count items experience slow playlist DOM initialization.",
+      "evidenceQuote": "\"No commercial ads or paywalls; occasional rate-limiting or maintenance downtime during peak archive crawls.\""
+    },
+    "dedup_integrity": {
+      "level": "none",
+      "score": 20,
+      "summary": "Zero cross-item deduplication; the same *Suspense* or *Shadow* recording is routinely duplicated 8 to 15 times across different uploader buckets.",
+      "evidenceQuote": "\"Each uploader creates an independent item identifier (`OTRR_Suspense_Singles`, `suspense-otr`, `Suspense_1942-1962`), resulting in massive duplication.\""
+    }
+  },
+  "gotchas": [
+    {
+      "severity": "warning",
+      "title": "Container-Level Metadata Granularity Trap",
+      "detail": "Because an Internet Archive 'Item' often holds 100 to 600 MP3 files, item-level metadata (`_meta.xml`) cannot express per-episode air dates, cast lists, or synopses."
+    },
+    {
+      "severity": "warning",
+      "title": "High-Latency Playlist Boot on Large Items",
+      "detail": "Opening an IA item page with 500+ MP3s + derivatives forces the browser to parse megabytes of playlist JSON before first audio frame playback."
+    },
+    {
+      "severity": "critical",
+      "title": "Derivative Re-Encoding Artifacts",
+      "detail": "IA's automated derivative pipeline historically generated 64k VBR MP3 and Ogg derivatives from already-lossy 32k–64k MP3 uploads, compounding generational artifacts if users stream the derivative instead of the original."
+    }
+  ],
+  "links": {
+    "markdownCard": "https://www.radiologs.org/data/providers/ia-otrr.md",
+    "jsonCard": "https://www.radiologs.org/data/providers/ia-otrr.json",
+    "comparisonHome": "https://www.radiologs.org/"
+  }
+}

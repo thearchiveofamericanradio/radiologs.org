@@ -1,0 +1,140 @@
+{
+  "id": "loc-recorded-sound",
+  "name": "Library of Congress — Recorded Sound Research Center",
+  "shortName": "Library of Congress",
+  "url": "https://www.loc.gov/audio/",
+  "category": "Institutional Sound Archive",
+  "operator": "U.S. Library of Congress (Packard Campus / NAVCC)",
+  "foundedYear": 1928,
+  "auditedAt": "2026-11-01",
+  "pricing": {
+    "model": "institutional",
+    "monthlyUsd": 0,
+    "annualUsd": 0,
+    "displayPrice": "$0 (Public / On-Site)",
+    "billingNote": "Federal public institution; online digital collections are free, but 90% of holdings require on-site Madison Building listening.",
+    "freeTierNote": "~14,000 digitized radio/recorded sound items streamable online; 150,000+ physical discs require Washington D.C. appointment."
+  },
+  "catalog": {
+    "broadcastCount": 150000,
+    "seriesCount": 3200,
+    "distinctRecordings": 145000,
+    "dateSpan": "1924–1975",
+    "onlineStreamablePct": 9
+  },
+  "metrics": {
+    "playableBroadcasts": 13500,
+    "catalogBroadcasts": 150000,
+    "seriesCount": 3200,
+    "vttSubtitleCount": 580,
+    "specCount": 8,
+    "totalSpecs": 14,
+    "medianBitrateKbps": 256,
+    "maxBitrateKbps": 4608,
+    "ttfaMs": 620,
+    "highCutoffHz": 15000
+  },
+  "audio": {
+    "formats": [
+      "WAV (24-bit/96kHz Archival)",
+      "MP3 (128–256 kbps Online)",
+      "FLAC"
+    ],
+    "primaryContainer": "WAV / MP3",
+    "streamingAvailable": true,
+    "batchDownloadAvailable": false,
+    "rssFeedsAvailable": false
+  },
+  "provenance": {
+    "primaryMasterSource": "Original NBC Radio Collection 16\" lacquer discs, AFRS master library, CBS/WOR/MBS archival deposits",
+    "airdateMethodology": "Primary network master control cards, copyright deposits, and Chronicling America newspaper archive",
+    "castAttributionMethod": "MARC/MODS catalog records transcribed from NBC master index cards and disc labels",
+    "captionEngine": "Select items only (American Archive of Public Broadcasting integration)"
+  },
+  "specs": {
+    "free_no_paywall": true,
+    "no_login_required": true,
+    "ad_free": true,
+    "uuid_index": false,
+    "sha256_dedup": false,
+    "schema_jsonld": false,
+    "podcast_rss": false,
+    "open_json_api": true,
+    "vtt_subtitles": false,
+    "newspaper_scans": true,
+    "studio_scripts": true,
+    "character_roles": true,
+    "lossless_et": true,
+    "serial_arcs": false
+  },
+  "specNotes": {
+    "free_no_paywall": "91% of the 52,000 cataloged NBC/AFRS discs require an in-person appointment at the Packard Campus / Madison Building reading room; ~4,800 stream online."
+  },
+  "capabilities": {
+    "primary_source_verification": {
+      "level": "verified",
+      "score": 100,
+      "summary": "Gold-standard primary network master cards, studio control logs, and the Chronicling America historic newspaper database.",
+      "evidenceQuote": "\"Cataloged directly from NBC master index cards, physical 16-inch lacquer labels, and copyright deposit ledgers.\""
+    },
+    "cast_credit_accuracy": {
+      "level": "partial",
+      "score": 78,
+      "summary": "MARC catalog records list principal performers and speakers from studio cards, though dramatic character names are often omitted.",
+      "evidenceQuote": "\"MARC 511 (Participant or Performer Note) records principal cast and speakers documented on studio index cards.\""
+    },
+    "vtt_transcripts": {
+      "level": "none",
+      "score": 18,
+      "summary": "Most digitized radio broadcasts lack synchronized WebVTT captions, outside of special exhibits.",
+      "evidenceQuote": "\"Online audio items stream via the LOC media player without universal WebVTT caption tracks.\""
+    },
+    "master_provenance": {
+      "level": "verified",
+      "score": 100,
+      "summary": "First-generation physical 16\" 33⅓ RPM glass/aluminum-base lacquer discs and network master reels preserved in climate-controlled vaults.",
+      "evidenceQuote": "\"Preserves the original NBC Collection of over 150,000 16-inch lacquer transcription discs at the Packard Campus.\""
+    },
+    "serial_continuity": {
+      "level": "partial",
+      "score": 65,
+      "summary": "SONIC catalog orders holdings chronologically by shelf/matrix number, but online availability is fragmentary.",
+      "evidenceQuote": "\"Searchable via the SONIC (Sound Online Inventory and Catalog) database by date and call number.\""
+    },
+    "open_api_export": {
+      "level": "verified",
+      "score": 85,
+      "summary": "Every `loc.gov` item and search supports `?fo=json` REST responses and IIIF/MODS metadata.",
+      "evidenceQuote": "\"The loc.gov JSON API (`?fo=json`) provides programmatic access to catalog records and digital asset URLs.\""
+    },
+    "ad_free_playback": {
+      "level": "partial",
+      "score": 70,
+      "summary": "100% ad-free and free of charge, but >90% of broadcasts are blocked from remote internet streaming due to rights restrictions.",
+      "evidenceQuote": "\"Due to copyright and donor restrictions, most NBC and AFRS recordings may only be listened to on-site in the Recorded Sound Research Center.\""
+    },
+    "dedup_integrity": {
+      "level": "verified",
+      "score": 96,
+      "summary": "Each physical disc pressing, safety reel, and East/West feed has a distinct shelfmark and matrix number.",
+      "evidenceQuote": "\"Library of Congress call numbers and matrix identifiers uniquely distinguish every physical lacquer side.\""
+    }
+  },
+  "gotchas": [
+    {
+      "severity": "critical",
+      "title": "91% of Radio Holdings Require In-Person D.C. Reading Room Visit",
+      "detail": "Because pre-1972 sound recordings and underlying dramatic scripts have complex rights layers, the vast majority of the NBC and AFRS collections cannot be streamed from home."
+    },
+    {
+      "severity": "note",
+      "title": "SONIC Catalog vs. Digital Audio Split",
+      "detail": "Finding a record in the SONIC inventory (`sonic.loc.gov`) usually returns a physical shelf number (`RWA / LWO`) rather than a playable audio stream."
+    }
+  ],
+  "links": {
+    "markdownCard": "https://www.radiologs.org/data/providers/loc-recorded-sound.md",
+    "jsonCard": "https://www.radiologs.org/data/providers/loc-recorded-sound.json",
+    "comparisonHome": "https://www.radiologs.org/"
+  }
+}

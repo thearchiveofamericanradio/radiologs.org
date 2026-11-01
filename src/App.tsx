@@ -192,9 +192,35 @@ export function App() {
                             {s.shortName}
                           </a>
                         ) : (
-                          <span className="site-title-plain">{s.shortName}</span>
+                          <a href={`/data/providers/${s.id}.md`} className="site-title-plain">
+                            {s.shortName}
+                          </a>
                         )}
-                        <span className="site-domain">{s.domain}</span>
+                        <span className="site-domain">
+                          {isWinner ? (
+                            <>
+                              {s.domain} ·{' '}
+                              <a href={`/data/providers/${s.id}.md`} className="domain-link">
+                                Audit card
+                              </a>
+                            </>
+                          ) : (
+                            <>
+                              <a
+                                href={s.url}
+                                className="domain-link"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                {s.domain} ↗
+                              </a>{' '}
+                              ·{' '}
+                              <a href={`/data/providers/${s.id}.md`} className="domain-link">
+                                Audit card
+                              </a>
+                            </>
+                          )}
+                        </span>
                       </div>
                     </div>
                   </td>
@@ -337,9 +363,16 @@ export function App() {
           const eps = s.episodes || [];
           return (
             <div className="show-card" key={s.slug}>
-              <h3 className="show-card-title">{s.title}</h3>
+              <h3 className="show-card-title">
+                <a href={s.radioindexUrl} className="show-card-title-link">
+                  {s.title}
+                </a>
+              </h3>
               <div className="show-card-meta">
-                {s.network} ({s.runYears}) · {fmt(s.verifiedBroadcasts)} broadcasts · 100% .vtt
+                {s.network} ({s.runYears}) · {fmt(s.verifiedBroadcasts)} broadcasts · 100% .vtt ·{' '}
+                <a href={s.rssUrl} className="domain-link">
+                  RSS
+                </a>
               </div>
               <ul className="ep-link-list">
                 {eps.map((ep) => (
@@ -353,6 +386,98 @@ export function App() {
             </div>
           );
         })}
+      </div>
+
+      {/* METHODOLOGY & AGENT-READABLE DATASET (battleships.dev pattern) */}
+      <h2 className="section-heading">Methodology &amp; Agent-Readable Dataset</h2>
+      <p className="section-sub">
+        Built by{' '}
+        <a href="https://www.radioindex.org/" className="dotted-link">
+          The Archive of American Radio (radioindex.org)
+        </a>
+        ; RadioIndex is held to the exact same primary-evidence audit rules as every other platform.
+      </p>
+
+      <div className="methodology-grid">
+        <div className="info-card">
+          <h3>How Every Platform Is Audited</h3>
+          <ul className="method-list">
+            <li>
+              <strong>Unauthenticated Stream &amp; Bitrate Check:</strong> Direct HTTP 200 playback
+              verification and <code>ffprobe</code> container, bitrate, and spectral cutoff (Hz)
+              sampling across recordings.
+            </li>
+            <li>
+              <strong>Full-Length WebVTT (<code>.vtt</code>) Verification:</strong> Counts only
+              complete start-to-finish word-timed subtitle files generated via{' '}
+              <code>faster-whisper</code> with VAD filtering—never 30–90s clips.
+            </li>
+            <li>
+              <strong>1 Item / Episode &amp; Stremio SDK (<code>stremio-addon-sdk</code>):</strong>{' '}
+              Checks whether each broadcast resolves by canonical UUID (
+              <code>/listen?id=&#123;uuid&#125;</code>) and individual Internet Archive item (
+              <code>archive.org/details/&#123;uuid&#125;</code>) vs. 500+ MP3s zipped in one folder.
+            </li>
+            <li>
+              <strong>Newspaper &amp; Script Ground Truth:</strong> Verifies air dates and per-episode
+              character roles against scanned 1930s–1950s newspapers (<em>Chronicling America</em>,{' '}
+              <em>Fulton History</em>, <em>JJonz</em>, <em>Variety</em>) and studio scripts.
+            </li>
+            <li>
+              <strong>Disclosed Trade-Offs:</strong> Every platform card—including{' '}
+              <a href="/data/providers/radioindex.md" className="dotted-link">
+                radioindex.md
+              </a>
+              —documents limitations and gotchas (e.g., strict ground-truth QA gates delaying raw
+              unverified trader uploads).
+            </li>
+          </ul>
+        </div>
+
+        <div className="info-card">
+          <h3>Static Files for AI Agents &amp; Crawlers</h3>
+          <ul className="agent-file-list">
+            <li>
+              <a href="/llms.txt" className="mono-link">
+                /llms.txt
+              </a>{' '}
+              <span>Concise index of all 22 platforms, rankings, and 116 UUID permalinks</span>
+            </li>
+            <li>
+              <a href="/llms-full.txt" className="mono-link">
+                /llms-full.txt
+              </a>{' '}
+              <span>Complete benchmark dataset, methodology, and all 22 audit cards in one file</span>
+            </li>
+            <li>
+              <a href="/data/index.json" className="mono-link">
+                /data/index.json
+              </a>{' '}
+              <span>Machine-readable provider index with metrics and card URLs</span>
+            </li>
+            <li>
+              <a href="/data/rankings.md" className="mono-link">
+                /data/rankings.md
+              </a>{' '}
+              <span>Rankings by use case (Free, Subtitles, 16&quot; ET HD, Stremio SDK UUID)</span>
+            </li>
+            <li>
+              <a href="/data/providers/radioindex.md" className="mono-link">
+                /data/providers/&lt;id&gt;.md
+              </a>{' '}
+              <span>22 individual static Markdown &amp; JSON audit cards per platform</span>
+            </li>
+          </ul>
+          <div className="hub-pills">
+            {backlinks.hubLinks
+              .filter((h) => h.url !== 'https://www.radioindex.org/')
+              .map((h) => (
+                <a key={h.url} href={h.url} className="hub-pill">
+                  {h.anchorText}
+                </a>
+              ))}
+          </div>
+        </div>
       </div>
 
       {/* 4-COLUMN FOOTER OF 48 ADDITIONAL UNIQUE /listen?id= BROADCAST BACKLINKS */}
@@ -418,6 +543,14 @@ export function App() {
             ·{' '}
             <a href="/llms-full.txt" className="dotted-link">
               llms-full.txt
+            </a>{' '}
+            ·{' '}
+            <a href="/data/index.json" className="dotted-link">
+              index.json
+            </a>{' '}
+            ·{' '}
+            <a href="/data/rankings.md" className="dotted-link">
+              rankings.md
             </a>{' '}
             ·{' '}
             <a href="/sitemap.xml" className="dotted-link">

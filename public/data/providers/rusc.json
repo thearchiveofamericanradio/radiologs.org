@@ -1,0 +1,145 @@
+{
+  "id": "rusc",
+  "name": "RUSC (Radio U S C)",
+  "shortName": "RUSC",
+  "url": "https://www.rusc.com",
+  "category": "Commercial Subscription",
+  "operator": "RUSC Entertainment (Joy & Ned)",
+  "foundedYear": 1999,
+  "auditedAt": "2026-11-01",
+  "pricing": {
+    "model": "subscription",
+    "monthlyUsd": 7.95,
+    "annualUsd": 59.95,
+    "displayPrice": "$7.95/mo ($59.95/yr)",
+    "billingNote": "Recurring commercial subscription required for full streaming and MP3 downloads ($4.99/mo billed annually).",
+    "freeTierNote": "Small rotating sample of free introductory shows; full 35,000+ catalog is behind a subscriber login wall."
+  },
+  "catalog": {
+    "broadcastCount": 35000,
+    "seriesCount": 620,
+    "distinctRecordings": 33500,
+    "dateSpan": "1930–1962",
+    "onlineStreamablePct": 100
+  },
+  "metrics": {
+    "playableBroadcasts": 35000,
+    "catalogBroadcasts": 35000,
+    "seriesCount": 620,
+    "vttSubtitleCount": 0,
+    "specCount": 2,
+    "totalSpecs": 14,
+    "medianBitrateKbps": 48,
+    "maxBitrateKbps": 64,
+    "ttfaMs": 740,
+    "highCutoffHz": 4800
+  },
+  "audio": {
+    "formats": [
+      "MP3 (32–64 kbps Mono)"
+    ],
+    "primaryContainer": "MP3",
+    "streamingAvailable": true,
+    "batchDownloadAvailable": false,
+    "rssFeedsAvailable": false
+  },
+  "provenance": {
+    "primaryMasterSource": "Legacy collector sets & OTRR public-domain transfers normalized to compact 32–64 kbps mono MP3",
+    "airdateMethodology": "Collector log dates imported from legacy OTR databases without primary newspaper citations",
+    "castAttributionMethod": "Series-level star tags and editorial blurbs; rare supporting actors omitted",
+    "captionEngine": "None (No synchronized .vtt transcripts)"
+  },
+  "specs": {
+    "free_no_paywall": false,
+    "no_login_required": false,
+    "ad_free": true,
+    "uuid_index": false,
+    "sha256_dedup": false,
+    "schema_jsonld": false,
+    "podcast_rss": false,
+    "open_json_api": false,
+    "vtt_subtitles": false,
+    "newspaper_scans": false,
+    "studio_scripts": false,
+    "character_roles": false,
+    "lossless_et": false,
+    "serial_arcs": true
+  },
+  "specNotes": {
+    "free_no_paywall": "Requires paid subscription ($6.95/mo or $59.95/yr) to stream or download full catalog.",
+    "lossless_et": "Files are uniformly down-sampled to 32–56 kbps mono MP3 (22.05 kHz); no FLAC or high-bitrate 16\" ET masters.",
+    "vtt_subtitles": "Zero .vtt subtitle tracks."
+  },
+  "capabilities": {
+    "primary_source_verification": {
+      "level": "none",
+      "score": 30,
+      "summary": "Air dates are inherited from 1990s/2000s collector logs without newspaper radio log citations or corrections for stride-projected soaps.",
+      "evidenceQuote": "\"Displays a single date string per show entry with no citation to newspaper logs, network ledgers, or disc matrix numbers.\""
+    },
+    "cast_credit_accuracy": {
+      "level": "partial",
+      "score": 45,
+      "summary": "Links shows to headline stars (e.g., Orson Welles, Vincent Price, Bob Bailey) but lacks verified episode-level character-to-actor mappings.",
+      "evidenceQuote": "\"Search by Star groups episodes by main series lead or notable guest star rather than full per-episode cast & character rosters.\""
+    },
+    "vtt_transcripts": {
+      "level": "none",
+      "score": 0,
+      "summary": "Zero WebVTT captions or full-text transcripts.",
+      "evidenceQuote": "\"Provides a short 1–3 sentence editorial description per episode; no spoken dialogue transcription.\""
+    },
+    "master_provenance": {
+      "level": "none",
+      "score": 25,
+      "summary": "Files are standardized at low bitrates (typically 32–56 kbps mono MP3) originally chosen for dial-up/early broadband downloads, with no source lineage.",
+      "evidenceQuote": "\"Audio files are optimized for small file size (5–12 MB per 30-minute show) with no transfer source or disc provenance metadata.\""
+    },
+    "serial_continuity": {
+      "level": "partial",
+      "score": 68,
+      "summary": "Editorial playlists group some serial runs together, and chronological series tables help listeners follow multi-part stories.",
+      "evidenceQuote": "\"Curated playlists and series pages list episodes by episode number and date for sequential listening.\""
+    },
+    "open_api_export": {
+      "level": "none",
+      "score": 5,
+      "summary": "Proprietary authenticated session wall; no public JSON API, no `/llms.txt`, and no bulk export.",
+      "evidenceQuote": "\"Requires active member authentication cookie for MP3 download/stream links; no public developer API.\""
+    },
+    "ad_free_playback": {
+      "level": "partial",
+      "score": 55,
+      "summary": "Ad-free inside the player, but requires a $7.95/mo ($59.95/yr) paid subscription to access public-domain broadcasts.",
+      "evidenceQuote": "\"Unlimited access to listen to or download over 35,000 old time radio shows requires a paid RUSC membership.\""
+    },
+    "dedup_integrity": {
+      "level": "partial",
+      "score": 55,
+      "summary": "Manual editorial curation removes obvious broken duplicates within a series, though legacy date/title aliases remain.",
+      "evidenceQuote": "\"Catalog is manually maintained as a single list per series without cryptographic digest tracking.\""
+    }
+  },
+  "gotchas": [
+    {
+      "severity": "critical",
+      "title": "Paywall Over Public-Domain Collector Transfers",
+      "detail": "Charges $7.95/mo ($59.95/yr) for recordings that largely originate from volunteer public-domain OTRR and collector preservation efforts available free on RadioIndex and Internet Archive."
+    },
+    {
+      "severity": "warning",
+      "title": "Dial-Up Era Audio Bitrate Ceiling (32–64 kbps)",
+      "detail": "Many files remain encoded at legacy 32–56 kbps mono MP3 with steep 4.5 kHz low-pass filtering, discarding high-frequency lacquer fidelity."
+    },
+    {
+      "severity": "warning",
+      "title": "Zero Programmatic or Agent Access",
+      "detail": "Closed behind member session cookies with no public RSS feeds per series, no JSON endpoints, and no transcripts."
+    }
+  ],
+  "links": {
+    "markdownCard": "https://www.radiologs.org/data/providers/rusc.md",
+    "jsonCard": "https://www.radiologs.org/data/providers/rusc.json",
+    "comparisonHome": "https://www.radiologs.org/"
+  }
+}

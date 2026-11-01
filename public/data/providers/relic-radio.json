@@ -1,0 +1,138 @@
+{
+  "id": "relic-radio",
+  "name": "RelicRadio Podcast Network",
+  "shortName": "RelicRadio",
+  "url": "https://www.relicradio.com",
+  "category": "Curated Podcast Network",
+  "operator": "RelicRadio (Independent Listener-Supported Network)",
+  "foundedYear": 2006,
+  "auditedAt": "2026-11-01",
+  "pricing": {
+    "model": "free",
+    "monthlyUsd": 0,
+    "annualUsd": 0,
+    "displayPrice": "$0 / Free (Patreon Optional)",
+    "billingNote": "100% free podcast feeds and web streaming; optional listener donations.",
+    "freeTierNote": "Full access to ~4,800 curated episodes across Horror, Sci-Fi, Thrillers, Strange Tales, and Case Closed."
+  },
+  "catalog": {
+    "broadcastCount": 4850,
+    "seriesCount": 310,
+    "distinctRecordings": 4600,
+    "dateSpan": "1936–1962",
+    "onlineStreamablePct": 100
+  },
+  "metrics": {
+    "playableBroadcasts": 4850,
+    "catalogBroadcasts": 4850,
+    "seriesCount": 310,
+    "vttSubtitleCount": 0,
+    "specCount": 4,
+    "totalSpecs": 14,
+    "medianBitrateKbps": 128,
+    "maxBitrateKbps": 128,
+    "ttfaMs": 340,
+    "highCutoffHz": 8200
+  },
+  "audio": {
+    "formats": [
+      "MP3 (96–128 kbps Normalized)"
+    ],
+    "primaryContainer": "MP3",
+    "streamingAvailable": true,
+    "batchDownloadAvailable": false,
+    "rssFeedsAvailable": true
+  },
+  "provenance": {
+    "primaryMasterSource": "Hand-selected, loudness-normalized transfers from OTRR and collector archives",
+    "airdateMethodology": "Host cites original broadcast date and episode number in podcast show notes and spoken outro",
+    "castAttributionMethod": "Basic series notes; no structured actor-to-character database",
+    "captionEngine": "None (Apple Podcasts auto-transcripts only on iOS client)"
+  },
+  "specs": {
+    "free_no_paywall": true,
+    "no_login_required": true,
+    "ad_free": true,
+    "uuid_index": false,
+    "sha256_dedup": false,
+    "schema_jsonld": false,
+    "podcast_rss": true,
+    "open_json_api": false,
+    "vtt_subtitles": false,
+    "newspaper_scans": false,
+    "studio_scripts": false,
+    "character_roles": false,
+    "lossless_et": false,
+    "serial_arcs": false
+  },
+  "specNotes": {
+    "podcast_rss": "Curated weekly genre podcast feeds (~3,200 total episodes across 5 feeds), not a complete series archive."
+  },
+  "capabilities": {
+    "primary_source_verification": {
+      "level": "partial",
+      "score": 68,
+      "summary": "Show notes accurately state original broadcast date and series episode number for curated selections.",
+      "evidenceQuote": "\"Each podcast post cites the original series, broadcast date, and episode title.\""
+    },
+    "cast_credit_accuracy": {
+      "level": "none",
+      "score": 30,
+      "summary": "Mentions headline stars occasionally in blog posts, without structured cast/character metadata.",
+      "evidenceQuote": "\"WordPress show notes focus on series history and air date rather than full cast rosters.\""
+    },
+    "vtt_transcripts": {
+      "level": "none",
+      "score": 0,
+      "summary": "No hosted `.vtt` transcripts on `relicradio.com`.",
+      "evidenceQuote": "\"Audio MP3 enclosures only; no WebVTT files served.\""
+    },
+    "master_provenance": {
+      "level": "partial",
+      "score": 72,
+      "summary": "Host screens out unlistenable low-bitrate mud and normalizes levels at 96–128 kbps MP3, though original disc matrix numbers aren't tracked.",
+      "evidenceQuote": "\"Curated for listenable audio quality and consistent volume across episodes.\""
+    },
+    "serial_continuity": {
+      "level": "none",
+      "score": 30,
+      "summary": "Thematic anthology feeds (*The Horror*, *Sci-Fi*, *Case Closed*) jump across different series each week rather than presenting contiguous serial arcs.",
+      "evidenceQuote": "\"Anthology podcast format rotates between different series every episode.\""
+    },
+    "open_api_export": {
+      "level": "partial",
+      "score": 70,
+      "summary": "Standard XML Podcast RSS feeds and WordPress REST API posts, though organized by podcast feed rather than canonical OTR series.",
+      "evidenceQuote": "\"Provides standard RSS 2.0 podcast feeds with direct MP3 enclosures.\""
+    },
+    "ad_free_playback": {
+      "level": "verified",
+      "score": 96,
+      "summary": "Listener-supported with zero third-party commercial ad injections.",
+      "evidenceQuote": "\"100% listener-supported with no dynamic ad insertion interrupting the broadcasts.\""
+    },
+    "dedup_integrity": {
+      "level": "partial",
+      "score": 70,
+      "summary": "Careful host curation avoids duplicate uploads within a feed, though some classic episodes appear in both a genre feed and a special feed.",
+      "evidenceQuote": "\"Curated release log tracks every episode aired on each thematic feed since 2006.\""
+    }
+  },
+  "gotchas": [
+    {
+      "severity": "warning",
+      "title": "Thematic Anthology Format Breaks Complete Series Browsing",
+      "detail": "Organized around 6 genre podcast feeds rather than complete chronological runs of 1,400+ series."
+    },
+    {
+      "severity": "note",
+      "title": "Covers ~4,850 Episodes (~4% of Known Surviving Broadcasts)",
+      "detail": "Excludes daytime serials, variety/music programs, news broadcasts, and deep-catalog drama runs."
+    }
+  ],
+  "links": {
+    "markdownCard": "https://www.radiologs.org/data/providers/relic-radio.md",
+    "jsonCard": "https://www.radiologs.org/data/providers/relic-radio.json",
+    "comparisonHome": "https://www.radiologs.org/"
+  }
+}

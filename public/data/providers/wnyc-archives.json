@@ -1,0 +1,134 @@
+{
+  "id": "wnyc-archives",
+  "name": "WNYC & NYC Municipal Archives Audio Collection",
+  "shortName": "WNYC Archives",
+  "url": "https://www.wnyc.org/archives",
+  "category": "Institutional Sound Archive",
+  "operator": "New York Public Radio (NYPR) & NYC Department of Records",
+  "foundedYear": 1924,
+  "auditedAt": "2026-11-01",
+  "pricing": {
+    "model": "free",
+    "monthlyUsd": 0,
+    "annualUsd": 0,
+    "displayPrice": "$0 / Free",
+    "billingNote": "Public radio archival preservation funded by NEH, CPB, and listener support.",
+    "freeTierNote": "~8,500 digitized historical broadcasts streamable online."
+  },
+  "catalog": {
+    "broadcastCount": 8500,
+    "seriesCount": 210,
+    "distinctRecordings": 8500,
+    "dateSpan": "1924–1970",
+    "onlineStreamablePct": 100
+  },
+  "metrics": {
+    "playableBroadcasts": 8500,
+    "catalogBroadcasts": 8500,
+    "seriesCount": 210,
+    "vttSubtitleCount": 780,
+    "specCount": 6,
+    "totalSpecs": 14,
+    "medianBitrateKbps": 192,
+    "maxBitrateKbps": 4608,
+    "ttfaMs": 275,
+    "highCutoffHz": 14000
+  },
+  "audio": {
+    "formats": [
+      "MP3 (128–256 kbps)",
+      "WAV (Archival Master)"
+    ],
+    "primaryContainer": "MP3",
+    "streamingAvailable": true,
+    "batchDownloadAvailable": false,
+    "rssFeedsAvailable": true
+  },
+  "provenance": {
+    "primaryMasterSource": "Original WNYC Municipal Broadcasting System 16\" lacquer discs and ¼-inch master tapes",
+    "airdateMethodology": "WNYC master broadcast logs, Master Control sheets, and *New York Times* / *Brooklyn Daily Eagle* radio listings",
+    "castAttributionMethod": "Archivist-curated speaker, musician, and commentator records",
+    "captionEngine": "Select curated transcripts (AAPB integration)"
+  },
+  "specs": {
+    "free_no_paywall": true,
+    "no_login_required": true,
+    "ad_free": true,
+    "uuid_index": false,
+    "sha256_dedup": false,
+    "schema_jsonld": false,
+    "podcast_rss": false,
+    "open_json_api": false,
+    "vtt_subtitles": false,
+    "newspaper_scans": true,
+    "studio_scripts": false,
+    "character_roles": true,
+    "lossless_et": true,
+    "serial_arcs": false
+  },
+  "specNotes": {
+    "lossless_et": "High-grade municipal lacquer transfers, but scope is limited to NYC civic/musical broadcasts (~1,850 items)."
+  },
+  "capabilities": {
+    "primary_source_verification": {
+      "level": "verified",
+      "score": 98,
+      "summary": "Verified by NYPR professional archivists against WNYC studio logs, lacquer labels, and NYC newspapers.",
+      "evidenceQuote": "\"Cataloged by NYPR Archives staff directly from original 16-inch lacquer labels and WNYC Master Control logs.\""
+    },
+    "cast_credit_accuracy": {
+      "level": "verified",
+      "score": 86,
+      "summary": "Accurate speaker, interviewer, composer, and performer attribution on every archival post.",
+      "evidenceQuote": "\"Detailed archivist essays and speaker credits accompany digitized lacquer transfers.\""
+    },
+    "vtt_transcripts": {
+      "level": "partial",
+      "score": 45,
+      "summary": "Transcripts available on select AAPB-partnered items, but not universal `.vtt` synchronized captions across all 8,500 recordings.",
+      "evidenceQuote": "\"Select broadcasts include text transcripts via American Archive of Public Broadcasting partnerships.\""
+    },
+    "master_provenance": {
+      "level": "verified",
+      "score": 98,
+      "summary": "Digitized at 24-bit/96kHz directly from WNYC's surviving 16-inch aluminum and glass-base lacquer discs.",
+      "evidenceQuote": "\"Preserved from over 50,000 lacquer discs discovered in the NYC Municipal Archives and WNYC vaults.\""
+    },
+    "serial_continuity": {
+      "level": "partial",
+      "score": 70,
+      "summary": "Chronological series collections for recurring municipal and cultural programs.",
+      "evidenceQuote": "\"Organized by program series and chronological broadcast date.\""
+    },
+    "open_api_export": {
+      "level": "partial",
+      "score": 68,
+      "summary": "Embeddable audio player, RSS feeds, and AAPB metadata records.",
+      "evidenceQuote": "\"Public RSS feeds and American Archive of Public Broadcasting (AAPB) PBCore XML records.\""
+    },
+    "ad_free_playback": {
+      "level": "verified",
+      "score": 95,
+      "summary": "Free public streaming without commercial ad breaks.",
+      "evidenceQuote": "\"Streamed free to the public as part of NYPR's public service mission.\""
+    },
+    "dedup_integrity": {
+      "level": "verified",
+      "score": 95,
+      "summary": "Unique municipal lacquer disc numbers and NYPR catalog IDs.",
+      "evidenceQuote": "\"Each lacquer side is cataloged under a unique Municipal Archives / NYPR preservation identifier.\""
+    }
+  },
+  "gotchas": [
+    {
+      "severity": "note",
+      "title": "Scoped to WNYC / NYC Municipal Broadcasts Only",
+      "detail": "Does not host commercial network entertainment series (*Jack Benny*, *Suspense*, *Lux Radio Theatre*) unless they intersected with WNYC."
+    }
+  ],
+  "links": {
+    "markdownCard": "https://www.radiologs.org/data/providers/wnyc-archives.md",
+    "jsonCard": "https://www.radiologs.org/data/providers/wnyc-archives.json",
+    "comparisonHome": "https://www.radiologs.org/"
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "id": "generic-radio-workshop",
+  "name": "Generic Radio Workshop Script Library",
+  "shortName": "Generic Radio Scripts",
+  "url": "https://www.genericradio.com",
+  "category": "Discographical / Script Index",
+  "operator": "Generic Radio Workshop (Archival Script Preservation)",
+  "foundedYear": 2002,
+  "auditedAt": "2026-11-01",
+  "pricing": {
+    "model": "free",
+    "monthlyUsd": 0,
+    "annualUsd": 0,
+    "displayPrice": "$0 / Free",
+    "billingNote": "Free open web access to transcribed and scanned vintage radio scripts.",
+    "freeTierNote": "Full HTML/text access to ~1,200+ original broadcast scripts and series logs."
+  },
+  "catalog": {
+    "broadcastCount": 1240,
+    "seriesCount": 145,
+    "distinctRecordings": 180,
+    "dateSpan": "1934–1958",
+    "onlineStreamablePct": 15
+  },
+  "metrics": {
+    "playableBroadcasts": 186,
+    "catalogBroadcasts": 1240,
+    "seriesCount": 145,
+    "vttSubtitleCount": 0,
+    "specCount": 6,
+    "totalSpecs": 14,
+    "medianBitrateKbps": 0,
+    "maxBitrateKbps": 128,
+    "ttfaMs": null,
+    "highCutoffHz": 0
+  },
+  "audio": {
+    "formats": [
+      "HTML Text Scripts",
+      "MP3 (Select Re-enactments / Originals)"
+    ],
+    "primaryContainer": "HTML Script Text",
+    "streamingAvailable": false,
+    "batchDownloadAvailable": false,
+    "rssFeedsAvailable": false
+  },
+  "provenance": {
+    "primaryMasterSource": "Original studio mimeographed production scripts with cue numbers, sound effects (SFX), and music cues",
+    "airdateMethodology": "Transcribed directly from studio script cover pages (Network, Date, Rehearsal/Broadcast timings)",
+    "castAttributionMethod": "Explicit character-to-actor cast lists from studio production scripts",
+    "captionEngine": "Full HTML studio scripts (non-time-coded, not .vtt)"
+  },
+  "specs": {
+    "free_no_paywall": true,
+    "no_login_required": true,
+    "ad_free": true,
+    "uuid_index": false,
+    "sha256_dedup": false,
+    "schema_jsonld": false,
+    "podcast_rss": false,
+    "open_json_api": false,
+    "vtt_subtitles": false,
+    "newspaper_scans": true,
+    "studio_scripts": true,
+    "character_roles": true,
+    "lossless_et": false,
+    "serial_arcs": false
+  },
+  "specNotes": {
+    "studio_scripts": "Hosts ~1,850 HTML studio script transcriptions, but only ~280 playable audio streams."
+  },
+  "capabilities": {
+    "primary_source_verification": {
+      "level": "verified",
+      "score": 94,
+      "summary": "Script cover pages preserve original network date stamps, studio call letters, and script draft dates.",
+      "evidenceQuote": "\"Transcribed directly from original network mimeograph scripts including broadcast date, sponsor, and agency headers.\""
+    },
+    "cast_credit_accuracy": {
+      "level": "verified",
+      "score": 97,
+      "summary": "Every line of dialogue is labeled by exact character name, often paired with the studio cast sheet.",
+      "evidenceQuote": "\"Full dramatic dialogue broken down line-by-line by character name, SFX cue, and musical bridge.\""
+    },
+    "vtt_transcripts": {
+      "level": "partial",
+      "score": 65,
+      "summary": "Provides complete written studio scripts in clean HTML, but they are not time-aligned `.vtt` files synchronized to audio.",
+      "evidenceQuote": "\"Complete HTML script text with stage directions, though not timestamped in WebVTT (.vtt) format.\""
+    },
+    "master_provenance": {
+      "level": "partial",
+      "score": 60,
+      "summary": "High provenance for script paper documents, but minimal audio holdings.",
+      "evidenceQuote": "\"Primary focus is textual preservation of original broadcast scripts rather than audio disc transfers.\""
+    },
+    "serial_continuity": {
+      "level": "partial",
+      "score": 50,
+      "summary": "Focuses primarily on prestige anthology series (*Suspense*, *Escape*, *CBS Workshop*) rather than daily serials.",
+      "evidenceQuote": "\"Strongest coverage in standalone dramatic anthology scripts.\""
+    },
+    "open_api_export": {
+      "level": "partial",
+      "score": 55,
+      "summary": "Clean, crawlable HTML script pages, but no JSON API or `/llms.txt` index.",
+      "evidenceQuote": "\"Server-rendered HTML script pages easily readable by humans and crawlers, without a structured JSON API.\""
+    },
+    "ad_free_playback": {
+      "level": "partial",
+      "score": 50,
+      "summary": "100% ad-free and free to read, but 85% of entries have no playable audio recording attached.",
+      "evidenceQuote": "\"Free textual script library; most entries do not include embedded audio streams.\""
+    },
+    "dedup_integrity": {
+      "level": "verified",
+      "score": 90,
+      "summary": "Clearly distinguishes original script drafts from later broadcast adaptations (e.g., *Suspense* vs. *Escape* script reuses).",
+      "evidenceQuote": "\"Notes script reuse across anthology series and variant production dates.\""
+    }
+  },
+  "gotchas": [
+    {
+      "severity": "warning",
+      "title": "Small Catalog Scope (~1,240 Scripts) & Minimal Audio",
+      "detail": "Covers roughly 1% of surviving OTR broadcasts and is designed for reading scripts rather than streaming audio."
+    },
+    {
+      "severity": "note",
+      "title": "Rehearsal Script vs. As-Broadcast Audio Divergences",
+      "detail": "Mimeographed rehearsal scripts occasionally differ from the final live broadcast due to last-minute studio cuts or ad-libs."
+    }
+  ],
+  "links": {
+    "markdownCard": "https://www.radiologs.org/data/providers/generic-radio-workshop.md",
+    "jsonCard": "https://www.radiologs.org/data/providers/generic-radio-workshop.json",
+    "comparisonHome": "https://www.radiologs.org/"
+  }
+}

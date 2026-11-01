@@ -1,0 +1,127 @@
+{
+  "id": "golden-radio-hour",
+  "name": "Golden Radio Hour",
+  "shortName": "Golden Radio Hour",
+  "url": "https://goldenradiohour.com",
+  "category": "Commercial Subscription Service",
+  "operator": "Golden Radio Hour",
+  "foundedYear": 2018,
+  "auditedAt": "2026-11-01",
+  "pricing": {
+    "model": "subscription",
+    "monthlyUsd": 4.99,
+    "annualUsd": 49.99,
+    "displayPrice": "$4.99/mo",
+    "billingNote": "Commercial repackaging of public-domain trader MP3s",
+    "freeTierNote": "Limited preview clips"
+  },
+  "catalog": {
+    "broadcastCount": 14500,
+    "seriesCount": 190,
+    "distinctRecordings": 13200,
+    "dateSpan": "1935–1962",
+    "onlineStreamablePct": 100
+  },
+  "metrics": {
+    "playableBroadcasts": 14500,
+    "catalogBroadcasts": 14500,
+    "seriesCount": 190,
+    "vttSubtitleCount": 0,
+    "specCount": 1,
+    "totalSpecs": 14,
+    "medianBitrateKbps": 48,
+    "maxBitrateKbps": 64,
+    "ttfaMs": 890,
+    "highCutoffHz": 5200
+  },
+  "audio": {
+    "formats": [
+      "MP3 (32–64 kbps)"
+    ],
+    "primaryContainer": "MP3",
+    "streamingAvailable": true,
+    "batchDownloadAvailable": false,
+    "rssFeedsAvailable": false
+  },
+  "provenance": {
+    "primaryMasterSource": "Re-hosted public collector MP3s with stripped provenance headers",
+    "airdateMethodology": "Copied from unverified trader filenames",
+    "castAttributionMethod": "None or generic series-level descriptions",
+    "captionEngine": "None (0% .vtt transcripts)"
+  },
+  "specs": {
+    "free_no_paywall": false,
+    "no_login_required": false,
+    "ad_free": true,
+    "uuid_index": false,
+    "sha256_dedup": false,
+    "schema_jsonld": false,
+    "podcast_rss": false,
+    "open_json_api": false,
+    "vtt_subtitles": false,
+    "newspaper_scans": false,
+    "studio_scripts": false,
+    "character_roles": false,
+    "lossless_et": false,
+    "serial_arcs": false
+  },
+  "specNotes": {
+    "free_no_paywall": "Commercial paywall ($5.99/mo or $49.99/yr) over public-domain OTRR/IA MP3 files.",
+    "lossless_et": "Streams 32–64 kbps MP3 files with no original 16\" ET transfers or FLAC downloads.",
+    "vtt_subtitles": "Zero .vtt subtitle files or primary archival documentation."
+  },
+  "capabilities": {
+    "primary_source_verification": {
+      "level": "none",
+      "score": 15,
+      "summary": "Relies on unverified trader filename dates."
+    },
+    "cast_credit_accuracy": {
+      "level": "none",
+      "score": 10,
+      "summary": "No verified per-episode cast or character role credits."
+    },
+    "vtt_transcripts": {
+      "level": "none",
+      "score": 0,
+      "summary": "0% synchronized WebVTT transcripts."
+    },
+    "master_provenance": {
+      "level": "none",
+      "score": 18,
+      "summary": "No 16-inch ET matrix lineage or stream digests."
+    },
+    "serial_continuity": {
+      "level": "partial",
+      "score": 45,
+      "summary": "Basic series lists without multi-part arc reconciliation."
+    },
+    "open_api_export": {
+      "level": "none",
+      "score": 5,
+      "summary": "No open API, RSS feeds, or structured data."
+    },
+    "ad_free_playback": {
+      "level": "partial",
+      "score": 40,
+      "summary": "Paywalled access to public-domain recordings."
+    },
+    "dedup_integrity": {
+      "level": "none",
+      "score": 20,
+      "summary": "Contains duplicate trader encodes and misdated episodes."
+    }
+  },
+  "gotchas": [
+    {
+      "severity": "critical",
+      "title": "Unverified Trader Metadata & Paywalled Public Domain Audio",
+      "detail": "Repackages community OTR transfers without newspaper date proof, cast role links, or synchronized .vtt captions."
+    }
+  ],
+  "links": {
+    "markdownCard": "https://www.radiologs.org/data/providers/golden-radio-hour.md",
+    "jsonCard": "https://www.radiologs.org/data/providers/golden-radio-hour.json",
+    "comparisonHome": "https://www.radiologs.org/"
+  }
+}

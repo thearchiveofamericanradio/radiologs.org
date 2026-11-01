@@ -1,0 +1,138 @@
+{
+  "id": "radiogoldindex",
+  "name": "RadioGOLDINdex (J. David Goldin Discography)",
+  "shortName": "RadioGOLDINdex",
+  "url": "https://radiogoldindex.com",
+  "category": "Discographical / Script Index",
+  "operator": "J. David Goldin (Golden Age of Radio / UMKC Marr Partner)",
+  "foundedYear": 1998,
+  "auditedAt": "2026-11-01",
+  "pricing": {
+    "model": "free",
+    "monthlyUsd": 0,
+    "annualUsd": 0,
+    "displayPrice": "$0 Web ($50+ PDF Books)",
+    "billingNote": "Free web reference lookup; multi-volume PDF/print editions sold separately.",
+    "freeTierNote": "Full online text lookup of ~100,000 broadcast entries."
+  },
+  "catalog": {
+    "broadcastCount": 102000,
+    "seriesCount": 2400,
+    "distinctRecordings": 102000,
+    "dateSpan": "1925–1978",
+    "onlineStreamablePct": 0
+  },
+  "metrics": {
+    "playableBroadcasts": 0,
+    "catalogBroadcasts": 102000,
+    "seriesCount": 2400,
+    "vttSubtitleCount": 0,
+    "specCount": 6,
+    "totalSpecs": 14,
+    "medianBitrateKbps": 0,
+    "maxBitrateKbps": 0,
+    "ttfaMs": null,
+    "highCutoffHz": 0
+  },
+  "audio": {
+    "formats": [
+      "None (Text Discography Only)"
+    ],
+    "primaryContainer": "HTML Text Only (0 Audio Streams)",
+    "streamingAvailable": false,
+    "batchDownloadAvailable": false,
+    "rssFeedsAvailable": false
+  },
+  "provenance": {
+    "primaryMasterSource": "Direct physical inspection of 95,000+ 16\" ET discs and master tapes in the J. David Goldin Collection (now at UMKC Marr)",
+    "airdateMethodology": "Transcribed directly from physical studio transcription disc labels, matrix etchings, and audition logs",
+    "castAttributionMethod": "Exhaustive actor, announcer, director, writer, and musician credits verified by ear and disc label",
+    "captionEngine": "None (Metadata index only)"
+  },
+  "specs": {
+    "free_no_paywall": true,
+    "no_login_required": true,
+    "ad_free": true,
+    "uuid_index": false,
+    "sha256_dedup": false,
+    "schema_jsonld": false,
+    "podcast_rss": false,
+    "open_json_api": false,
+    "vtt_subtitles": false,
+    "newspaper_scans": true,
+    "studio_scripts": false,
+    "character_roles": true,
+    "lossless_et": false,
+    "serial_arcs": true
+  },
+  "specNotes": {
+    "lossless_et": "Text-only discography (0 playable audio streams hosted online)."
+  },
+  "capabilities": {
+    "primary_source_verification": {
+      "level": "verified",
+      "score": 96,
+      "summary": "Dates, networks, sponsors, and AFRS/matrix numbers are transcribed directly from physical 16\" transcription disc labels.",
+      "evidenceQuote": "\"Every entry in RadioGOLDINdex reflects a recording physically auditioned and cataloged by J. David Goldin from disc labels and audio.\""
+    },
+    "cast_credit_accuracy": {
+      "level": "verified",
+      "score": 92,
+      "summary": "Unmatched documentation of supporting character actors, announcers, organists, and writers per broadcast.",
+      "evidenceQuote": "\"Cross-indexes tens of thousands of supporting actors, announcers, musical directors, and writers across 100,000+ broadcasts.\""
+    },
+    "vtt_transcripts": {
+      "level": "none",
+      "score": 0,
+      "summary": "Text discography only; contains concise 1-sentence loglines, not spoken transcripts.",
+      "evidenceQuote": "\"Provides a brief one-line plot & sponsor note per broadcast; no full-text scripts or .vtt captions.\""
+    },
+    "master_provenance": {
+      "level": "verified",
+      "score": 95,
+      "summary": "Documents exact transcription service ( syndicated Ziv, Lang-Worth, World, NBC Orthacoustic, AFRS) and disc numbers.",
+      "evidenceQuote": "\"Lists transcription syndicate, sustaining vs. sponsored status, and physical Goldin catalog numbers.\""
+    },
+    "serial_continuity": {
+      "level": "verified",
+      "score": 88,
+      "summary": "Chronological series listings clearly trace sequential episode numbers and audition pressings.",
+      "evidenceQuote": "\"Ordered strictly by broadcast date and episode/matrix sequence within each program page.\""
+    },
+    "open_api_export": {
+      "level": "none",
+      "score": 15,
+      "summary": "Static 1990s HTML pages (`f1.html`, `f2.html`) with no JSON API, no search endpoint, and no `/llms.txt`.",
+      "evidenceQuote": "\"Generated as static alphabetical HTML files from a legacy desktop database with no REST API.\""
+    },
+    "ad_free_playback": {
+      "level": "none",
+      "score": 0,
+      "summary": "Cannot stream or play audio — text-only reference index.",
+      "evidenceQuote": "\"RadioGOLDINdex is a text reference database only; it does not stream or sell audio recordings.\""
+    },
+    "dedup_integrity": {
+      "level": "verified",
+      "score": 94,
+      "summary": "Clearly separates original network broadcasts from AFRS re-uses and syndicated re-titles.",
+      "evidenceQuote": "\"Explicitly notes when an AFRS or syndicated pressing reuses an earlier network broadcast.\""
+    }
+  },
+  "gotchas": [
+    {
+      "severity": "critical",
+      "title": "Zero Audio Playback or Downloads (0% Streamable)",
+      "detail": "RadioGOLDINdex is strictly a discographical text encyclopedia. Users looking to actually listen to the broadcasts must cross-reference them on RadioIndex or visit UMKC Marr."
+    },
+    {
+      "severity": "warning",
+      "title": "Static Alphabetical HTML Frames Without Query Engine",
+      "detail": "Cannot run compound queries (e.g., 'all CBS broadcasts from October 1948 featuring William Conrad') without downloading and parsing thousands of static HTML files."
+    }
+  ],
+  "links": {
+    "markdownCard": "https://www.radiologs.org/data/providers/radiogoldindex.md",
+    "jsonCard": "https://www.radiologs.org/data/providers/radiogoldindex.json",
+    "comparisonHome": "https://www.radiologs.org/"
+  }
+}

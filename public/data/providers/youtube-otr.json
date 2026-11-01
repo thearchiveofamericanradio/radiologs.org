@@ -1,0 +1,143 @@
+{
+  "id": "youtube-otr",
+  "name": "YouTube — Unofficial OTR Channels",
+  "shortName": "YouTube OTR Channels",
+  "url": "https://www.youtube.com/results?search_query=old+time+radio",
+  "category": "Ad-Supported Video Platform",
+  "operator": "Google / Alphabet + Hundreds of Unaffiliated Uploaders",
+  "foundedYear": 2005,
+  "auditedAt": "2026-11-01",
+  "pricing": {
+    "model": "freemium",
+    "monthlyUsd": 13.99,
+    "annualUsd": 139.99,
+    "displayPrice": "$0 w/ Ads ($13.99/mo Premium)",
+    "billingNote": "Free tier injects jarring mid-roll video ads every 6–10 minutes unless paying $13.99/mo for YouTube Premium.",
+    "freeTierNote": "Ad-supported streaming with mid-roll interruptions and locked screen playback restrictions on mobile."
+  },
+  "catalog": {
+    "broadcastCount": 45000,
+    "seriesCount": 890,
+    "distinctRecordings": 28000,
+    "dateSpan": "1930–1982",
+    "onlineStreamablePct": 100
+  },
+  "metrics": {
+    "playableBroadcasts": 45000,
+    "catalogBroadcasts": 45000,
+    "seriesCount": 890,
+    "vttSubtitleCount": 0,
+    "specCount": 2,
+    "totalSpecs": 14,
+    "medianBitrateKbps": 96,
+    "maxBitrateKbps": 128,
+    "ttfaMs": 240,
+    "highCutoffHz": 4600
+  },
+  "audio": {
+    "formats": [
+      "Opus / AAC inside MP4/WebM Video Container"
+    ],
+    "primaryContainer": "MP4 / WebM Video",
+    "streamingAvailable": true,
+    "batchDownloadAvailable": false,
+    "rssFeedsAvailable": false
+  },
+  "provenance": {
+    "primaryMasterSource": "Re-encoded collector MP3s muxed with AI-generated static images and heavy loudness normalization",
+    "airdateMethodology": "Rampant clickbait/AI-invented dates or stripped dates ('RARE Episode You Never Heard!')",
+    "castAttributionMethod": "Rarely credited; often hallucinates famous actors in clickbait thumbnails",
+    "captionEngine": "YouTube Auto-ASR (low accuracy on 1940s transatlantic dialects & vintage sponsor names)"
+  },
+  "specs": {
+    "free_no_paywall": true,
+    "no_login_required": true,
+    "ad_free": false,
+    "uuid_index": false,
+    "sha256_dedup": false,
+    "schema_jsonld": false,
+    "podcast_rss": false,
+    "open_json_api": false,
+    "vtt_subtitles": false,
+    "newspaper_scans": false,
+    "studio_scripts": false,
+    "character_roles": false,
+    "lossless_et": false,
+    "serial_arcs": false
+  },
+  "specNotes": {
+    "ad_free": "Injects loud programmatic pre-roll and mid-roll video ads unless paying $13.99/mo ($167.88/yr) for YouTube Premium."
+  },
+  "capabilities": {
+    "primary_source_verification": {
+      "level": "none",
+      "score": 8,
+      "summary": "Uploaders routinely strip real air dates and original episode titles in favor of clickbait titles to game recommendation algorithms.",
+      "evidenceQuote": "\"Channels frequently rename canonical broadcasts to 'Chilling 1940s Detective Mystery!' to prevent viewers from realizing they've already heard it.\""
+    },
+    "cast_credit_accuracy": {
+      "level": "none",
+      "score": 10,
+      "summary": "Thumbnails frequently paste photos of Humphrey Bogart, Orson Welles, or Vincent Price onto episodes in which they never appeared.",
+      "evidenceQuote": "\"AI-generated thumbnails and video titles routinely misattribute series stars for clickthrough rate.\""
+    },
+    "vtt_transcripts": {
+      "level": "partial",
+      "score": 48,
+      "summary": "YouTube auto-captions exist on most uploads, but lack punctuation, speaker separation, and proper-noun accuracy for 1930s–1950s radio.",
+      "evidenceQuote": "\"Automated YouTube ASR captions are available via the CC button, though unedited and prone to period-name mistranscriptions.\""
+    },
+    "master_provenance": {
+      "level": "none",
+      "score": 15,
+      "summary": "Audio is typically a 32–64k collector MP3 re-compressed through video editing software, brick-walled with heavy compression, and re-encoded by YouTube.",
+      "evidenceQuote": "\"Multiple lossy transcode generations (MP3 → AAC video render → YouTube Opus/AAC) plus aggressive dynamic range compression.\""
+    },
+    "serial_continuity": {
+      "level": "none",
+      "score": 15,
+      "summary": "Algorithmic autoplay shuffles unrelated shows and breaks multi-part serial story arcs.",
+      "evidenceQuote": "\"YouTube's recommendation sidebar and autoplay queue prioritize engagement metrics over chronological broadcast sequence.\""
+    },
+    "open_api_export": {
+      "level": "none",
+      "score": 15,
+      "summary": "YouTube Data API v3 is strictly quota-capped, prohibits audio downloading in ToS, and offers no OTR relational schema.",
+      "evidenceQuote": "\"YouTube Terms of Service prohibit direct audio stream extraction or bulk archival mirroring.\""
+    },
+    "ad_free_playback": {
+      "level": "none",
+      "score": 10,
+      "summary": "Monetized channels insert loud modern video ads every 6–10 minutes right in the middle of 1940s radio dramas unless paying $13.99/mo.",
+      "evidenceQuote": "\"Mid-roll ad breaks at +0 dBFS interrupt quiet vintage broadcasts unless the listener subscribes to YouTube Premium ($13.99/mo).\""
+    },
+    "dedup_integrity": {
+      "level": "none",
+      "score": 5,
+      "summary": "The same 500 popular episodes of *CBSRMT*, *Suspense*, and *Yours Truly Johnny Dollar* are re-uploaded hundreds of times under disguised titles.",
+      "evidenceQuote": "\"Massive duplication across '8-Hour Old Time Radio Sleep' compilation videos with zero canonical broadcast IDs.\""
+    }
+  },
+  "gotchas": [
+    {
+      "severity": "critical",
+      "title": "Loud Mid-Roll Ads Spliced Into Quiet 1940s Drama Scenes",
+      "detail": "Unless you pay $13.99/mo ($139.99/yr) for YouTube Premium, modern high-LUFS commercials blast at random intervals during suspenseful scenes."
+    },
+    {
+      "severity": "critical",
+      "title": "Deliberate Title & Air Date Obfuscation",
+      "detail": "Many monetized OTR channels intentionally delete the real broadcast date and episode title so listeners cannot tell it is a re-upload."
+    },
+    {
+      "severity": "warning",
+      "title": "Mobile Background Playback Paywalled",
+      "detail": "Turning off your phone screen to listen to a radio show stops playback on mobile unless paying for YouTube Premium."
+    }
+  ],
+  "links": {
+    "markdownCard": "https://www.radiologs.org/data/providers/youtube-otr.md",
+    "jsonCard": "https://www.radiologs.org/data/providers/youtube-otr.json",
+    "comparisonHome": "https://www.radiologs.org/"
+  }
+}

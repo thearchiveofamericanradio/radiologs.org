@@ -1,0 +1,142 @@
+{
+  "id": "otrrlib",
+  "name": "OTRRlib.org (Old Time Radio Researchers Library)",
+  "shortName": "OTRRlib",
+  "url": "https://www.otrrlib.org",
+  "category": "Public Digital Repository",
+  "operator": "Old Time Radio Researchers Group (Volunteer Non-Profit)",
+  "foundedYear": 2003,
+  "auditedAt": "2026-11-01",
+  "pricing": {
+    "model": "free",
+    "monthlyUsd": 0,
+    "annualUsd": 0,
+    "displayPrice": "$0 / Free",
+    "billingNote": "100% volunteer-run, donation-supported archival file server.",
+    "freeTierNote": "Unrestricted direct HTTP MP3 downloads and reference magazine PDFs."
+  },
+  "catalog": {
+    "broadcastCount": 68500,
+    "seriesCount": 1120,
+    "distinctRecordings": 65000,
+    "dateSpan": "1928–1982",
+    "onlineStreamablePct": 100
+  },
+  "metrics": {
+    "playableBroadcasts": 68500,
+    "catalogBroadcasts": 68500,
+    "seriesCount": 1120,
+    "vttSubtitleCount": 0,
+    "specCount": 7,
+    "totalSpecs": 14,
+    "medianBitrateKbps": 96,
+    "maxBitrateKbps": 256,
+    "ttfaMs": 460,
+    "highCutoffHz": 9200
+  },
+  "audio": {
+    "formats": [
+      "MP3 (32–192 kbps)",
+      "PDF Logs",
+      "JPG Covers"
+    ],
+    "primaryContainer": "MP3",
+    "streamingAvailable": true,
+    "batchDownloadAvailable": true,
+    "rssFeedsAvailable": false
+  },
+  "provenance": {
+    "primaryMasterSource": "Community-pooled transcription disc transfers, reel-to-reel upgrades, and OTRR Certified series sets",
+    "airdateMethodology": "Volunteer researcher logs cross-checked against trade publications for Certified sets; legacy sets retain collector dates",
+    "castAttributionMethod": "Companion HTML/PDF series logs list cast for select series, not embedded in a queryable web API",
+    "captionEngine": "None (No .vtt transcripts)"
+  },
+  "specs": {
+    "free_no_paywall": true,
+    "no_login_required": true,
+    "ad_free": true,
+    "uuid_index": false,
+    "sha256_dedup": false,
+    "schema_jsonld": false,
+    "podcast_rss": false,
+    "open_json_api": false,
+    "vtt_subtitles": false,
+    "newspaper_scans": true,
+    "studio_scripts": true,
+    "character_roles": false,
+    "lossless_et": true,
+    "serial_arcs": true
+  },
+  "specNotes": {
+    "uuid_index": "Files are addressed by mutable filename strings (e.g. SERIES_YY-MM-DD_ep_title.mp3) rather than permanent recording UUIDs.",
+    "vtt_subtitles": "Zero synchronized .vtt caption tracks hosted.",
+    "schema_jsonld": "Legacy static HTML directory tables with zero Schema.org JSON-LD or OpenGraph tags."
+  },
+  "capabilities": {
+    "primary_source_verification": {
+      "level": "partial",
+      "score": 76,
+      "summary": "OTRR Certified sets undergo rigorous volunteer log auditing, though uncertified series folders still carry legacy collector dates.",
+      "evidenceQuote": "\"Certified Series sets include an Introduction & Log PDF documenting known broadcast dates and missing episodes.\""
+    },
+    "cast_credit_accuracy": {
+      "level": "partial",
+      "score": 52,
+      "summary": "Detailed cast lists exist in separate companion PDF/Excel logs on `otrr.org`, but are not linked to audio playback on `otrrlib.org`.",
+      "evidenceQuote": "\"Audio files on otrrlib.org are served via flat directory tables without inline cast/character records.\""
+    },
+    "vtt_transcripts": {
+      "level": "none",
+      "score": 5,
+      "summary": "No synchronized WebVTT transcripts; a small number of scanned PDF scripts exist in the separate reference library.",
+      "evidenceQuote": "\"No `.vtt` or `.srt` timed text tracks accompany the MP3 distribution folders.\""
+    },
+    "master_provenance": {
+      "level": "partial",
+      "score": 74,
+      "summary": "Actively replaces muddy encodes with higher-generation transcription disc rips when donated by members.",
+      "evidenceQuote": "\"Upgrade alerts track higher-bitrate replacements from 16-inch transcription discs and reel-to-reel tapes.\""
+    },
+    "serial_continuity": {
+      "level": "verified",
+      "score": 82,
+      "summary": "Strict `Series_YY-MM-DD_Ep#_Title.mp3` naming convention keeps multi-part serials in accurate sequential order.",
+      "evidenceQuote": "\"Standardized OTRR file-naming specification guarantees chronological and episode-number ordering.\""
+    },
+    "open_api_export": {
+      "level": "partial",
+      "score": 65,
+      "summary": "Predictable direct HTTP directory paths allow `wget`/`curl` mirroring, but no JSON API, RSS feeds, or `/llms.txt`.",
+      "evidenceQuote": "\"Open HTTP file paths (`/ia2/...`) suitable for batch downloaders, without a structured JSON query API.\""
+    },
+    "ad_free_playback": {
+      "level": "verified",
+      "score": 92,
+      "summary": "100% free and ad-free community service.",
+      "evidenceQuote": "\"Maintained by volunteer donations with zero commercial advertising.\""
+    },
+    "dedup_integrity": {
+      "level": "verified",
+      "score": 84,
+      "summary": "OTRR verification teams actively hunt down 'aka' title aliases and wrongly dated duplicates within each certified series.",
+      "evidenceQuote": "\"Series coordinators audit 'AKA' titles and purge mislabeled episodes from certified releases.\""
+    }
+  },
+  "gotchas": [
+    {
+      "severity": "warning",
+      "title": "Legacy Frame/Table UI With Zero Full-Text Search",
+      "detail": "Navigating requires clicking alphabetically through nested HTML tables; there is no unified search bar for episode plots, actors, or dialogue."
+    },
+    {
+      "severity": "note",
+      "title": "Split Between Audio Server (`otrrlib.org`) and Metadata (`otrr.org`)",
+      "detail": "Historical magazines, scripts, and research logs live on separate sub-sites rather than being unified on a single broadcast resource page."
+    }
+  ],
+  "links": {
+    "markdownCard": "https://www.radiologs.org/data/providers/otrrlib.md",
+    "jsonCard": "https://www.radiologs.org/data/providers/otrrlib.json",
+    "comparisonHome": "https://www.radiologs.org/"
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "id": "boxcars711",
+  "name": "Boxcars711 Old Time Radio Pod",
+  "shortName": "Boxcars711 Pod",
+  "url": "https://boxcars711.podbean.com",
+  "category": "Curated Podcast Network",
+  "operator": "Boxcars711 (Independent Podcast Host)",
+  "foundedYear": 2009,
+  "auditedAt": "2026-11-01",
+  "pricing": {
+    "model": "free",
+    "monthlyUsd": 0,
+    "annualUsd": 0,
+    "displayPrice": "$0 / Free",
+    "billingNote": "Free podcast RSS feed and Podbean web player.",
+    "freeTierNote": "~2,400 crime, mystery, and western episodes available via RSS."
+  },
+  "catalog": {
+    "broadcastCount": 2450,
+    "seriesCount": 160,
+    "distinctRecordings": 2350,
+    "dateSpan": "1937–1962",
+    "onlineStreamablePct": 100
+  },
+  "metrics": {
+    "playableBroadcasts": 2450,
+    "catalogBroadcasts": 2450,
+    "seriesCount": 160,
+    "vttSubtitleCount": 0,
+    "specCount": 5,
+    "totalSpecs": 14,
+    "medianBitrateKbps": 96,
+    "maxBitrateKbps": 128,
+    "ttfaMs": 315,
+    "highCutoffHz": 7800
+  },
+  "audio": {
+    "formats": [
+      "MP3 (64–128 kbps)"
+    ],
+    "primaryContainer": "MP3",
+    "streamingAvailable": true,
+    "batchDownloadAvailable": false,
+    "rssFeedsAvailable": true
+  },
+  "provenance": {
+    "primaryMasterSource": "Collector MP3 transfers with host spoken intros",
+    "airdateMethodology": "Collector log dates cited in episode titles and host intro",
+    "castAttributionMethod": "Occasional lead actor mention in show notes; no structured character schema",
+    "captionEngine": "None"
+  },
+  "specs": {
+    "free_no_paywall": true,
+    "no_login_required": true,
+    "ad_free": true,
+    "uuid_index": false,
+    "sha256_dedup": false,
+    "schema_jsonld": false,
+    "podcast_rss": true,
+    "open_json_api": false,
+    "vtt_subtitles": false,
+    "newspaper_scans": false,
+    "studio_scripts": false,
+    "character_roles": false,
+    "lossless_et": false,
+    "serial_arcs": true
+  },
+  "specNotes": {
+    "podcast_rss": "Single chronological podcast feed (~3,400 episodes) with host commentary."
+  },
+  "capabilities": {
+    "primary_source_verification": {
+      "level": "partial",
+      "score": 55,
+      "summary": "Uses OTRR and collector log dates; generally reliable on 1950s CBS crime shows but lacks primary newspaper citations.",
+      "evidenceQuote": "\"Post titles include air date and episode number drawn from collector logs.\""
+    },
+    "cast_credit_accuracy": {
+      "level": "none",
+      "score": 28,
+      "summary": "Host mentions starring actors verbally, without structured per-episode cast/character metadata.",
+      "evidenceQuote": "\"Show notes list series title, episode title, and air date without structured cast tables.\""
+    },
+    "vtt_transcripts": {
+      "level": "none",
+      "score": 0,
+      "summary": "No WebVTT transcripts.",
+      "evidenceQuote": "\"MP3 podcast enclosures only; no `.vtt` caption files.\""
+    },
+    "master_provenance": {
+      "level": "partial",
+      "score": 58,
+      "summary": "Selects clean collector transfers (64–128 kbps MP3), though original disc lineage is not recorded.",
+      "evidenceQuote": "\"Standardized 64–128 kbps MP3 podcast encodes hosted on Podbean CDN.\""
+    },
+    "serial_continuity": {
+      "level": "verified",
+      "score": 78,
+      "summary": "Frequently posts complete 5-part *Yours Truly, Johnny Dollar* and *Seven-Eleven* serial arcs in contiguous order.",
+      "evidenceQuote": "\"Dedicated to posting complete 5-part Bob Bailey and Mandel Kramer Johnny Dollar serial arcs in sequence.\""
+    },
+    "open_api_export": {
+      "level": "partial",
+      "score": 65,
+      "summary": "Open RSS 2.0 podcast feed with direct MP3 URLs, but no relational JSON API or `/llms.txt`.",
+      "evidenceQuote": "\"Standard Podbean RSS 2.0 XML feed accessible to any podcast client or script.\""
+    },
+    "ad_free_playback": {
+      "level": "verified",
+      "score": 88,
+      "summary": "Free podcast feed without paywalls.",
+      "evidenceQuote": "\"Free public podcast feed.\""
+    },
+    "dedup_integrity": {
+      "level": "partial",
+      "score": 65,
+      "summary": "Curated single-host feed avoids mass duplicate dumps.",
+      "evidenceQuote": "\"Manually scheduled episode releases.\""
+    }
+  },
+  "gotchas": [
+    {
+      "severity": "warning",
+      "title": "Narrow Genre Scope (~2,450 Crime/Western Episodes)",
+      "detail": "Covers roughly 2% of surviving OTR broadcasts, omitting comedy, variety, daytime soaps, news, and prestige drama anthologies."
+    }
+  ],
+  "links": {
+    "markdownCard": "https://www.radiologs.org/data/providers/boxcars711.md",
+    "jsonCard": "https://www.radiologs.org/data/providers/boxcars711.json",
+    "comparisonHome": "https://www.radiologs.org/"
+  }
+}

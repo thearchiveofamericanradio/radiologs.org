@@ -1,0 +1,138 @@
+{
+  "id": "dumb-otr",
+  "name": "Dumb.com Old Time Radio",
+  "shortName": "Dumb.com OTR",
+  "url": "https://www.dumb.com/oldtimeradio",
+  "category": "Commercial Subscription",
+  "operator": "Dumb.com Media",
+  "foundedYear": 2004,
+  "auditedAt": "2026-11-01",
+  "pricing": {
+    "model": "subscription",
+    "monthlyUsd": 4.95,
+    "annualUsd": 29.95,
+    "displayPrice": "$4.95/mo ($29.95/yr)",
+    "billingNote": "Paywall required after a tiny free preview limit.",
+    "freeTierNote": "Allows streaming a few sample clips before blocking playback with a membership wall."
+  },
+  "catalog": {
+    "broadcastCount": 26000,
+    "seriesCount": 410,
+    "distinctRecordings": 24000,
+    "dateSpan": "1933–1960",
+    "onlineStreamablePct": 100
+  },
+  "metrics": {
+    "playableBroadcasts": 26000,
+    "catalogBroadcasts": 26000,
+    "seriesCount": 410,
+    "vttSubtitleCount": 0,
+    "specCount": 0,
+    "totalSpecs": 14,
+    "medianBitrateKbps": 32,
+    "maxBitrateKbps": 64,
+    "ttfaMs": 1050,
+    "highCutoffHz": 4200
+  },
+  "audio": {
+    "formats": [
+      "MP3 (24–64 kbps)"
+    ],
+    "primaryContainer": "MP3",
+    "streamingAvailable": true,
+    "batchDownloadAvailable": false,
+    "rssFeedsAvailable": false
+  },
+  "provenance": {
+    "primaryMasterSource": "Repackaged public-domain collector MP3 sets",
+    "airdateMethodology": "Unverified legacy collector dates",
+    "castAttributionMethod": "None (Generic series description only)",
+    "captionEngine": "None"
+  },
+  "specs": {
+    "free_no_paywall": false,
+    "no_login_required": false,
+    "ad_free": false,
+    "uuid_index": false,
+    "sha256_dedup": false,
+    "schema_jsonld": false,
+    "podcast_rss": false,
+    "open_json_api": false,
+    "vtt_subtitles": false,
+    "newspaper_scans": false,
+    "studio_scripts": false,
+    "character_roles": false,
+    "lossless_et": false,
+    "serial_arcs": false
+  },
+  "specNotes": {
+    "free_no_paywall": "Charges $4.95/mo or $29.95/yr for unimproved 24–64 kbps public-domain trader MP3s."
+  },
+  "capabilities": {
+    "primary_source_verification": {
+      "level": "none",
+      "score": 10,
+      "summary": "Copies raw collector dates with zero newspaper or archival verification.",
+      "evidenceQuote": "\"Displays unverified legacy trader dates with no source attribution.\""
+    },
+    "cast_credit_accuracy": {
+      "level": "none",
+      "score": 8,
+      "summary": "No episode-level cast or character credits.",
+      "evidenceQuote": "\"Zero per-episode cast, writer, or character role metadata.\""
+    },
+    "vtt_transcripts": {
+      "level": "none",
+      "score": 0,
+      "summary": "No transcripts or captions.",
+      "evidenceQuote": "\"No text transcripts or closed captions.\""
+    },
+    "master_provenance": {
+      "level": "none",
+      "score": 15,
+      "summary": "Low-bitrate 24–64 kbps MP3s scraped from public collector archives.",
+      "evidenceQuote": "\"Re-hosts low-bitrate collector MP3s with no restoration or lineage documentation.\""
+    },
+    "serial_continuity": {
+      "level": "none",
+      "score": 30,
+      "summary": "Basic table listing with frequent gaps in serial arcs.",
+      "evidenceQuote": "\"Flat episode list with no serial arc tracking.\""
+    },
+    "open_api_export": {
+      "level": "none",
+      "score": 0,
+      "summary": "Paywalled HTML player with zero API or RSS support.",
+      "evidenceQuote": "\"Authenticated session gate blocks direct access, RSS feeds, and APIs.\""
+    },
+    "ad_free_playback": {
+      "level": "none",
+      "score": 20,
+      "summary": "Blocks free listening with a commercial paywall over public-domain recordings.",
+      "evidenceQuote": "\"Requires paid subscription after initial sample streams.\""
+    },
+    "dedup_integrity": {
+      "level": "none",
+      "score": 15,
+      "summary": "Retains duplicate and mislabeled files from early-2000s trader discs.",
+      "evidenceQuote": "\"Un-deduplicated legacy MP3 directory import.\""
+    }
+  },
+  "gotchas": [
+    {
+      "severity": "critical",
+      "title": "Rent-Seeking Paywall on Unimproved Public Domain Files",
+      "detail": "Charges users to stream low-bitrate MP3s that were digitized by unpaid community volunteers and are freely available elsewhere."
+    },
+    {
+      "severity": "critical",
+      "title": "Zero Archival Value-Add",
+      "detail": "Adds no newspaper date verification, no audio remastering, no cast credits, and no `.vtt` transcripts."
+    }
+  ],
+  "links": {
+    "markdownCard": "https://www.radiologs.org/data/providers/dumb-otr.md",
+    "jsonCard": "https://www.radiologs.org/data/providers/dumb-otr.json",
+    "comparisonHome": "https://www.radiologs.org/"
+  }
+}
