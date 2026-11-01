@@ -186,11 +186,11 @@ html[data-theme="dark"] .btn-pill.primary {
 .search-box {
   display: flex;
   align-items: center;
-  height: 38px;
+  height: 36px;
   padding: 0 14px;
   border-radius: 9999px;
   background: var(--bg-subtle);
-  min-width: 240px;
+  width: 200px;
 }
 .search-box input {
   width: 100%;
@@ -201,7 +201,7 @@ html[data-theme="dark"] .btn-pill.primary {
   color: var(--ink-muted);
 }
 
-/* Simple Side-by-Side Comparison Table (Pivots on narrower widths <= 860px) */
+/* Simple Side-by-Side Comparison Table (Pivots on narrower widths <= 960px) */
 .table-card {
   border: 1px solid var(--line);
   border-radius: 14px;
@@ -212,12 +212,12 @@ html[data-theme="dark"] .btn-pill.primary {
 table.simple-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 table.simple-table th,
 table.simple-table td {
-  padding: 14px 12px;
+  padding: 12px 10px;
   border-bottom: 1px solid var(--line);
   text-align: left;
   vertical-align: middle;
@@ -253,7 +253,7 @@ table.simple-table tbody tr.winner-row {
   gap: 10px;
 }
 
-@media (max-width: 860px) {
+@media (max-width: 960px) {
   table.simple-table thead {
     display: none;
   }

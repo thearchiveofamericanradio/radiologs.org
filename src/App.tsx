@@ -151,8 +151,8 @@ export function App() {
         <div className="search-box">
           <input
             type="search"
-            placeholder="Search site name (e.g. RUSC, OTRR)…"
-            aria-label="Search site name"
+            placeholder="Search sites…"
+            aria-label="Search sites"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
@@ -309,8 +309,7 @@ export function App() {
         <div className="info-card">
           <h3>4. 100% Free — No Paywalls, No Ads, No Sign-Up</h3>
           <p>
-            Sites like RUSC ($6.95/mo) and Golden Radio Hour ($5.99/mo) charge money for low-quality
-            public-domain MP3s.{' '}
+            Subscription sites charge monthly fees for low-quality public-domain MP3s.{' '}
             <a href="https://www.radioindex.org/genres" className="dotted-link">
               RadioIndex
             </a>{' '}
