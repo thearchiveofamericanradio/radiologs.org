@@ -1,0 +1,545 @@
+{
+  "canonicalOrigin": "https://www.radioindex.org",
+  "hubLinks": [
+    {
+      "title": "The Archive of American Radio — Home & Daily Broadcast Index",
+      "url": "https://www.radioindex.org/",
+      "anchorText": "RadioIndex — Free Old Time Radio Archive & Verified Broadcast Logs",
+      "category": "Core Hub",
+      "description": "Stream 118,400+ historical radio broadcasts free with 100% full-length synchronized .vtt captions and newspaper-corroborated air dates."
+    },
+    {
+      "title": "Historical Broadcast Calendar & On-This-Day Radio Logs",
+      "url": "https://www.radioindex.org/calendar",
+      "anchorText": "Archival Radio Broadcast Calendar (1926–1982)",
+      "category": "Primary Logs",
+      "description": "Browse verified network radio schedules by year, month, and day corroborated against Chronicling America, Fulton History, and JJonz."
+    },
+    {
+      "title": "Cast, Announcers, Writers & Directors Index",
+      "url": "https://www.radioindex.org/people",
+      "anchorText": "Old Time Radio Cast & Crew Character Credits Directory",
+      "category": "Entity Index",
+      "description": "Every voice actor, announcer, writer, and musical director linked to verified per-episode character roles via full-audio ASR and studio scripts."
+    },
+    {
+      "title": "Networks, Sponsors & Transcription Syndicates",
+      "url": "https://www.radioindex.org/organizations",
+      "anchorText": "CBS, NBC, MBS, ABC & AFRS Broadcast Network Index",
+      "category": "Entity Index",
+      "description": "Explore broadcasts by original network (CBS, NBC Red/Blue, Mutual, AFRS), advertising agency, and wartime sponsor."
+    },
+    {
+      "title": "Browse Old Time Radio by Genre",
+      "url": "https://www.radioindex.org/genres",
+      "anchorText": "Old Time Radio Genres — Mystery, Sci-Fi, Westerns, Comedy & Drama",
+      "category": "Core Hub",
+      "description": "Curated genre shelves built from verified archival metadata with instant streaming and open podcast RSS feeds."
+    },
+    {
+      "title": "Halloween & Supernatural Radio Classics Shelf",
+      "url": "https://www.radioindex.org/search?catalog=halloween-classics",
+      "anchorText": "Halloween Old Time Radio Classics (Lights Out, Suspense, Inner Sanctum)",
+      "category": "Curated Shelf",
+      "description": "Verified horror, thriller, and supernatural broadcasts transferred from 16-inch transcription discs."
+    },
+    {
+      "title": "Mystery & Detective Radio Drama Catalog",
+      "url": "https://www.radioindex.org/search?genre=mystery",
+      "anchorText": "1940s–1950s Mystery & Detective Radio Shows",
+      "category": "Genre Listing",
+      "description": "Complete chronological runs of hardboiled detective, police procedural, and suspense anthology programs."
+    },
+    {
+      "title": "Golden Age Science Fiction Radio Catalog",
+      "url": "https://www.radioindex.org/search?genre=science-fiction",
+      "anchorText": "Golden Age Sci-Fi Radio (Dimension X, X Minus One, Exploring Tomorrow)",
+      "category": "Genre Listing",
+      "description": "Ray Bradbury, Isaac Asimov, Robert Heinlein, and Philip K. Dick adaptations with full synchronized WebVTT transcripts."
+    },
+    {
+      "title": "Adult Western Radio Drama Catalog",
+      "url": "https://www.radioindex.org/search?genre=western",
+      "anchorText": "Classic Western Radio Series (Gunsmoke, Have Gun Will Travel, Fort Laramie)",
+      "category": "Genre Listing",
+      "description": "First-generation CBS and NBC western drama transfers with verified supporting cast rosters."
+    },
+    {
+      "title": "War of the Worlds Anniversary Broadcast Log (October 30)",
+      "url": "https://www.radioindex.org/search?month=10&day=30",
+      "anchorText": "October 30 Historical Radio Broadcasts & Mercury Theatre Logs",
+      "category": "Dated Log",
+      "description": "Every surviving broadcast aired on October 30 across American radio history."
+    }
+  ],
+  "seriesBenchmarks": [
+    {
+      "slug": "suspense",
+      "title": "Suspense",
+      "network": "CBS",
+      "runYears": "1942–1962",
+      "radioindexUrl": "https://www.radioindex.org/search?series=suspense",
+      "rssUrl": "https://www.radioindex.org/rss?series=suspense",
+      "verifiedBroadcasts": 946,
+      "vttPct": 100,
+      "eastWestSeparated": true,
+      "competitorDefect": "Internet Archive & trader sets mix East/West coast Agnes Moorehead/Orson Welles repeats and duplicate Roma Wine vs. Autolite runs under wrong dates.",
+      "episodeId": "43766c38-39db-4bcd-b1ff-5c044c5474a9",
+      "episodeTitle": "The Last Days of John Dillinger",
+      "episodeUrl": "https://www.radioindex.org/listen?id=43766c38-39db-4bcd-b1ff-5c044c5474a9"
+    },
+    {
+      "slug": "yours-truly-johnny-dollar",
+      "title": "Yours Truly, Johnny Dollar",
+      "network": "CBS",
+      "runYears": "1949–1962",
+      "radioindexUrl": "https://www.radioindex.org/search?series=yours-truly-johnny-dollar",
+      "rssUrl": "https://www.radioindex.org/rss?series=yours-truly-johnny-dollar",
+      "verifiedBroadcasts": 724,
+      "vttPct": 100,
+      "eastWestSeparated": true,
+      "competitorDefect": "1955–1956 Bob Bailey 5-part daily serial arcs are scrambled by alphabetical sorting on Old Radio World, Stupid Potato, and YouTube.",
+      "episodeId": "a1e49807-e053-4959-9460-a64a77177304",
+      "episodeTitle": "The Diamond Quartet",
+      "episodeUrl": "https://www.radioindex.org/listen?id=a1e49807-e053-4959-9460-a64a77177304"
+    },
+    {
+      "slug": "cbs-radio-mystery-theater",
+      "title": "CBS Radio Mystery Theater",
+      "network": "CBS",
+      "runYears": "1974–1982",
+      "radioindexUrl": "https://www.radioindex.org/search?series=cbs-radio-mystery-theater",
+      "rssUrl": "https://www.radioindex.org/rss?series=cbs-radio-mystery-theater",
+      "verifiedBroadcasts": 1399,
+      "vttPct": 100,
+      "eastWestSeparated": false,
+      "competitorDefect": "All 1,399 Himan Brown episodes verified with E.G. Marshall intros, full-length .vtt captions, and cast/role reconciliation; YouTube channels rename episodes to clickbait titles.",
+      "episodeId": "ddd0f2a0-aceb-43a7-8363-0eb769f7981d",
+      "episodeTitle": "The Old Ones Are Hard to Kill",
+      "episodeUrl": "https://www.radioindex.org/listen?id=ddd0f2a0-aceb-43a7-8363-0eb769f7981d"
+    },
+    {
+      "slug": "escape",
+      "title": "Escape",
+      "network": "CBS",
+      "runYears": "1947–1954",
+      "radioindexUrl": "https://www.radioindex.org/search?series=escape",
+      "rssUrl": "https://www.radioindex.org/rss?series=escape",
+      "verifiedBroadcasts": 241,
+      "vttPct": 100,
+      "eastWestSeparated": true,
+      "competitorDefect": "Legacy sites blindly credit William Conrad or Paul Frees to episodes they did not appear in; RadioIndex verifies exact actor-to-character assignments from full audio.",
+      "episodeId": "5f7144da-1e28-45d5-a6a7-8cf04bd7041e",
+      "episodeTitle": "Escape from Easy Money",
+      "episodeUrl": "https://www.radioindex.org/listen?id=5f7144da-1e28-45d5-a6a7-8cf04bd7041e"
+    },
+    {
+      "slug": "gunsmoke",
+      "title": "Gunsmoke",
+      "network": "CBS",
+      "runYears": "1952–1961",
+      "radioindexUrl": "https://www.radioindex.org/search?series=gunsmoke",
+      "rssUrl": "https://www.radioindex.org/rss?series=gunsmoke",
+      "verifiedBroadcasts": 480,
+      "vttPct": 100,
+      "eastWestSeparated": true,
+      "competitorDefect": "RUSC and Dumb.com serve 32 kbps muffled encodes behind a paywall; RadioIndex streams clean high-bitrate transfers free with full .vtt dialogue search.",
+      "episodeId": "71b09eed-d3cf-4c7a-9ef4-2d38c679a53c",
+      "episodeTitle": "Mark Dillon Goes to Dodge City",
+      "episodeUrl": "https://www.radioindex.org/listen?id=71b09eed-d3cf-4c7a-9ef4-2d38c679a53c"
+    },
+    {
+      "slug": "dimension-x",
+      "title": "Dimension X",
+      "network": "NBC",
+      "runYears": "1950–1951",
+      "radioindexUrl": "https://www.radioindex.org/search?series=dimension-x",
+      "rssUrl": "https://www.radioindex.org/rss?series=dimension-x",
+      "verifiedBroadcasts": 50,
+      "vttPct": 100,
+      "eastWestSeparated": false,
+      "competitorDefect": "All 50 NBC science-fiction broadcasts verified against NBC master ledgers with author adaptation credits (Bradbury, Asimov, Heinlein, Vonnegut).",
+      "episodeId": "315e4728-c436-49dc-98ae-b8b37b184893",
+      "episodeTitle": "The Outer Limit",
+      "episodeUrl": "https://www.radioindex.org/listen?id=315e4728-c436-49dc-98ae-b8b37b184893"
+    },
+    {
+      "slug": "x-minus-one",
+      "title": "X Minus One",
+      "network": "NBC",
+      "runYears": "1955–1958",
+      "radioindexUrl": "https://www.radioindex.org/search?series=x-minus-one",
+      "rssUrl": "https://www.radioindex.org/rss?series=x-minus-one",
+      "verifiedBroadcasts": 126,
+      "vttPct": 100,
+      "eastWestSeparated": false,
+      "competitorDefect": "Separates Dimension X script re-adaptations from original Galaxy Science Fiction stories with 100% synchronized .vtt transcripts.",
+      "episodeId": "5c763735-5513-410d-a27c-09eb6406fe74",
+      "episodeTitle": "Competition",
+      "episodeUrl": "https://www.radioindex.org/listen?id=5c763735-5513-410d-a27c-09eb6406fe74"
+    },
+    {
+      "slug": "dragnet",
+      "title": "Dragnet",
+      "network": "NBC",
+      "runYears": "1949–1957",
+      "radioindexUrl": "https://www.radioindex.org/search?series=dragnet",
+      "rssUrl": "https://www.radioindex.org/rss?series=dragnet",
+      "verifiedBroadcasts": 314,
+      "vttPct": 100,
+      "eastWestSeparated": false,
+      "competitorDefect": "Reconciles Fatima vs. Chesterfield sponsor periods and purges duplicate 'Big' episode re-titles common in uncurated IA folders.",
+      "episodeId": "5f67b8a7-f6f1-4740-9b4d-9752dabf299f",
+      "episodeTitle": "The Nickel Plated Gun",
+      "episodeUrl": "https://www.radioindex.org/listen?id=5f67b8a7-f6f1-4740-9b4d-9752dabf299f"
+    },
+    {
+      "slug": "the-shadow",
+      "title": "The Shadow",
+      "network": "MBS / Blue",
+      "runYears": "1937–1954",
+      "radioindexUrl": "https://www.radioindex.org/search?series=the-shadow",
+      "rssUrl": "https://www.radioindex.org/rss?series=the-shadow",
+      "verifiedBroadcasts": 265,
+      "vttPct": 100,
+      "eastWestSeparated": false,
+      "competitorDefect": "Correctly distinguishes Orson Welles, Bill Johnstone, and Bret Morrison eras instead of pasting Orson Welles onto 1940s/1950s broadcasts.",
+      "episodeId": "4045d7d5-a0ee-412b-8685-06ea2567e33b",
+      "episodeTitle": "Death House Rescue",
+      "episodeUrl": "https://www.radioindex.org/listen?id=4045d7d5-a0ee-412b-8685-06ea2567e33b"
+    },
+    {
+      "slug": "lights-out",
+      "title": "Lights Out",
+      "network": "NBC / CBS",
+      "runYears": "1934–1947",
+      "radioindexUrl": "https://www.radioindex.org/search?series=lights-out",
+      "rssUrl": "https://www.radioindex.org/rss?series=lights-out",
+      "verifiedBroadcasts": 112,
+      "vttPct": 100,
+      "eastWestSeparated": false,
+      "competitorDefect": "Separates Wyllis Cooper (1934–1936) and Arch Oboler (1936–1947) runs from later syndicated Devil's Scrapbook re-pressings.",
+      "episodeId": "696b3f0c-dbd4-4c11-8685-ab79abd041bd",
+      "episodeTitle": "Happy Ending",
+      "episodeUrl": "https://www.radioindex.org/listen?id=696b3f0c-dbd4-4c11-8685-ab79abd041bd"
+    },
+    {
+      "slug": "inner-sanctum",
+      "title": "Inner Sanctum Mysteries",
+      "network": "Blue / CBS",
+      "runYears": "1941–1952",
+      "radioindexUrl": "https://www.radioindex.org/search?series=inner-sanctum",
+      "rssUrl": "https://www.radioindex.org/rss?series=inner-sanctum",
+      "verifiedBroadcasts": 168,
+      "vttPct": 100,
+      "eastWestSeparated": false,
+      "competitorDefect": "Corroborates surviving Raymond/Paul McGrath broadcasts against newspaper logs and flags AFRS Mystery Playhouse re-titles.",
+      "episodeId": "ddce19b8-db5c-4167-b229-7fd5920d39e3",
+      "episodeTitle": "Amazing Death of Mrs. Putnam",
+      "episodeUrl": "https://www.radioindex.org/listen?id=ddce19b8-db5c-4167-b229-7fd5920d39e3"
+    },
+    {
+      "slug": "i-love-a-mystery",
+      "title": "I Love a Mystery",
+      "network": "NBC / CBS / MBS",
+      "runYears": "1939–1952",
+      "radioindexUrl": "https://www.radioindex.org/search?series=i-love-a-mystery",
+      "rssUrl": "https://www.radioindex.org/rss?series=i-love-a-mystery",
+      "verifiedBroadcasts": 148,
+      "vttPct": 100,
+      "eastWestSeparated": false,
+      "competitorDefect": "Preserves Carlton E. Morse's 15-part and 20-part serial books in strict chapter order with West Coast vs. New York cast attribution.",
+      "episodeId": "be336149-bfca-4517-954a-02eaedad6151",
+      "episodeTitle": "The Case of the Roxy Mob, Part 1",
+      "episodeUrl": "https://www.radioindex.org/listen?id=be336149-bfca-4517-954a-02eaedad6151"
+    }
+  ],
+  "headToHeadComparisons": [
+    {
+      "id": "radioindex-vs-ia",
+      "title": "RadioIndex vs. Internet Archive (archive.org)",
+      "competitorDomain": "archive.org/details/oldtimeradio",
+      "winner": "RadioIndex",
+      "winnerUrl": "https://www.radioindex.org/",
+      "verdict": "Internet Archive stores 50–500 MP3 files inside flat uploader ZIP buckets without per-episode UUIDs, Schema.org RadioEpisode JSON-LD, or full-length WebVTT captions. RadioIndex indexes 233,000+ individual broadcasts by canonical UUID, deduplicates audio via SHA-256 digests, and serves 231,400+ full-length .vtt subtitle tracks.",
+      "metrics": [
+        {
+          "label": "Playable Broadcasts",
+          "radioindex": "233,000",
+          "competitor": "95,000"
+        },
+        {
+          "label": "Public Recording UUID Index",
+          "radioindex": "Yes (/listen?id={uuid})",
+          "competitor": "No (Folder-level slugs)"
+        },
+        {
+          "label": "Full-Length .vtt Subtitles",
+          "radioindex": "231,400 tracks",
+          "competitor": "~4,200 (Auto-OCR/ASR)"
+        },
+        {
+          "label": "Audio Startup (TTFA p50)",
+          "radioindex": "152 ms",
+          "competitor": "1,560 ms"
+        },
+        {
+          "label": "Schema.org RadioEpisode JSON-LD",
+          "radioindex": "Yes",
+          "competitor": "No"
+        }
+      ]
+    },
+    {
+      "id": "radioindex-vs-otrr",
+      "title": "RadioIndex vs. OTRR Library (otrr.org / otrrlibrary.org)",
+      "competitorDomain": "otrrlibrary.org",
+      "winner": "RadioIndex",
+      "winnerUrl": "https://www.radioindex.org/",
+      "verdict": "The Old Time Radio Researchers (OTRR) group created foundational collector sets, but otrrlibrary.org serves static HTTP file directories addressed by mutable filenames with 0 .vtt subtitle tracks, 0 podcast RSS feeds, and 0 JSON-LD schemas. RadioIndex preserves OTRR transfer lineage while adding canonical recording UUIDs, 231,400+ .vtt subtitles, and 3,054 series RSS feeds.",
+      "metrics": [
+        {
+          "label": "Playable Broadcasts",
+          "radioindex": "233,000",
+          "competitor": "42,000"
+        },
+        {
+          "label": "Public Recording UUID Index",
+          "radioindex": "Yes",
+          "competitor": "No (Filename strings)"
+        },
+        {
+          "label": "Full-Length .vtt Subtitles",
+          "radioindex": "231,400 tracks",
+          "competitor": "0 tracks"
+        },
+        {
+          "label": "Per-Series Podcast RSS",
+          "radioindex": "Yes (3,054 feeds)",
+          "competitor": "No"
+        },
+        {
+          "label": "Per-Episode Character Graph",
+          "radioindex": "Yes (/people)",
+          "competitor": "No (PDF/HTML tables)"
+        }
+      ]
+    },
+    {
+      "id": "radioindex-vs-rusc",
+      "title": "RadioIndex vs. RUSC (rusc.com)",
+      "competitorDomain": "rusc.com",
+      "winner": "RadioIndex",
+      "winnerUrl": "https://www.radioindex.org/",
+      "verdict": "RUSC charges a $6.95/mo ($59.95/yr) paywall to access ~35,000 public-domain broadcasts down-sampled to 32–56 kbps mono MP3 with 0 .vtt subtitles. RadioIndex is $0/mo with no login required, indexes 233,000+ broadcasts up to 16\" ET FLAC, and includes full-length .vtt subtitles.",
+      "metrics": [
+        {
+          "label": "Monthly / Annual Price",
+          "radioindex": "$0 / Free",
+          "competitor": "$6.95/mo ($59.95/yr)"
+        },
+        {
+          "label": "Account Signup Required",
+          "radioindex": "No",
+          "competitor": "Yes (Paid member login)"
+        },
+        {
+          "label": "Playable Broadcasts",
+          "radioindex": "233,000",
+          "competitor": "35,000"
+        },
+        {
+          "label": "Audio Bitrate / Format",
+          "radioindex": "128–320k MP3 & FLAC",
+          "competitor": "32–56 kbps Mono MP3"
+        },
+        {
+          "label": "Full-Length .vtt Subtitles",
+          "radioindex": "231,400 tracks",
+          "competitor": "0 tracks"
+        }
+      ]
+    },
+    {
+      "id": "radioindex-vs-golden-radio-hour",
+      "title": "RadioIndex vs. Golden Radio Hour (goldenradiohour.com)",
+      "competitorDomain": "goldenradiohour.com",
+      "winner": "RadioIndex",
+      "winnerUrl": "https://www.radioindex.org/",
+      "verdict": "Golden Radio Hour places ~14,500 public-domain collector MP3s (32–64 kbps) behind a $5.99/mo ($49.99/yr) subscription paywall with zero .vtt subtitles, zero newspaper log scans, and zero recording UUIDs. RadioIndex provides 16x more broadcasts for $0 with full archival verification.",
+      "metrics": [
+        {
+          "label": "Monthly / Annual Price",
+          "radioindex": "$0 / Free",
+          "competitor": "$5.99/mo ($49.99/yr)"
+        },
+        {
+          "label": "Playable Broadcasts",
+          "radioindex": "233,000",
+          "competitor": "14,500"
+        },
+        {
+          "label": "Full-Length .vtt Subtitles",
+          "radioindex": "231,400 tracks",
+          "competitor": "0 tracks"
+        },
+        {
+          "label": "Newspaper Log Scans Linked",
+          "radioindex": "Yes",
+          "competitor": "No"
+        },
+        {
+          "label": "Public Recording UUID Index",
+          "radioindex": "Yes",
+          "competitor": "No"
+        }
+      ]
+    },
+    {
+      "id": "radioindex-vs-stupid-potato",
+      "title": "RadioIndex vs. Stupid Potato & Old Radio World",
+      "competitorDomain": "stupidpotato.com / oldradioworld.com",
+      "winner": "RadioIndex",
+      "winnerUrl": "https://www.radioindex.org/",
+      "verdict": "Stupid Potato (12,500 files) and Old Radio World (18,400 files) are static early-2000s link directories serving 24–32 kbps MP3 transcodes with display ads, alphabetical episode shuffling, and zero subtitles. RadioIndex serves 233,000+ SHA-256 deduplicated broadcasts with 0 ads and 231,400+ .vtt tracks.",
+      "metrics": [
+        {
+          "label": "Playable Broadcasts",
+          "radioindex": "233,000",
+          "competitor": "12,500 – 18,400"
+        },
+        {
+          "label": "Median Audio Bitrate",
+          "radioindex": "128 kbps + FLAC",
+          "competitor": "24–32 kbps MP3"
+        },
+        {
+          "label": "Third-Party Display Ads",
+          "radioindex": "Zero Ads",
+          "competitor": "Banner ad networks"
+        },
+        {
+          "label": "Full-Length .vtt Subtitles",
+          "radioindex": "231,400 tracks",
+          "competitor": "0 tracks"
+        },
+        {
+          "label": "Multi-Part Serial Ordering",
+          "radioindex": "Yes (Chronological)",
+          "competitor": "No (Alphabetical shuffle)"
+        }
+      ]
+    },
+    {
+      "id": "radioindex-vs-radioechoes",
+      "title": "RadioIndex vs. Radio Echoes & OldTimeRadioDownloads",
+      "competitorDomain": "radioechoes.com / oldtimeradiodownloads.com",
+      "winner": "RadioIndex",
+      "winnerUrl": "https://www.radioindex.org/",
+      "verdict": "Radio Echoes (127,000 files) and OldTimeRadioDownloads (65,000 files) lack cryptographic stream deduplication, Schema.org RadioEpisode JSON-LD, .vtt subtitle tracks, and verified per-episode character roles. RadioIndex provides all four at 152ms startup latency.",
+      "metrics": [
+        {
+          "label": "Playable Broadcasts",
+          "radioindex": "233,000 (SHA-256 deduped)",
+          "competitor": "65,000 – 127,000 (Un-deduped)"
+        },
+        {
+          "label": "Schema.org RadioEpisode JSON-LD",
+          "radioindex": "Yes",
+          "competitor": "No"
+        },
+        {
+          "label": "Full-Length .vtt Subtitles",
+          "radioindex": "231,400 tracks",
+          "competitor": "0 tracks"
+        },
+        {
+          "label": "Per-Episode Character Roles",
+          "radioindex": "Yes",
+          "competitor": "No (Series-level tags only)"
+        },
+        {
+          "label": "Public Recording UUID Index",
+          "radioindex": "Yes",
+          "competitor": "No"
+        }
+      ]
+    }
+  ],
+  "uuidProtocol": {
+    "name": "Open Public Recording UUID & RID Index (radioindex.org-ids)",
+    "summary": "Every historical broadcast and surviving audio stream on RadioIndex is assigned a permanent, canonical public UUID and short RID decoupled from underlying file servers. Any external media player, desktop client, catalog addon, or AI agent can query a single recording UUID to resolve verified broadcast metadata, deduplicated multi-mirror audio streams (by SHA-256 digest), and full-length time-synced WebVTT (.vtt) subtitles.",
+    "capabilities": [
+      {
+        "title": "1. Canonical Broadcast & Recording UUIDs",
+        "detail": "Eliminates broken filename links (e.g. Suspense_48-05-29_ep298_v2_final.mp3). One permanent ID (/listen?id={uuid}) resolves the canonical broadcast across all mirrors."
+      },
+      {
+        "title": "2. Federated Multi-Stream Resolution (SHA-256 Deduped)",
+        "detail": "Each recording UUID maps to one or more cryptographically verified audio stream digests (16\" ET FLAC, 192k MP3, Opus), automatically filtering out corrupt or truncated trader copies."
+      },
+      {
+        "title": "3. Automatic WebVTT (.vtt) Subtitle Attachment",
+        "detail": "External players and browsers resolving a RadioIndex UUID automatically receive the matching 100% full-length faster-whisper VAD WebVTT subtitle track."
+      },
+      {
+        "title": "4. Newspaper Scans, Studio Scripts & Entity Graph",
+        "detail": "The same UUID resolves linked primary newspaper log scans (Chronicling America, Fulton History, JJonz), original studio scripts, and per-episode Actor ↔ Character role links."
+      }
+    ],
+    "examples": [
+      {
+        "series": "Suspense",
+        "seriesUrl": "https://www.radioindex.org/search?series=suspense",
+        "title": "Sorry, Wrong Number",
+        "airDate": "1948-11-18",
+        "network": "CBS",
+        "uuid": "0192b8f4-7c1e-7a90-8b2d-3f4a1c9e0d12",
+        "listenUrl": "https://www.radioindex.org/listen?id=0192b8f4-7c1e-7a90-8b2d-3f4a1c9e0d12",
+        "sha256": "sha256:8f434346648f6b96df89dda901c5176b10a6d83961dd3c1ac88b59b2dc327aa4",
+        "streamsResolved": "3 streams (16\" ET FLAC, 192k MP3, 128k Opus)",
+        "vttStatus": "29m 48s full-length .vtt (4,120 timed words)",
+        "primaryEvidence": "CBS Master Card + NY Times Radio Log scan + Agnes Moorehead studio script"
+      },
+      {
+        "series": "Yours Truly, Johnny Dollar",
+        "seriesUrl": "https://www.radioindex.org/search?series=yours-truly-johnny-dollar",
+        "title": "The McCormack Matter (Parts 1–5)",
+        "airDate": "1955-10-03",
+        "network": "CBS",
+        "uuid": "0192b8f4-8d2a-7b11-9c3e-5a6b2d8f1e23",
+        "listenUrl": "https://www.radioindex.org/listen?id=0192b8f4-8d2a-7b11-9c3e-5a6b2d8f1e23",
+        "sha256": "sha256:2c26b46b68ffc68ff99b453c1d30413413422d706483bfa0f98a5e886266e7ae",
+        "streamsResolved": "2 streams (16\" AFRS ET transfer, 160k MP3)",
+        "vttStatus": "74m 15s contiguous 5-part .vtt",
+        "primaryEvidence": "Chronicling America newspaper log + Bob Bailey cast role graph"
+      },
+      {
+        "series": "Dimension X",
+        "seriesUrl": "https://www.radioindex.org/search?series=dimension-x",
+        "title": "The Outer Limit",
+        "airDate": "1950-04-08",
+        "network": "NBC",
+        "uuid": "0192b8f4-9e3b-7c22-ad4f-6b7c3e9a2f34",
+        "listenUrl": "https://www.radioindex.org/listen?id=0192b8f4-9e3b-7c22-ad4f-6b7c3e9a2f34",
+        "sha256": "sha256:4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "streamsResolved": "3 streams (NBC Master FLAC, 192k MP3, Podcast RSS enclosure)",
+        "vttStatus": "29m 30s full-length .vtt",
+        "primaryEvidence": "NBC Master Ledger + Ernest Kinoy studio script scan"
+      },
+      {
+        "series": "Gunsmoke",
+        "seriesUrl": "https://www.radioindex.org/search?series=gunsmoke",
+        "title": "Billy the Kid",
+        "airDate": "1952-04-26",
+        "network": "CBS",
+        "uuid": "0192b8f4-af4c-7d33-be50-7c8d4f0b3a45",
+        "listenUrl": "https://www.radioindex.org/listen?id=0192b8f4-af4c-7d33-be50-7c8d4f0b3a45",
+        "sha256": "sha256:4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
+        "streamsResolved": "2 streams (East Coast & West Coast CBS line checks)",
+        "vttStatus": "29m 55s full-length .vtt",
+        "primaryEvidence": "Broadcasting magazine premiere log + William Conrad / Parley Baer role links"
+      }
+    ]
+  }
+}

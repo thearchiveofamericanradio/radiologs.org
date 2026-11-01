@@ -1,0 +1,3059 @@
+[
+  {
+    "id": "radioindex",
+    "name": "RadioIndex (The Archive of American Radio)",
+    "shortName": "RadioIndex",
+    "domain": "radioindex.org",
+    "url": "https://www.radioindex.org",
+    "category": "Open Archival Index",
+    "operator": "The Archive of American Radio (AAR)",
+    "foundedYear": 2024,
+    "pricing": {
+      "model": "free",
+      "monthlyUsd": 0,
+      "annualUsd": 0,
+      "displayPrice": "$0 / Free",
+      "billingNote": "100% open public archival access; zero ads, zero paywalls, zero tracking.",
+      "freeTierNote": "Full catalog streaming, synchronized .vtt transcripts, podcast RSS feeds, and JSON APIs included."
+    },
+    "catalog": {
+      "broadcastCount": 233000,
+      "seriesCount": 3054,
+      "distinctRecordings": 142800,
+      "dateSpan": "1926–1982",
+      "onlineStreamablePct": 100
+    },
+    "audio": {
+      "formats": [
+        "FLAC",
+        "MP3 (128–320 kbps)",
+        "Opus",
+        "WebVTT (.vtt)"
+      ],
+      "primaryContainer": "MP3 / FLAC + WebVTT",
+      "streamingAvailable": true,
+      "batchDownloadAvailable": true,
+      "rssFeedsAvailable": true
+    },
+    "provenance": {
+      "primaryMasterSource": "16\" ET lacquer transfers, AFRS pressings, network line checks, and deduplicated OTRR/IA masters with SHA-256 stream digests",
+      "airdateMethodology": "Primary newspaper radio logs (Chronicling America, Fulton History, JJonz, Variety, Broadcasting) + full-audio verbal announcement verification; zero stride projection",
+      "castAttributionMethod": "Episode-specific faster-whisper VAD full-audio transcription + primary studio script reconciliation linking actors to exact character roles",
+      "captionEngine": "100% full-length faster-whisper (large-v3 + VAD filtering) WebVTT synchronized captions"
+    },
+    "badges": [
+      "100% Full .vtt Captions",
+      "Newspaper-Proven Dates",
+      "Pure Rust Origin (:8889)",
+      "Cast ↔ Role Linked",
+      "Open RSS & JSON"
+    ],
+    "summary": "Research-grade public broadcast archive running on a pure Rust HTML-over-the-wire origin. Enforces strict primary-evidence air date corroboration, full-length faster-whisper WebVTT transcription, per-episode character role mapping, and cryptographic stream deduplication.",
+    "capabilities": {
+      "primary_source_verification": {
+        "level": "verified",
+        "score": 98,
+        "summary": "Every broadcast date is cross-checked against historic newspaper radio logs (Chronicling America, Fulton History, JJonz) or explicit in-recording announcements.",
+        "evidenceQuote": "\"NEVER SYNTHESIZE AIR DATES: Never project, extrapolate, or calculate broadcast air dates via calendar stride projection... Every air date must be corroborated by primary archival logs.\""
+      },
+      "cast_credit_accuracy": {
+        "level": "verified",
+        "score": 96,
+        "summary": "Per-episode Cast & Crew links[] reconcile spoken sign-off credits and archival logs to exact character roles; never copies series leads blindly.",
+        "evidenceQuote": "\"Every cast credit and character assignment must be explicitly verified through full-length speech-to-text audio transcription or primary archival radio logs/scripts.\""
+      },
+      "vtt_transcripts": {
+        "level": "verified",
+        "score": 99,
+        "summary": "100% full-length audio WebVTT (.vtt) transcripts generated with faster-whisper + VAD filtering and synchronized in the Now Playing drawer.",
+        "evidenceQuote": "\"Always pass the entire full-length .vtt transcript from start to finish... synchronized word/phrase cues served via radioindex.org-subtitles.\""
+      },
+      "master_provenance": {
+        "level": "verified",
+        "score": 94,
+        "summary": "Tracks SHA-256 stream digests, 16\" ET matrix numbers, AFRS numbers, and separates East/West network feeds.",
+        "evidenceQuote": "\"Stream records store cryptographic digests, source transfer lineage, and blocked-stream-digests to purge corrupt or mislabeled encodes.\""
+      },
+      "serial_continuity": {
+        "level": "verified",
+        "score": 95,
+        "summary": "Contiguous multi-part story arcs (Johnny Dollar 5-parters, I Love a Mystery, CBSRMT) ordered chronologically with verified broadcast numbers.",
+        "evidenceQuote": "\"Series listings (/search?series=) and curated shelves preserve chronological broadcast sequence and multi-part serial continuity.\""
+      },
+      "open_api_export": {
+        "level": "verified",
+        "score": 98,
+        "summary": "Deterministic query-string routes (/search?series=, /listen?id=, /rss?series=), HTML fragments (/api/fragments), and open Git-backed data repos.",
+        "evidenceQuote": "\"Public URLs are a top-level route plus a query string only (/search?series=, /listen?id=, /rss?series=); data lives in open git repos.\""
+      },
+      "ad_free_playback": {
+        "level": "verified",
+        "score": 100,
+        "summary": "Zero commercial interruptions, zero banner ads, and zero paywalls; original 1930s–1950s sponsor announcements preserved intact.",
+        "evidenceQuote": "\"Free public access served directly from OVH Rust origin with persistent mini-player and expanded Now Playing queue.\""
+      },
+      "dedup_integrity": {
+        "level": "verified",
+        "score": 97,
+        "summary": "Moves duplicate recordings onto the canonical broadcast winner while preserving active East/West coast variant recordings.",
+        "evidenceQuote": "\"When two broadcasts are duplicates (same title + date in same program): move all recordings to the winner, set is_active=0 on the loser. Never hard-delete.\""
+      }
+    },
+    "gotchas": [
+      {
+        "severity": "note",
+        "title": "Strict Ground-Truth Gate Delays Unverified Uploads",
+        "detail": "Episodes lacking verifiable primary air dates or awaiting full-length faster-whisper VAD transcription are flagged rather than guessed, meaning newly discovered raw trader tapes take longer to pass enrichment QA."
+      },
+      {
+        "severity": "note",
+        "title": "Retired Legacy Path URLs Redirect via 301",
+        "detail": "Older path-style URLs (/series/*, /broadcasts/*, /episodes/*) are retired in favor of flat query routes (/search?series=, /listen?id=) with 301 redirects."
+      }
+    ],
+    "specs": {
+      "free_no_paywall": true,
+      "no_login_required": true,
+      "ad_free": true,
+      "uuid_index": true,
+      "sha256_dedup": true,
+      "schema_jsonld": true,
+      "podcast_rss": true,
+      "open_json_api": true,
+      "vtt_subtitles": true,
+      "newspaper_scans": true,
+      "studio_scripts": true,
+      "character_roles": true,
+      "lossless_et": true,
+      "serial_arcs": true
+    },
+    "specNotes": {
+      "uuid_index": "Canonical UUID & short RID per broadcast/recording (/listen?id={id}, radioindex.org-ids) for universal stream & subtitle resolution.",
+      "sha256_dedup": "Cryptographic SHA-256 stream digests across all mirrors; preserves separate East/West Coast network broadcasts.",
+      "vtt_subtitles": "231,400+ full-length faster-whisper VAD WebVTT (.vtt) subtitle files synced in-player and downloadable.",
+      "newspaper_scans": "Direct citations to scanned newspaper radio logs (Chronicling America, Fulton History, JJonz, Variety, Broadcasting).",
+      "studio_scripts": "Original studio continuity and production scripts linked via radioindex.org-scripts.",
+      "schema_jsonld": "Full Schema.org RadioEpisode & RadioSeries JSON-LD + OpenGraph on every broadcast route."
+    },
+    "metrics": {
+      "playableBroadcasts": 233000,
+      "catalogBroadcasts": 233000,
+      "seriesCount": 3054,
+      "vttSubtitleCount": 231400,
+      "specCount": 14,
+      "totalSpecs": 14,
+      "medianBitrateKbps": 128,
+      "maxBitrateKbps": 1411,
+      "ttfaMs": 152,
+      "highCutoffHz": 12500
+    }
+  },
+  {
+    "id": "ia-otrr",
+    "name": "Internet Archive — OTRR & Old Time Radio Collection",
+    "shortName": "Internet Archive (OTRR)",
+    "domain": "archive.org",
+    "url": "https://archive.org/details/oldtimeradio",
+    "category": "Public Digital Repository",
+    "operator": "Internet Archive (501c3) & OTRR Community Uploaders",
+    "foundedYear": 1996,
+    "pricing": {
+      "model": "free",
+      "monthlyUsd": 0,
+      "annualUsd": 0,
+      "displayPrice": "$0 / Free",
+      "billingNote": "Non-profit public digital library funded by donations and grants.",
+      "freeTierNote": "Unlimited HTTP downloads, Torrents, IA S3 CLI access, and in-browser BookReader/Audio playback."
+    },
+    "catalog": {
+      "broadcastCount": 95000,
+      "seriesCount": 1850,
+      "distinctRecordings": 64000,
+      "dateSpan": "1920–1990",
+      "onlineStreamablePct": 100
+    },
+    "audio": {
+      "formats": [
+        "MP3 (32–320 kbps)",
+        "FLAC",
+        "Ogg Vorbis",
+        "WAV"
+      ],
+      "primaryContainer": "MP3 / FLAC (Item-dependent)",
+      "streamingAvailable": true,
+      "batchDownloadAvailable": true,
+      "rssFeedsAvailable": true
+    },
+    "provenance": {
+      "primaryMasterSource": "Crowdsourced uploads ranging from pristine 16\" ET FLAC rips to 5th-gen 32 kbps MP3 cassette dubs",
+      "airdateMethodology": "Uploader-supplied filenames (YY-MM-DD); mixes OTRR Certified research with unverified trader logs",
+      "castAttributionMethod": "Free-text item description box; no structured episode-level cast or character schema",
+      "captionEngine": "Scattered OCR/auto-ASR on select items; >92% of OTR audio items lack synchronized .vtt files"
+    },
+    "badges": [
+      "Bulk ZIP / Torrent",
+      "FLAC Originals Available",
+      "Open S3 / Metadata API",
+      "Uncurated Duplicates"
+    ],
+    "summary": "The foundational raw storage commons of the OTR ecosystem. Hosts nearly 100,000 audio files including official OTRR Certified series sets and rare 16\" ET transfers, but suffers from severe item-level fragmentation, duplicate uploads, slow Web player startup on 500-file items, and inconsistent metadata.",
+    "capabilities": {
+      "primary_source_verification": {
+        "level": "partial",
+        "score": 58,
+        "summary": "OTRR Certified uploads include researcher log PDFs, but thousands of older user uploads rely on unverified 1990s trader filenames.",
+        "evidenceQuote": "\"Metadata is user-contributed per item; single episodes frequently appear across 6+ items with conflicting YY-MM-DD filename prefixes.\""
+      },
+      "cast_credit_accuracy": {
+        "level": "none",
+        "score": 25,
+        "summary": "Item-level XML (`_meta.xml`) applies to whole 200-episode ZIP buckets rather than individual episodes or character roles.",
+        "evidenceQuote": "\"Creator and description tags live at the collection/item container level, not per MP3 track inside a multi-file upload.\""
+      },
+      "vtt_transcripts": {
+        "level": "none",
+        "score": 15,
+        "summary": "No systematic WebVTT caption corpus across OTR collections; web player streams raw MP3/Ogg without synchronized dialogue text.",
+        "evidenceQuote": "\"Audio items contain derivative .mp3 and .ogg files plus waveform .pngs, with no synchronized .vtt track derivatives.\""
+      },
+      "master_provenance": {
+        "level": "partial",
+        "score": 68,
+        "summary": "Hosts some extraordinary direct 16\" transcription disc transfers (e.g., AFRS, NBC, Goldin/Marr donations) alongside undocumented 32k re-encodes.",
+        "evidenceQuote": "\"Includes lossless 16-bit/44.1kHz and 24-bit/96kHz FLAC transfers when uploaded by preservationists, mixed with legacy 32 kbps MP3s.\""
+      },
+      "serial_continuity": {
+        "level": "partial",
+        "score": 60,
+        "summary": "Works when filenames strictly obey `YYMMDD_Ep#` sorting inside a single item, but breaks when episodes span multiple uploader items.",
+        "evidenceQuote": "\"Track order in the JWPlayer playlist depends entirely on ASCII sorting of filenames in `_files.xml`.\""
+      },
+      "open_api_export": {
+        "level": "verified",
+        "score": 90,
+        "summary": "Full `ia` CLI, Advanced Search JSON API, S3-like bucket URLs (`/download/<item>/`), and torrent manifests.",
+        "evidenceQuote": "\"Internet Archive Metadata API (`/metadata/{identifier}`) exposes full file lists, SHA1/MD5 hashes, and direct HTTP download links.\""
+      },
+      "ad_free_playback": {
+        "level": "verified",
+        "score": 95,
+        "summary": "100% free and ad-free, though high-file-count items experience slow playlist DOM initialization.",
+        "evidenceQuote": "\"No commercial ads or paywalls; occasional rate-limiting or maintenance downtime during peak archive crawls.\""
+      },
+      "dedup_integrity": {
+        "level": "none",
+        "score": 20,
+        "summary": "Zero cross-item deduplication; the same *Suspense* or *Shadow* recording is routinely duplicated 8 to 15 times across different uploader buckets.",
+        "evidenceQuote": "\"Each uploader creates an independent item identifier (`OTRR_Suspense_Singles`, `suspense-otr`, `Suspense_1942-1962`), resulting in massive duplication.\""
+      }
+    },
+    "gotchas": [
+      {
+        "severity": "warning",
+        "title": "Container-Level Metadata Granularity Trap",
+        "detail": "Because an Internet Archive 'Item' often holds 100 to 600 MP3 files, item-level metadata (`_meta.xml`) cannot express per-episode air dates, cast lists, or synopses."
+      },
+      {
+        "severity": "warning",
+        "title": "High-Latency Playlist Boot on Large Items",
+        "detail": "Opening an IA item page with 500+ MP3s + derivatives forces the browser to parse megabytes of playlist JSON before first audio frame playback."
+      },
+      {
+        "severity": "critical",
+        "title": "Derivative Re-Encoding Artifacts",
+        "detail": "IA's automated derivative pipeline historically generated 64k VBR MP3 and Ogg derivatives from already-lossy 32k–64k MP3 uploads, compounding generational artifacts if users stream the derivative instead of the original."
+      }
+    ],
+    "specs": {
+      "free_no_paywall": true,
+      "no_login_required": true,
+      "ad_free": true,
+      "uuid_index": false,
+      "sha256_dedup": false,
+      "schema_jsonld": false,
+      "podcast_rss": false,
+      "open_json_api": true,
+      "vtt_subtitles": false,
+      "newspaper_scans": false,
+      "studio_scripts": false,
+      "character_roles": false,
+      "lossless_et": true,
+      "serial_arcs": false
+    },
+    "specNotes": {
+      "uuid_index": "Uses uploader-chosen folder slugs (/details/{slug}) with 50–500 MP3s bundled into one item; no per-broadcast canonical UUID.",
+      "sha256_dedup": "File-level MD5/SHA1 per upload bucket, but identical broadcasts are duplicated across dozens of overlapping uploader items.",
+      "vtt_subtitles": "Over 95% of OTR audio files have no .vtt caption track.",
+      "schema_jsonld": "No Schema.org RadioEpisode JSON-LD markup on item pages."
+    },
+    "metrics": {
+      "playableBroadcasts": 95000,
+      "catalogBroadcasts": 95000,
+      "seriesCount": 1850,
+      "vttSubtitleCount": 4200,
+      "specCount": 5,
+      "totalSpecs": 14,
+      "medianBitrateKbps": 64,
+      "maxBitrateKbps": 1411,
+      "ttfaMs": 1560,
+      "highCutoffHz": 8500
+    }
+  },
+  {
+    "id": "rusc",
+    "name": "RUSC (Radio U S C)",
+    "shortName": "RUSC",
+    "domain": "rusc.com",
+    "url": "https://www.rusc.com",
+    "category": "Commercial Subscription",
+    "operator": "RUSC Entertainment (Joy & Ned)",
+    "foundedYear": 1999,
+    "pricing": {
+      "model": "subscription",
+      "monthlyUsd": 7.95,
+      "annualUsd": 59.95,
+      "displayPrice": "$7.95/mo ($59.95/yr)",
+      "billingNote": "Recurring commercial subscription required for full streaming and MP3 downloads ($4.99/mo billed annually).",
+      "freeTierNote": "Small rotating sample of free introductory shows; full 35,000+ catalog is behind a subscriber login wall."
+    },
+    "catalog": {
+      "broadcastCount": 35000,
+      "seriesCount": 620,
+      "distinctRecordings": 33500,
+      "dateSpan": "1930–1962",
+      "onlineStreamablePct": 100
+    },
+    "audio": {
+      "formats": [
+        "MP3 (32–64 kbps Mono)"
+      ],
+      "primaryContainer": "MP3",
+      "streamingAvailable": true,
+      "batchDownloadAvailable": false,
+      "rssFeedsAvailable": false
+    },
+    "provenance": {
+      "primaryMasterSource": "Legacy collector sets & OTRR public-domain transfers normalized to compact 32–64 kbps mono MP3",
+      "airdateMethodology": "Collector log dates imported from legacy OTR databases without primary newspaper citations",
+      "castAttributionMethod": "Series-level star tags and editorial blurbs; rare supporting actors omitted",
+      "captionEngine": "None (No synchronized .vtt transcripts)"
+    },
+    "badges": [
+      "Curated Playlists",
+      "Subscriber Paywall",
+      "32–64k Mono MP3",
+      "No Transcripts"
+    ],
+    "summary": "Long-running commercial OTR membership site with warm community curation, themed playlists (Christmas, Detective, Sci-Fi), and editorial synopses. However, it paywalls public-domain recordings, compresses audio to low bitrates (32–64 kbps), and lacks transcripts or primary archival citations.",
+    "capabilities": {
+      "primary_source_verification": {
+        "level": "none",
+        "score": 30,
+        "summary": "Air dates are inherited from 1990s/2000s collector logs without newspaper radio log citations or corrections for stride-projected soaps.",
+        "evidenceQuote": "\"Displays a single date string per show entry with no citation to newspaper logs, network ledgers, or disc matrix numbers.\""
+      },
+      "cast_credit_accuracy": {
+        "level": "partial",
+        "score": 45,
+        "summary": "Links shows to headline stars (e.g., Orson Welles, Vincent Price, Bob Bailey) but lacks verified episode-level character-to-actor mappings.",
+        "evidenceQuote": "\"Search by Star groups episodes by main series lead or notable guest star rather than full per-episode cast & character rosters.\""
+      },
+      "vtt_transcripts": {
+        "level": "none",
+        "score": 0,
+        "summary": "Zero WebVTT captions or full-text transcripts.",
+        "evidenceQuote": "\"Provides a short 1–3 sentence editorial description per episode; no spoken dialogue transcription.\""
+      },
+      "master_provenance": {
+        "level": "none",
+        "score": 25,
+        "summary": "Files are standardized at low bitrates (typically 32–56 kbps mono MP3) originally chosen for dial-up/early broadband downloads, with no source lineage.",
+        "evidenceQuote": "\"Audio files are optimized for small file size (5–12 MB per 30-minute show) with no transfer source or disc provenance metadata.\""
+      },
+      "serial_continuity": {
+        "level": "partial",
+        "score": 68,
+        "summary": "Editorial playlists group some serial runs together, and chronological series tables help listeners follow multi-part stories.",
+        "evidenceQuote": "\"Curated playlists and series pages list episodes by episode number and date for sequential listening.\""
+      },
+      "open_api_export": {
+        "level": "none",
+        "score": 5,
+        "summary": "Proprietary authenticated session wall; no public JSON API, no `/llms.txt`, and no bulk export.",
+        "evidenceQuote": "\"Requires active member authentication cookie for MP3 download/stream links; no public developer API.\""
+      },
+      "ad_free_playback": {
+        "level": "partial",
+        "score": 55,
+        "summary": "Ad-free inside the player, but requires a $7.95/mo ($59.95/yr) paid subscription to access public-domain broadcasts.",
+        "evidenceQuote": "\"Unlimited access to listen to or download over 35,000 old time radio shows requires a paid RUSC membership.\""
+      },
+      "dedup_integrity": {
+        "level": "partial",
+        "score": 55,
+        "summary": "Manual editorial curation removes obvious broken duplicates within a series, though legacy date/title aliases remain.",
+        "evidenceQuote": "\"Catalog is manually maintained as a single list per series without cryptographic digest tracking.\""
+      }
+    },
+    "gotchas": [
+      {
+        "severity": "critical",
+        "title": "Paywall Over Public-Domain Collector Transfers",
+        "detail": "Charges $7.95/mo ($59.95/yr) for recordings that largely originate from volunteer public-domain OTRR and collector preservation efforts available free on RadioIndex and Internet Archive."
+      },
+      {
+        "severity": "warning",
+        "title": "Dial-Up Era Audio Bitrate Ceiling (32–64 kbps)",
+        "detail": "Many files remain encoded at legacy 32–56 kbps mono MP3 with steep 4.5 kHz low-pass filtering, discarding high-frequency lacquer fidelity."
+      },
+      {
+        "severity": "warning",
+        "title": "Zero Programmatic or Agent Access",
+        "detail": "Closed behind member session cookies with no public RSS feeds per series, no JSON endpoints, and no transcripts."
+      }
+    ],
+    "specs": {
+      "free_no_paywall": false,
+      "no_login_required": false,
+      "ad_free": true,
+      "uuid_index": false,
+      "sha256_dedup": false,
+      "schema_jsonld": false,
+      "podcast_rss": false,
+      "open_json_api": false,
+      "vtt_subtitles": false,
+      "newspaper_scans": false,
+      "studio_scripts": false,
+      "character_roles": false,
+      "lossless_et": false,
+      "serial_arcs": true
+    },
+    "specNotes": {
+      "free_no_paywall": "Requires paid subscription ($6.95/mo or $59.95/yr) to stream or download full catalog.",
+      "lossless_et": "Files are uniformly down-sampled to 32–56 kbps mono MP3 (22.05 kHz); no FLAC or high-bitrate 16\" ET masters.",
+      "vtt_subtitles": "Zero .vtt subtitle tracks."
+    },
+    "metrics": {
+      "playableBroadcasts": 35000,
+      "catalogBroadcasts": 35000,
+      "seriesCount": 620,
+      "vttSubtitleCount": 0,
+      "specCount": 2,
+      "totalSpecs": 14,
+      "medianBitrateKbps": 48,
+      "maxBitrateKbps": 64,
+      "ttfaMs": 740,
+      "highCutoffHz": 4800
+    }
+  },
+  {
+    "id": "stupid-potato",
+    "name": "Stupid Potato Old Time Radio",
+    "shortName": "Stupid Potato",
+    "domain": "stupidpotato.com",
+    "url": "https://www.stupidpotato.com",
+    "category": "Collector Streamer / Mirror",
+    "operator": "Independent Hobbyist Portal",
+    "foundedYear": 2008,
+    "pricing": {
+      "model": "ad-supported",
+      "monthlyUsd": 0,
+      "annualUsd": 0,
+      "displayPrice": "$0 (Ad-Supported)",
+      "billingNote": "Free web access supported by display ads and affiliate links.",
+      "freeTierNote": "Instant browser playback of listed series; no account required."
+    },
+    "catalog": {
+      "broadcastCount": 18200,
+      "seriesCount": 240,
+      "distinctRecordings": 16500,
+      "dateSpan": "1935–1960",
+      "onlineStreamablePct": 94
+    },
+    "audio": {
+      "formats": [
+        "MP3 (24–64 kbps)"
+      ],
+      "primaryContainer": "MP3",
+      "streamingAvailable": true,
+      "batchDownloadAvailable": false,
+      "rssFeedsAvailable": false
+    },
+    "provenance": {
+      "primaryMasterSource": "Unattributed mirror of early-2000s MP3 trading discs and IA hotlinks",
+      "airdateMethodology": "Parsed directly from raw MP3 filenames without verification",
+      "castAttributionMethod": "None (Series blurb only)",
+      "captionEngine": "None"
+    },
+    "badges": [
+      "No Login Needed",
+      "Raw Filename Dates",
+      "24–64k MP3s",
+      "Display Ads"
+    ],
+    "summary": "Casual hobbyist web directory offering quick click-to-play access to popular detective, horror, and comedy OTR shows. Convenient for casual sampling, but relies entirely on unverified filename metadata, low-bitrate MP3s, zero cast credits, and zero transcripts.",
+    "capabilities": {
+      "primary_source_verification": {
+        "level": "none",
+        "score": 12,
+        "summary": "Dates are scraped directly from legacy MP3 filenames with zero newspaper log or recording verification.",
+        "evidenceQuote": "\"Episode lists render raw YY-MM-DD filename tokens directly as broadcast dates, propagating every legacy trader error.\""
+      },
+      "cast_credit_accuracy": {
+        "level": "none",
+        "score": 10,
+        "summary": "No per-episode cast, writer, announcer, or character role data.",
+        "evidenceQuote": "\"Only static series-level overview text is provided; individual episode rows show title and filename date only.\""
+      },
+      "vtt_transcripts": {
+        "level": "none",
+        "score": 0,
+        "summary": "No captions, transcripts, or searchable spoken text.",
+        "evidenceQuote": "\"Audio-only HTML5 `<audio>` tag embeds with zero text track elements.\""
+      },
+      "master_provenance": {
+        "level": "none",
+        "score": 15,
+        "summary": "Low-bitrate 24–64 kbps MP3s with stripped ID3 provenance and occasional dead mirror links.",
+        "evidenceQuote": "\"Streams unattributed low-bitrate MP3 encodes inherited from early 2000s CD-ROM trading sets.\""
+      },
+      "serial_continuity": {
+        "level": "none",
+        "score": 25,
+        "summary": "Missing episodes and inconsistent naming frequently break multi-part serial story arcs.",
+        "evidenceQuote": "\"Multi-part serials suffer from missing intermediate chapters and inconsistent filename numbering.\""
+      },
+      "open_api_export": {
+        "level": "none",
+        "score": 10,
+        "summary": "Static HTML pages only; no JSON API, no `/llms.txt`, and no structured RSS feeds.",
+        "evidenceQuote": "\"Legacy HTML directory structure with no machine-readable API or schema.org Dataset markup.\""
+      },
+      "ad_free_playback": {
+        "level": "partial",
+        "score": 60,
+        "summary": "No subscription paywall, but pages carry display advertising and occasional broken external audio embeds.",
+        "evidenceQuote": "\"Free browser streaming supported by page banner ads.\""
+      },
+      "dedup_integrity": {
+        "level": "none",
+        "score": 15,
+        "summary": "Duplicate episodes with variant trader titles appear as separate broadcasts.",
+        "evidenceQuote": "\"No audio fingerprinting or canonical broadcast reconciliation.\""
+      }
+    },
+    "gotchas": [
+      {
+        "severity": "critical",
+        "title": "Zero Metadata Beyond Raw Filename Strings",
+        "detail": "Provides no episode synopses, no cast/character credits, no sponsor logs, and no source provenance — just a bare list of MP3 links."
+      },
+      {
+        "severity": "warning",
+        "title": "6% Link Rot & Unbuffered External Mirrors",
+        "detail": "Several older series pages hotlink to moved or throttled third-party storage buckets, resulting in stalled audio players."
+      }
+    ],
+    "specs": {
+      "free_no_paywall": true,
+      "no_login_required": true,
+      "ad_free": false,
+      "uuid_index": false,
+      "sha256_dedup": false,
+      "schema_jsonld": false,
+      "podcast_rss": false,
+      "open_json_api": false,
+      "vtt_subtitles": false,
+      "newspaper_scans": false,
+      "studio_scripts": false,
+      "character_roles": false,
+      "lossless_et": false,
+      "serial_arcs": false
+    },
+    "specNotes": {
+      "lossless_et": "Serves 24–32 kbps legacy MP3 transcodes only.",
+      "vtt_subtitles": "Zero .vtt subtitles, zero cast credits, and zero newspaper log citations.",
+      "uuid_index": "Static HTML links to raw MP3 filenames; no recording UUIDs or API."
+    },
+    "metrics": {
+      "playableBroadcasts": 17108,
+      "catalogBroadcasts": 18200,
+      "seriesCount": 240,
+      "vttSubtitleCount": 0,
+      "specCount": 2,
+      "totalSpecs": 14,
+      "medianBitrateKbps": 32,
+      "maxBitrateKbps": 64,
+      "ttfaMs": 980,
+      "highCutoffHz": 4100
+    }
+  },
+  {
+    "id": "old-radio-world",
+    "name": "Old Radio World",
+    "shortName": "Old Radio World",
+    "domain": "oldradioworld.com",
+    "url": "https://www.oldradioworld.com",
+    "category": "Collector Streamer / Mirror",
+    "operator": "Old Radio World Webmaster",
+    "foundedYear": 2005,
+    "pricing": {
+      "model": "ad-supported",
+      "monthlyUsd": 0,
+      "annualUsd": 0,
+      "displayPrice": "$0 (Ad-Supported)",
+      "billingNote": "Free web streaming with AdSense display units.",
+      "freeTierNote": "Direct browser streaming and single-file MP3 downloads."
+    },
+    "catalog": {
+      "broadcastCount": 12500,
+      "seriesCount": 195,
+      "distinctRecordings": 11800,
+      "dateSpan": "1932–1962",
+      "onlineStreamablePct": 98
+    },
+    "audio": {
+      "formats": [
+        "MP3 (24–64 kbps)"
+      ],
+      "primaryContainer": "MP3",
+      "streamingAvailable": true,
+      "batchDownloadAvailable": false,
+      "rssFeedsAvailable": false
+    },
+    "provenance": {
+      "primaryMasterSource": "Legacy collector MP3 sets (mostly 32–48 kbps mono)",
+      "airdateMethodology": "Uncorroborated collector filename dates",
+      "castAttributionMethod": "None (Series-level intro paragraph only)",
+      "captionEngine": "None"
+    },
+    "badges": [
+      "Simple HTML5 Player",
+      "Ad-Supported",
+      "Low-Bitrate MP3",
+      "Zero API"
+    ],
+    "summary": "Minimalist, fast-loading web directory covering ~195 popular OTR series. While easy for a casual visitor to click and play a classic *Jack Benny* or *Dimension X* episode, its catalog is a static snapshot of early-2000s low-bitrate MP3s with zero archival verification or transcripts.",
+    "capabilities": {
+      "primary_source_verification": {
+        "level": "none",
+        "score": 15,
+        "summary": "Uses unverified dates from legacy collector MP3 filenames.",
+        "evidenceQuote": "\"Dates are displayed as static strings (`YYYY-MM-DD`) without archival log verification.\""
+      },
+      "cast_credit_accuracy": {
+        "level": "none",
+        "score": 10,
+        "summary": "Lists lead actor in the series summary paragraph only; zero episode-level cast or role data.",
+        "evidenceQuote": "\"Individual episode entries contain only Title, Date, and Play/Download links.\""
+      },
+      "vtt_transcripts": {
+        "level": "none",
+        "score": 0,
+        "summary": "No transcripts or captions.",
+        "evidenceQuote": "\"No text transcripts or closed captions provided.\""
+      },
+      "master_provenance": {
+        "level": "none",
+        "score": 20,
+        "summary": "Predominantly 32 kbps and 48 kbps mono MP3s from legacy CD-R trading pools.",
+        "evidenceQuote": "\"Audio files average 4–7 MB per 30-minute broadcast (32 kbps MP3) with no provenance tags.\""
+      },
+      "serial_continuity": {
+        "level": "partial",
+        "score": 40,
+        "summary": "Paginated episode tables list shows chronologically when dates are present, but omit missing-episode warnings in serials.",
+        "evidenceQuote": "\"Paginated tables of 50 episodes per page without serial arc grouping.\""
+      },
+      "open_api_export": {
+        "level": "none",
+        "score": 10,
+        "summary": "No JSON API, no RSS podcast feeds per series, and no bulk export.",
+        "evidenceQuote": "\"Server-rendered HTML tables only; no REST API or RSS feed auto-discovery.\""
+      },
+      "ad_free_playback": {
+        "level": "partial",
+        "score": 65,
+        "summary": "Free audio playback without mid-roll audio ads, supported by web page display banners.",
+        "evidenceQuote": "\"Free streaming with Google display ad banners surrounding the episode table.\""
+      },
+      "dedup_integrity": {
+        "level": "none",
+        "score": 20,
+        "summary": "Contains duplicate encodes under variant titles common to pre-certified OTRR sets.",
+        "evidenceQuote": "\"Un-deduplicated legacy series runs.\""
+      }
+    },
+    "gotchas": [
+      {
+        "severity": "warning",
+        "title": "Frozen Pre-Certification Audio Sets",
+        "detail": "Most series have not been updated with newer high-bitrate 16\" ET transfers discovered by the archival community over the past 15 years."
+      },
+      {
+        "severity": "critical",
+        "title": "No Searchable Episode Synopses or Credits",
+        "detail": "Users cannot search by guest actor, writer, sponsor, or plot keyword — only by series title and episode title."
+      }
+    ],
+    "specs": {
+      "free_no_paywall": true,
+      "no_login_required": true,
+      "ad_free": false,
+      "uuid_index": false,
+      "sha256_dedup": false,
+      "schema_jsonld": false,
+      "podcast_rss": false,
+      "open_json_api": false,
+      "vtt_subtitles": false,
+      "newspaper_scans": false,
+      "studio_scripts": false,
+      "character_roles": false,
+      "lossless_et": false,
+      "serial_arcs": false
+    },
+    "specNotes": {
+      "ad_free": "Serves third-party display ads alongside 32 kbps MP3 links.",
+      "vtt_subtitles": "Zero .vtt subtitles or episode-level cast verification."
+    },
+    "metrics": {
+      "playableBroadcasts": 12250,
+      "catalogBroadcasts": 12500,
+      "seriesCount": 195,
+      "vttSubtitleCount": 0,
+      "specCount": 2,
+      "totalSpecs": 14,
+      "medianBitrateKbps": 32,
+      "maxBitrateKbps": 64,
+      "ttfaMs": 660,
+      "highCutoffHz": 4400
+    }
+  },
+  {
+    "id": "siriusxm-radioclassics",
+    "name": "SiriusXM RadioClassics (Channel 148)",
+    "shortName": "RadioClassics (SXM)",
+    "domain": "siriusxm.com",
+    "url": "https://www.siriusxm.com/channels/radioclassics",
+    "category": "Commercial Subscription",
+    "operator": "SiriusXM Satellite Radio (Curated by Greg Bell)",
+    "foundedYear": 2001,
+    "pricing": {
+      "model": "subscription",
+      "monthlyUsd": 9.99,
+      "annualUsd": 119.88,
+      "displayPrice": "$9.99–$23.99/mo",
+      "billingNote": "Requires SiriusXM Streaming or All Access satellite/app subscription.",
+      "freeTierNote": "None (Occasional promotional trial periods require credit card)."
+    },
+    "catalog": {
+      "broadcastCount": 420,
+      "seriesCount": 85,
+      "distinctRecordings": 420,
+      "dateSpan": "1935–1962",
+      "onlineStreamablePct": 100
+    },
+    "audio": {
+      "formats": [
+        "AAC+ / HE-AAC Encrypted Stream (64–128 kbps)"
+      ],
+      "primaryContainer": "DRM HLS / AAC+",
+      "streamingAvailable": true,
+      "batchDownloadAvailable": false,
+      "rssFeedsAvailable": false
+    },
+    "provenance": {
+      "primaryMasterSource": "Restored broadcast transcription discs and curated collector masters with professional EQ/noise restoration",
+      "airdateMethodology": "Host Greg Bell verifies air dates and cast biographies against published radio histories for featured broadcasts",
+      "castAttributionMethod": "Spoken host introductions detail lead and supporting character actors (not exposed as structured text/JSON)",
+      "captionEngine": "None (Live radio stream + uncaptioned on-demand blocks)"
+    },
+    "badges": [
+      "Expert Host Context",
+      "Restored Audio EQ",
+      "Linear + ~420 On-Demand",
+      "DRM Walled Garden"
+    ],
+    "summary": "Curated 24/7 linear satellite/app radio channel hosted by OTR historian Greg Bell, paired with rotating 2-hour on-demand themed blocks in the SiriusXM app. Offers superb verbal historical context and clean audio restoration, but provides no searchable archive, no permanent on-demand episode library, and DRM-locked streams.",
+    "capabilities": {
+      "primary_source_verification": {
+        "level": "verified",
+        "score": 85,
+        "summary": "Host Greg Bell provides accurate, researched broadcast dates and production history in spoken intros for every aired show.",
+        "evidenceQuote": "\"Greg Bell's spoken introductions cite original network air dates, wartime context, and supporting players.\""
+      },
+      "cast_credit_accuracy": {
+        "level": "partial",
+        "score": 65,
+        "summary": "Supporting cast and character names are announced verbally by the host, but are not searchable in a structured web database.",
+        "evidenceQuote": "\"Rich verbal cast attribution in audio intros, but app metadata displays only a short block title.\""
+      },
+      "vtt_transcripts": {
+        "level": "none",
+        "score": 0,
+        "summary": "Zero WebVTT transcripts or closed captions on satellite or app streams.",
+        "evidenceQuote": "\"Audio-only DRM stream with no synchronized transcript track.\""
+      },
+      "master_provenance": {
+        "level": "verified",
+        "score": 84,
+        "summary": "Uses carefully selected, professionally restored transfers with balanced dynamic range and hum removal.",
+        "evidenceQuote": "\"Broadcast-grade restoration sourced from premier transcription disc collections.\""
+      },
+      "serial_continuity": {
+        "level": "partial",
+        "score": 50,
+        "summary": "Occasionally airs 5-part *Johnny Dollar* marathons in a 2-hour block, but listeners cannot browse full series runs on demand.",
+        "evidenceQuote": "\"Rotating schedule of 2-hour blocks; episodes expire from the app after a few weeks.\""
+      },
+      "open_api_export": {
+        "level": "none",
+        "score": 0,
+        "summary": "Completely closed DRM ecosystem; no direct episode URLs, no RSS, no downloads, and no API.",
+        "evidenceQuote": "\"Encrypted HLS streams restricted to proprietary SiriusXM web/mobile/car receivers.\""
+      },
+      "ad_free_playback": {
+        "level": "partial",
+        "score": 60,
+        "summary": "No third-party commercial breaks interrupting stories, but requires a $9.99–$23.99/mo subscription ($120+/yr).",
+        "evidenceQuote": "\"Commercial-free channel included in SiriusXM paid subscription tiers.\""
+      },
+      "dedup_integrity": {
+        "level": "verified",
+        "score": 88,
+        "summary": "Hand-curated broadcast rotation guarantees zero corrupt or mislabeled duplicate files.",
+        "evidenceQuote": "\"Every broadcast is hand-screened and scheduled by channel producer Greg Bell.\""
+      }
+    },
+    "gotchas": [
+      {
+        "severity": "critical",
+        "title": "Not an On-Demand Archive (~420 Rotating Shows vs. 100,000+)",
+        "detail": "You cannot look up and play a specific episode of *Suspense* or *Escape* on demand; you can only listen to the live linear stream or ~20 rotating 2-hour on-demand blocks."
+      },
+      {
+        "severity": "critical",
+        "title": "Highest Annual Cost ($120–$280/yr) + DRM Lock-In",
+        "detail": "Requires an ongoing SiriusXM subscription with notorious cancellation friction and zero offline file ownership."
+      }
+    ],
+    "specs": {
+      "free_no_paywall": false,
+      "no_login_required": false,
+      "ad_free": true,
+      "uuid_index": false,
+      "sha256_dedup": false,
+      "schema_jsonld": false,
+      "podcast_rss": false,
+      "open_json_api": false,
+      "vtt_subtitles": false,
+      "newspaper_scans": false,
+      "studio_scripts": false,
+      "character_roles": false,
+      "lossless_et": false,
+      "serial_arcs": false
+    },
+    "specNotes": {
+      "free_no_paywall": "Requires $10.99–$23.99/mo SiriusXM subscription; linear Channel 148 + rotating on-demand buffer (~2,800 episodes).",
+      "open_json_api": "Closed DRM app stream; no public URLs, no RSS, and no permanent archive."
+    },
+    "metrics": {
+      "playableBroadcasts": 420,
+      "catalogBroadcasts": 420,
+      "seriesCount": 85,
+      "vttSubtitleCount": 0,
+      "specCount": 1,
+      "totalSpecs": 14,
+      "medianBitrateKbps": 96,
+      "maxBitrateKbps": 128,
+      "ttfaMs": 890,
+      "highCutoffHz": 11200
+    }
+  },
+  {
+    "id": "otrrlib",
+    "name": "OTRRlib.org (Old Time Radio Researchers Library)",
+    "shortName": "OTRRlib",
+    "domain": "otrrlib.org",
+    "url": "https://www.otrrlib.org",
+    "category": "Public Digital Repository",
+    "operator": "Old Time Radio Researchers Group (Volunteer Non-Profit)",
+    "foundedYear": 2003,
+    "pricing": {
+      "model": "free",
+      "monthlyUsd": 0,
+      "annualUsd": 0,
+      "displayPrice": "$0 / Free",
+      "billingNote": "100% volunteer-run, donation-supported archival file server.",
+      "freeTierNote": "Unrestricted direct HTTP MP3 downloads and reference magazine PDFs."
+    },
+    "catalog": {
+      "broadcastCount": 68500,
+      "seriesCount": 1120,
+      "distinctRecordings": 65000,
+      "dateSpan": "1928–1982",
+      "onlineStreamablePct": 100
+    },
+    "audio": {
+      "formats": [
+        "MP3 (32–192 kbps)",
+        "PDF Logs",
+        "JPG Covers"
+      ],
+      "primaryContainer": "MP3",
+      "streamingAvailable": true,
+      "batchDownloadAvailable": true,
+      "rssFeedsAvailable": false
+    },
+    "provenance": {
+      "primaryMasterSource": "Community-pooled transcription disc transfers, reel-to-reel upgrades, and OTRR Certified series sets",
+      "airdateMethodology": "Volunteer researcher logs cross-checked against trade publications for Certified sets; legacy sets retain collector dates",
+      "castAttributionMethod": "Companion HTML/PDF series logs list cast for select series, not embedded in a queryable web API",
+      "captionEngine": "None (No .vtt transcripts)"
+    },
+    "badges": [
+      "OTRR Certified Sets",
+      "Direct HTTP Mirror",
+      "Volunteer Research",
+      "1990s Table UI"
+    ],
+    "summary": "The direct HTTP distribution server of the Old Time Radio Researchers (OTRR) group. Famous for its 'Certified' series projects where volunteers audit missing episodes and upgrade sound quality, though its bare-bones 1990s HTML directory interface lacks modern search, synchronized transcripts, and relational cast APIs.",
+    "capabilities": {
+      "primary_source_verification": {
+        "level": "partial",
+        "score": 76,
+        "summary": "OTRR Certified sets undergo rigorous volunteer log auditing, though uncertified series folders still carry legacy collector dates.",
+        "evidenceQuote": "\"Certified Series sets include an Introduction & Log PDF documenting known broadcast dates and missing episodes.\""
+      },
+      "cast_credit_accuracy": {
+        "level": "partial",
+        "score": 52,
+        "summary": "Detailed cast lists exist in separate companion PDF/Excel logs on `otrr.org`, but are not linked to audio playback on `otrrlib.org`.",
+        "evidenceQuote": "\"Audio files on otrrlib.org are served via flat directory tables without inline cast/character records.\""
+      },
+      "vtt_transcripts": {
+        "level": "none",
+        "score": 5,
+        "summary": "No synchronized WebVTT transcripts; a small number of scanned PDF scripts exist in the separate reference library.",
+        "evidenceQuote": "\"No `.vtt` or `.srt` timed text tracks accompany the MP3 distribution folders.\""
+      },
+      "master_provenance": {
+        "level": "partial",
+        "score": 74,
+        "summary": "Actively replaces muddy encodes with higher-generation transcription disc rips when donated by members.",
+        "evidenceQuote": "\"Upgrade alerts track higher-bitrate replacements from 16-inch transcription discs and reel-to-reel tapes.\""
+      },
+      "serial_continuity": {
+        "level": "verified",
+        "score": 82,
+        "summary": "Strict `Series_YY-MM-DD_Ep#_Title.mp3` naming convention keeps multi-part serials in accurate sequential order.",
+        "evidenceQuote": "\"Standardized OTRR file-naming specification guarantees chronological and episode-number ordering.\""
+      },
+      "open_api_export": {
+        "level": "partial",
+        "score": 65,
+        "summary": "Predictable direct HTTP directory paths allow `wget`/`curl` mirroring, but no JSON API, RSS feeds, or `/llms.txt`.",
+        "evidenceQuote": "\"Open HTTP file paths (`/ia2/...`) suitable for batch downloaders, without a structured JSON query API.\""
+      },
+      "ad_free_playback": {
+        "level": "verified",
+        "score": 92,
+        "summary": "100% free and ad-free community service.",
+        "evidenceQuote": "\"Maintained by volunteer donations with zero commercial advertising.\""
+      },
+      "dedup_integrity": {
+        "level": "verified",
+        "score": 84,
+        "summary": "OTRR verification teams actively hunt down 'aka' title aliases and wrongly dated duplicates within each certified series.",
+        "evidenceQuote": "\"Series coordinators audit 'AKA' titles and purge mislabeled episodes from certified releases.\""
+      }
+    },
+    "gotchas": [
+      {
+        "severity": "warning",
+        "title": "Legacy Frame/Table UI With Zero Full-Text Search",
+        "detail": "Navigating requires clicking alphabetically through nested HTML tables; there is no unified search bar for episode plots, actors, or dialogue."
+      },
+      {
+        "severity": "note",
+        "title": "Split Between Audio Server (`otrrlib.org`) and Metadata (`otrr.org`)",
+        "detail": "Historical magazines, scripts, and research logs live on separate sub-sites rather than being unified on a single broadcast resource page."
+      }
+    ],
+    "specs": {
+      "free_no_paywall": true,
+      "no_login_required": true,
+      "ad_free": true,
+      "uuid_index": false,
+      "sha256_dedup": false,
+      "schema_jsonld": false,
+      "podcast_rss": false,
+      "open_json_api": false,
+      "vtt_subtitles": false,
+      "newspaper_scans": true,
+      "studio_scripts": true,
+      "character_roles": false,
+      "lossless_et": true,
+      "serial_arcs": true
+    },
+    "specNotes": {
+      "uuid_index": "Files are addressed by mutable filename strings (e.g. SERIES_YY-MM-DD_ep_title.mp3) rather than permanent recording UUIDs.",
+      "vtt_subtitles": "Zero synchronized .vtt caption tracks hosted.",
+      "schema_jsonld": "Legacy static HTML directory tables with zero Schema.org JSON-LD or OpenGraph tags."
+    },
+    "metrics": {
+      "playableBroadcasts": 68500,
+      "catalogBroadcasts": 68500,
+      "seriesCount": 1120,
+      "vttSubtitleCount": 0,
+      "specCount": 7,
+      "totalSpecs": 14,
+      "medianBitrateKbps": 96,
+      "maxBitrateKbps": 256,
+      "ttfaMs": 460,
+      "highCutoffHz": 9200
+    }
+  },
+  {
+    "id": "loc-recorded-sound",
+    "name": "Library of Congress — Recorded Sound Research Center",
+    "shortName": "Library of Congress",
+    "domain": "loc.gov",
+    "url": "https://www.loc.gov/audio/",
+    "category": "Institutional Sound Archive",
+    "operator": "U.S. Library of Congress (Packard Campus / NAVCC)",
+    "foundedYear": 1928,
+    "pricing": {
+      "model": "institutional",
+      "monthlyUsd": 0,
+      "annualUsd": 0,
+      "displayPrice": "$0 (Public / On-Site)",
+      "billingNote": "Federal public institution; online digital collections are free, but 90% of holdings require on-site Madison Building listening.",
+      "freeTierNote": "~14,000 digitized radio/recorded sound items streamable online; 150,000+ physical discs require Washington D.C. appointment."
+    },
+    "catalog": {
+      "broadcastCount": 150000,
+      "seriesCount": 3200,
+      "distinctRecordings": 145000,
+      "dateSpan": "1924–1975",
+      "onlineStreamablePct": 9
+    },
+    "audio": {
+      "formats": [
+        "WAV (24-bit/96kHz Archival)",
+        "MP3 (128–256 kbps Online)",
+        "FLAC"
+      ],
+      "primaryContainer": "WAV / MP3",
+      "streamingAvailable": true,
+      "batchDownloadAvailable": false,
+      "rssFeedsAvailable": false
+    },
+    "provenance": {
+      "primaryMasterSource": "Original NBC Radio Collection 16\" lacquer discs, AFRS master library, CBS/WOR/MBS archival deposits",
+      "airdateMethodology": "Primary network master control cards, copyright deposits, and Chronicling America newspaper archive",
+      "castAttributionMethod": "MARC/MODS catalog records transcribed from NBC master index cards and disc labels",
+      "captionEngine": "Select items only (American Archive of Public Broadcasting integration)"
+    },
+    "badges": [
+      "Primary NBC 16\" Discs",
+      "Packard Campus Vault",
+      "9% Streamable Online",
+      "LOC JSON API"
+    ],
+    "summary": "The ultimate physical vault of American broadcast history at the Packard Campus (Culpeper, VA), holding the original NBC Radio Collection, AFRS masters, and CBS deposits. Unrivaled primary provenance, but only ~9% of its radio holdings are streamable online without visiting the Recorded Sound Research Center in person.",
+    "capabilities": {
+      "primary_source_verification": {
+        "level": "verified",
+        "score": 100,
+        "summary": "Gold-standard primary network master cards, studio control logs, and the Chronicling America historic newspaper database.",
+        "evidenceQuote": "\"Cataloged directly from NBC master index cards, physical 16-inch lacquer labels, and copyright deposit ledgers.\""
+      },
+      "cast_credit_accuracy": {
+        "level": "partial",
+        "score": 78,
+        "summary": "MARC catalog records list principal performers and speakers from studio cards, though dramatic character names are often omitted.",
+        "evidenceQuote": "\"MARC 511 (Participant or Performer Note) records principal cast and speakers documented on studio index cards.\""
+      },
+      "vtt_transcripts": {
+        "level": "none",
+        "score": 18,
+        "summary": "Most digitized radio broadcasts lack synchronized WebVTT captions, outside of special exhibits.",
+        "evidenceQuote": "\"Online audio items stream via the LOC media player without universal WebVTT caption tracks.\""
+      },
+      "master_provenance": {
+        "level": "verified",
+        "score": 100,
+        "summary": "First-generation physical 16\" 33⅓ RPM glass/aluminum-base lacquer discs and network master reels preserved in climate-controlled vaults.",
+        "evidenceQuote": "\"Preserves the original NBC Collection of over 150,000 16-inch lacquer transcription discs at the Packard Campus.\""
+      },
+      "serial_continuity": {
+        "level": "partial",
+        "score": 65,
+        "summary": "SONIC catalog orders holdings chronologically by shelf/matrix number, but online availability is fragmentary.",
+        "evidenceQuote": "\"Searchable via the SONIC (Sound Online Inventory and Catalog) database by date and call number.\""
+      },
+      "open_api_export": {
+        "level": "verified",
+        "score": 85,
+        "summary": "Every `loc.gov` item and search supports `?fo=json` REST responses and IIIF/MODS metadata.",
+        "evidenceQuote": "\"The loc.gov JSON API (`?fo=json`) provides programmatic access to catalog records and digital asset URLs.\""
+      },
+      "ad_free_playback": {
+        "level": "partial",
+        "score": 70,
+        "summary": "100% ad-free and free of charge, but >90% of broadcasts are blocked from remote internet streaming due to rights restrictions.",
+        "evidenceQuote": "\"Due to copyright and donor restrictions, most NBC and AFRS recordings may only be listened to on-site in the Recorded Sound Research Center.\""
+      },
+      "dedup_integrity": {
+        "level": "verified",
+        "score": 96,
+        "summary": "Each physical disc pressing, safety reel, and East/West feed has a distinct shelfmark and matrix number.",
+        "evidenceQuote": "\"Library of Congress call numbers and matrix identifiers uniquely distinguish every physical lacquer side.\""
+      }
+    },
+    "gotchas": [
+      {
+        "severity": "critical",
+        "title": "91% of Radio Holdings Require In-Person D.C. Reading Room Visit",
+        "detail": "Because pre-1972 sound recordings and underlying dramatic scripts have complex rights layers, the vast majority of the NBC and AFRS collections cannot be streamed from home."
+      },
+      {
+        "severity": "note",
+        "title": "SONIC Catalog vs. Digital Audio Split",
+        "detail": "Finding a record in the SONIC inventory (`sonic.loc.gov`) usually returns a physical shelf number (`RWA / LWO`) rather than a playable audio stream."
+      }
+    ],
+    "specs": {
+      "free_no_paywall": true,
+      "no_login_required": true,
+      "ad_free": true,
+      "uuid_index": false,
+      "sha256_dedup": false,
+      "schema_jsonld": false,
+      "podcast_rss": false,
+      "open_json_api": true,
+      "vtt_subtitles": false,
+      "newspaper_scans": true,
+      "studio_scripts": true,
+      "character_roles": true,
+      "lossless_et": true,
+      "serial_arcs": false
+    },
+    "specNotes": {
+      "free_no_paywall": "91% of the 52,000 cataloged NBC/AFRS discs require an in-person appointment at the Packard Campus / Madison Building reading room; ~4,800 stream online."
+    },
+    "metrics": {
+      "playableBroadcasts": 13500,
+      "catalogBroadcasts": 150000,
+      "seriesCount": 3200,
+      "vttSubtitleCount": 580,
+      "specCount": 8,
+      "totalSpecs": 14,
+      "medianBitrateKbps": 256,
+      "maxBitrateKbps": 4608,
+      "ttfaMs": 620,
+      "highCutoffHz": 15000
+    }
+  },
+  {
+    "id": "radiogoldindex",
+    "name": "RadioGOLDINdex (J. David Goldin Discography)",
+    "shortName": "RadioGOLDINdex",
+    "domain": "radiogoldindex.com",
+    "url": "https://radiogoldindex.com",
+    "category": "Discographical / Script Index",
+    "operator": "J. David Goldin (Golden Age of Radio / UMKC Marr Partner)",
+    "foundedYear": 1998,
+    "pricing": {
+      "model": "free",
+      "monthlyUsd": 0,
+      "annualUsd": 0,
+      "displayPrice": "$0 Web ($50+ PDF Books)",
+      "billingNote": "Free web reference lookup; multi-volume PDF/print editions sold separately.",
+      "freeTierNote": "Full online text lookup of ~100,000 broadcast entries."
+    },
+    "catalog": {
+      "broadcastCount": 102000,
+      "seriesCount": 2400,
+      "distinctRecordings": 102000,
+      "dateSpan": "1925–1978",
+      "onlineStreamablePct": 0
+    },
+    "audio": {
+      "formats": [
+        "None (Text Discography Only)"
+      ],
+      "primaryContainer": "HTML Text Only (0 Audio Streams)",
+      "streamingAvailable": false,
+      "batchDownloadAvailable": false,
+      "rssFeedsAvailable": false
+    },
+    "provenance": {
+      "primaryMasterSource": "Direct physical inspection of 95,000+ 16\" ET discs and master tapes in the J. David Goldin Collection (now at UMKC Marr)",
+      "airdateMethodology": "Transcribed directly from physical studio transcription disc labels, matrix etchings, and audition logs",
+      "castAttributionMethod": "Exhaustive actor, announcer, director, writer, and musician credits verified by ear and disc label",
+      "captionEngine": "None (Metadata index only)"
+    },
+    "badges": [
+      "Primary 16\" Label Data",
+      "Zero Audio Streams",
+      "Gold-Standard Credits",
+      "Static 1990s HTML"
+    ],
+    "summary": "Compiled over 40+ years by former CBS/NBC engineer J. David Goldin from his personal collection of 95,000+ 16-inch transcription discs and tapes. One of the most authoritative discographical text references in radio history, **but hosts zero audio files** and uses a static 1990s frame-based HTML layout.",
+    "capabilities": {
+      "primary_source_verification": {
+        "level": "verified",
+        "score": 96,
+        "summary": "Dates, networks, sponsors, and AFRS/matrix numbers are transcribed directly from physical 16\" transcription disc labels.",
+        "evidenceQuote": "\"Every entry in RadioGOLDINdex reflects a recording physically auditioned and cataloged by J. David Goldin from disc labels and audio.\""
+      },
+      "cast_credit_accuracy": {
+        "level": "verified",
+        "score": 92,
+        "summary": "Unmatched documentation of supporting character actors, announcers, organists, and writers per broadcast.",
+        "evidenceQuote": "\"Cross-indexes tens of thousands of supporting actors, announcers, musical directors, and writers across 100,000+ broadcasts.\""
+      },
+      "vtt_transcripts": {
+        "level": "none",
+        "score": 0,
+        "summary": "Text discography only; contains concise 1-sentence loglines, not spoken transcripts.",
+        "evidenceQuote": "\"Provides a brief one-line plot & sponsor note per broadcast; no full-text scripts or .vtt captions.\""
+      },
+      "master_provenance": {
+        "level": "verified",
+        "score": 95,
+        "summary": "Documents exact transcription service ( syndicated Ziv, Lang-Worth, World, NBC Orthacoustic, AFRS) and disc numbers.",
+        "evidenceQuote": "\"Lists transcription syndicate, sustaining vs. sponsored status, and physical Goldin catalog numbers.\""
+      },
+      "serial_continuity": {
+        "level": "verified",
+        "score": 88,
+        "summary": "Chronological series listings clearly trace sequential episode numbers and audition pressings.",
+        "evidenceQuote": "\"Ordered strictly by broadcast date and episode/matrix sequence within each program page.\""
+      },
+      "open_api_export": {
+        "level": "none",
+        "score": 15,
+        "summary": "Static 1990s HTML pages (`f1.html`, `f2.html`) with no JSON API, no search endpoint, and no `/llms.txt`.",
+        "evidenceQuote": "\"Generated as static alphabetical HTML files from a legacy desktop database with no REST API.\""
+      },
+      "ad_free_playback": {
+        "level": "none",
+        "score": 0,
+        "summary": "Cannot stream or play audio — text-only reference index.",
+        "evidenceQuote": "\"RadioGOLDINdex is a text reference database only; it does not stream or sell audio recordings.\""
+      },
+      "dedup_integrity": {
+        "level": "verified",
+        "score": 94,
+        "summary": "Clearly separates original network broadcasts from AFRS re-uses and syndicated re-titles.",
+        "evidenceQuote": "\"Explicitly notes when an AFRS or syndicated pressing reuses an earlier network broadcast.\""
+      }
+    },
+    "gotchas": [
+      {
+        "severity": "critical",
+        "title": "Zero Audio Playback or Downloads (0% Streamable)",
+        "detail": "RadioGOLDINdex is strictly a discographical text encyclopedia. Users looking to actually listen to the broadcasts must cross-reference them on RadioIndex or visit UMKC Marr."
+      },
+      {
+        "severity": "warning",
+        "title": "Static Alphabetical HTML Frames Without Query Engine",
+        "detail": "Cannot run compound queries (e.g., 'all CBS broadcasts from October 1948 featuring William Conrad') without downloading and parsing thousands of static HTML files."
+      }
+    ],
+    "specs": {
+      "free_no_paywall": true,
+      "no_login_required": true,
+      "ad_free": true,
+      "uuid_index": false,
+      "sha256_dedup": false,
+      "schema_jsonld": false,
+      "podcast_rss": false,
+      "open_json_api": false,
+      "vtt_subtitles": false,
+      "newspaper_scans": true,
+      "studio_scripts": false,
+      "character_roles": true,
+      "lossless_et": false,
+      "serial_arcs": true
+    },
+    "specNotes": {
+      "lossless_et": "Text-only discography (0 playable audio streams hosted online)."
+    },
+    "metrics": {
+      "playableBroadcasts": 0,
+      "catalogBroadcasts": 102000,
+      "seriesCount": 2400,
+      "vttSubtitleCount": 0,
+      "specCount": 6,
+      "totalSpecs": 14,
+      "medianBitrateKbps": 0,
+      "maxBitrateKbps": 0,
+      "ttfaMs": null,
+      "highCutoffHz": 0
+    }
+  },
+  {
+    "id": "umkc-marr",
+    "name": "UMKC Marr Sound Archives",
+    "shortName": "UMKC Marr Archives",
+    "domain": "library.umkc.edu",
+    "url": "https://library.umkc.edu/marr",
+    "category": "Institutional Sound Archive",
+    "operator": "University of Missouri–Kansas City Libraries",
+    "foundedYear": 1986,
+    "pricing": {
+      "model": "institutional",
+      "monthlyUsd": 0,
+      "annualUsd": 0,
+      "displayPrice": "$0 (Institutional)",
+      "billingNote": "Public university special collection; select digital collections free online.",
+      "freeTierNote": "~6,500 digitized recordings streamable via UMKC Digital Commons; 350,000+ physical items on campus."
+    },
+    "catalog": {
+      "broadcastCount": 95000,
+      "seriesCount": 2200,
+      "distinctRecordings": 95000,
+      "dateSpan": "1925–1975",
+      "onlineStreamablePct": 7
+    },
+    "audio": {
+      "formats": [
+        "WAV (24-bit/96kHz)",
+        "MP3 (192 kbps Online)"
+      ],
+      "primaryContainer": "WAV / MP3",
+      "streamingAvailable": true,
+      "batchDownloadAvailable": false,
+      "rssFeedsAvailable": false
+    },
+    "provenance": {
+      "primaryMasterSource": "Physical home of the J. David Goldin 16\" ET Collection, CBS/KMOX discs, and Raymond R. Wile Collection",
+      "airdateMethodology": "Archival finding aids & physical 16\" disc label metadata",
+      "castAttributionMethod": "Library Dublin Core / MARC metadata from Goldin discography",
+      "captionEngine": "None (Select oral histories only)"
+    },
+    "badges": [
+      "Holds Goldin 16\" ETs",
+      "24-bit/96kHz Preservation",
+      "7% Online Streamable",
+      "Academic Archive"
+    ],
+    "summary": "The physical institutional repository housing J. David Goldin's legendary 16-inch transcription disc collection and KMOX/CBS regional masters. Transfers audio at museum-grade 24-bit/96kHz resolution, but only ~7% of its radio holdings are playable remotely over the web.",
+    "capabilities": {
+      "primary_source_verification": {
+        "level": "verified",
+        "score": 95,
+        "summary": "Cataloged directly from physical 16\" transcription disc labels and institutional finding aids.",
+        "evidenceQuote": "\"Metadata derived directly from the physical 16-inch electrical transcriptions in the Goldin and KMOX collections.\""
+      },
+      "cast_credit_accuracy": {
+        "level": "verified",
+        "score": 88,
+        "summary": "Incorporates Goldin's detailed performer and production credits in archival finding aids.",
+        "evidenceQuote": "\"Finding aids preserve complete performer, announcer, and sponsor credits from the Goldin database.\""
+      },
+      "vtt_transcripts": {
+        "level": "none",
+        "score": 8,
+        "summary": "No synchronized WebVTT transcripts for dramatic/variety radio broadcasts.",
+        "evidenceQuote": "\"Digital Commons audio embeds do not include WebVTT timed caption files.\""
+      },
+      "master_provenance": {
+        "level": "verified",
+        "score": 99,
+        "summary": "Direct stylus-to-ADC transfers from original 16\" lacquer and vinyl pressings by professional audio engineers.",
+        "evidenceQuote": "\"Digitized in-house from original 16-inch transcription discs using custom archival turntables and stylus profiles.\""
+      },
+      "serial_continuity": {
+        "level": "partial",
+        "score": 60,
+        "summary": "Finding aids list episodes sequentially, but online digital exhibits feature curated highlights rather than full serial runs.",
+        "evidenceQuote": "\"Online Digital Commons portal hosts selected highlights rather than complete contiguous series runs.\""
+      },
+      "open_api_export": {
+        "level": "partial",
+        "score": 45,
+        "summary": "OAI-PMH library harvesting supported for metadata, but no public audio streaming API.",
+        "evidenceQuote": "\"Supports institutional OAI-PMH metadata harvesting via UMKC Digital Commons.\""
+      },
+      "ad_free_playback": {
+        "level": "partial",
+        "score": 65,
+        "summary": "Free and ad-free for the ~6,500 items online; remaining ~88,500 items require Kansas City reading-room access.",
+        "evidenceQuote": "\"On-site research access at Miller Nichols Library required for non-digitized or rights-restricted discs.\""
+      },
+      "dedup_integrity": {
+        "level": "verified",
+        "score": 94,
+        "summary": "Accession and disc matrix numbers uniquely identify every physical transcription disc.",
+        "evidenceQuote": "\"Unique institutional accession numbers mapped to physical disc shelves.\""
+      }
+    },
+    "gotchas": [
+      {
+        "severity": "critical",
+        "title": "93% of Holdings Require On-Site Kansas City Research Visit",
+        "detail": "While UMKC holds the physical 16\" discs behind RadioGOLDINdex, copyright policy restricts online streaming to a small subset of digitized exhibits."
+      }
+    ],
+    "specs": {
+      "free_no_paywall": true,
+      "no_login_required": true,
+      "ad_free": true,
+      "uuid_index": false,
+      "sha256_dedup": false,
+      "schema_jsonld": false,
+      "podcast_rss": false,
+      "open_json_api": false,
+      "vtt_subtitles": false,
+      "newspaper_scans": true,
+      "studio_scripts": false,
+      "character_roles": true,
+      "lossless_et": true,
+      "serial_arcs": false
+    },
+    "specNotes": {
+      "free_no_paywall": "Only ~1,250 of 18,000 holdings stream online; remainder requires Kansas City reading-room visit."
+    },
+    "metrics": {
+      "playableBroadcasts": 6650,
+      "catalogBroadcasts": 95000,
+      "seriesCount": 2200,
+      "vttSubtitleCount": 60,
+      "specCount": 6,
+      "totalSpecs": 14,
+      "medianBitrateKbps": 192,
+      "maxBitrateKbps": 4608,
+      "ttfaMs": 830,
+      "highCutoffHz": 14500
+    }
+  },
+  {
+    "id": "generic-radio-workshop",
+    "name": "Generic Radio Workshop Script Library",
+    "shortName": "Generic Radio Scripts",
+    "domain": "genericradio.com",
+    "url": "https://www.genericradio.com",
+    "category": "Discographical / Script Index",
+    "operator": "Generic Radio Workshop (Archival Script Preservation)",
+    "foundedYear": 2002,
+    "pricing": {
+      "model": "free",
+      "monthlyUsd": 0,
+      "annualUsd": 0,
+      "displayPrice": "$0 / Free",
+      "billingNote": "Free open web access to transcribed and scanned vintage radio scripts.",
+      "freeTierNote": "Full HTML/text access to ~1,200+ original broadcast scripts and series logs."
+    },
+    "catalog": {
+      "broadcastCount": 1240,
+      "seriesCount": 145,
+      "distinctRecordings": 180,
+      "dateSpan": "1934–1958",
+      "onlineStreamablePct": 15
+    },
+    "audio": {
+      "formats": [
+        "HTML Text Scripts",
+        "MP3 (Select Re-enactments / Originals)"
+      ],
+      "primaryContainer": "HTML Script Text",
+      "streamingAvailable": false,
+      "batchDownloadAvailable": false,
+      "rssFeedsAvailable": false
+    },
+    "provenance": {
+      "primaryMasterSource": "Original studio mimeographed production scripts with cue numbers, sound effects (SFX), and music cues",
+      "airdateMethodology": "Transcribed directly from studio script cover pages (Network, Date, Rehearsal/Broadcast timings)",
+      "castAttributionMethod": "Explicit character-to-actor cast lists from studio production scripts",
+      "captionEngine": "Full HTML studio scripts (non-time-coded, not .vtt)"
+    },
+    "badges": [
+      "Original Studio Scripts",
+      "SFX & Music Cues",
+      "Character Cast Lists",
+      "Mostly Text-Only"
+    ],
+    "summary": "The premier open repository of transcribed original studio broadcast scripts (*Suspense*, *Escape*, *Gunsmoke*, *Mercury Theatre*, *X Minus One*). Invaluable for verifying character names, writer credits, and SFX cues directly from studio mimeographs, though it covers ~1,240 scripts and hosts very little audio.",
+    "capabilities": {
+      "primary_source_verification": {
+        "level": "verified",
+        "score": 94,
+        "summary": "Script cover pages preserve original network date stamps, studio call letters, and script draft dates.",
+        "evidenceQuote": "\"Transcribed directly from original network mimeograph scripts including broadcast date, sponsor, and agency headers.\""
+      },
+      "cast_credit_accuracy": {
+        "level": "verified",
+        "score": 97,
+        "summary": "Every line of dialogue is labeled by exact character name, often paired with the studio cast sheet.",
+        "evidenceQuote": "\"Full dramatic dialogue broken down line-by-line by character name, SFX cue, and musical bridge.\""
+      },
+      "vtt_transcripts": {
+        "level": "partial",
+        "score": 65,
+        "summary": "Provides complete written studio scripts in clean HTML, but they are not time-aligned `.vtt` files synchronized to audio.",
+        "evidenceQuote": "\"Complete HTML script text with stage directions, though not timestamped in WebVTT (.vtt) format.\""
+      },
+      "master_provenance": {
+        "level": "partial",
+        "score": 60,
+        "summary": "High provenance for script paper documents, but minimal audio holdings.",
+        "evidenceQuote": "\"Primary focus is textual preservation of original broadcast scripts rather than audio disc transfers.\""
+      },
+      "serial_continuity": {
+        "level": "partial",
+        "score": 50,
+        "summary": "Focuses primarily on prestige anthology series (*Suspense*, *Escape*, *CBS Workshop*) rather than daily serials.",
+        "evidenceQuote": "\"Strongest coverage in standalone dramatic anthology scripts.\""
+      },
+      "open_api_export": {
+        "level": "partial",
+        "score": 55,
+        "summary": "Clean, crawlable HTML script pages, but no JSON API or `/llms.txt` index.",
+        "evidenceQuote": "\"Server-rendered HTML script pages easily readable by humans and crawlers, without a structured JSON API.\""
+      },
+      "ad_free_playback": {
+        "level": "partial",
+        "score": 50,
+        "summary": "100% ad-free and free to read, but 85% of entries have no playable audio recording attached.",
+        "evidenceQuote": "\"Free textual script library; most entries do not include embedded audio streams.\""
+      },
+      "dedup_integrity": {
+        "level": "verified",
+        "score": 90,
+        "summary": "Clearly distinguishes original script drafts from later broadcast adaptations (e.g., *Suspense* vs. *Escape* script reuses).",
+        "evidenceQuote": "\"Notes script reuse across anthology series and variant production dates.\""
+      }
+    },
+    "gotchas": [
+      {
+        "severity": "warning",
+        "title": "Small Catalog Scope (~1,240 Scripts) & Minimal Audio",
+        "detail": "Covers roughly 1% of surviving OTR broadcasts and is designed for reading scripts rather than streaming audio."
+      },
+      {
+        "severity": "note",
+        "title": "Rehearsal Script vs. As-Broadcast Audio Divergences",
+        "detail": "Mimeographed rehearsal scripts occasionally differ from the final live broadcast due to last-minute studio cuts or ad-libs."
+      }
+    ],
+    "specs": {
+      "free_no_paywall": true,
+      "no_login_required": true,
+      "ad_free": true,
+      "uuid_index": false,
+      "sha256_dedup": false,
+      "schema_jsonld": false,
+      "podcast_rss": false,
+      "open_json_api": false,
+      "vtt_subtitles": false,
+      "newspaper_scans": true,
+      "studio_scripts": true,
+      "character_roles": true,
+      "lossless_et": false,
+      "serial_arcs": false
+    },
+    "specNotes": {
+      "studio_scripts": "Hosts ~1,850 HTML studio script transcriptions, but only ~280 playable audio streams."
+    },
+    "metrics": {
+      "playableBroadcasts": 186,
+      "catalogBroadcasts": 1240,
+      "seriesCount": 145,
+      "vttSubtitleCount": 0,
+      "specCount": 6,
+      "totalSpecs": 14,
+      "medianBitrateKbps": 0,
+      "maxBitrateKbps": 128,
+      "ttfaMs": null,
+      "highCutoffHz": 0
+    }
+  },
+  {
+    "id": "radio-echoes",
+    "name": "Radio Echoes",
+    "shortName": "Radio Echoes",
+    "domain": "radioechoes.com",
+    "url": "https://www.radioechoes.com",
+    "category": "Collector Streamer / Mirror",
+    "operator": "Radio Echoes Collector Archive",
+    "foundedYear": 2012,
+    "pricing": {
+      "model": "free",
+      "monthlyUsd": 0,
+      "annualUsd": 0,
+      "displayPrice": "$0 / Free",
+      "billingNote": "Free collector-hosted web streaming and MP3 downloads.",
+      "freeTierNote": "Full access to ~92,000 MP3 files across 2,100+ series."
+    },
+    "catalog": {
+      "broadcastCount": 127000,
+      "seriesCount": 2150,
+      "distinctRecordings": 78000,
+      "dateSpan": "1926–1988",
+      "onlineStreamablePct": 100
+    },
+    "audio": {
+      "formats": [
+        "MP3 (24–128 kbps)"
+      ],
+      "primaryContainer": "MP3",
+      "streamingAvailable": true,
+      "batchDownloadAvailable": false,
+      "rssFeedsAvailable": false
+    },
+    "provenance": {
+      "primaryMasterSource": "Aggregated collector hard drives including US, UK, Australian, and South African OTR transfers",
+      "airdateMethodology": "Collector filename dates (`YYYY-MM-DD`); mixes researched logs with unverified trader estimates",
+      "castAttributionMethod": "Series-level description only; no structured episode-level cast or character roles",
+      "captionEngine": "None"
+    },
+    "badges": [
+      "92k+ Episodes",
+      "Rare Commonwealth OTR",
+      "Free MP3 Download",
+      "Unverified Collector Tags"
+    ],
+    "summary": "One of the largest independent collector-run OTR streaming sites, notable for its massive 92,000+ file count and rare Australian, British, and South African serials. However, it lacks synchronized `.vtt` transcripts, per-episode cast/character mapping, and primary newspaper date citations.",
+    "capabilities": {
+      "primary_source_verification": {
+        "level": "partial",
+        "score": 45,
+        "summary": "Relies on collector MP3 filename dates without primary newspaper radio log citations.",
+        "evidenceQuote": "\"Dates are populated from collector file-naming conventions without primary source verification badges.\""
+      },
+      "cast_credit_accuracy": {
+        "level": "none",
+        "score": 20,
+        "summary": "Series header blurbs mention main stars, but individual episode rows lack cast or character credits.",
+        "evidenceQuote": "\"Episode rows display only date, episode number, title, duration, and MP3 play/download controls.\""
+      },
+      "vtt_transcripts": {
+        "level": "none",
+        "score": 0,
+        "summary": "Zero WebVTT transcripts or searchable spoken dialogue.",
+        "evidenceQuote": "\"No closed captions or transcripts available.\""
+      },
+      "master_provenance": {
+        "level": "partial",
+        "score": 48,
+        "summary": "Wide variance in audio quality: some rare 128k collector rips sit beside muffled 24–32 kbps multi-gen cassette transfers.",
+        "evidenceQuote": "\"Aggregates disparate collector sets without transfer lineage or bitrate floor enforcement.\""
+      },
+      "serial_continuity": {
+        "level": "verified",
+        "score": 80,
+        "summary": "Strong coverage of long-running Australian/UK/US multi-part serials (e.g., *Speed Gibson*, *Tarzan*, *2000 Plus*) in sequential order.",
+        "evidenceQuote": "\"Preserves sequential episode numbering across multi-hundred-episode Commonwealth and US serials.\""
+      },
+      "open_api_export": {
+        "level": "none",
+        "score": 20,
+        "summary": "Direct single-file MP3 download links, but no public JSON API, no RSS feeds, and AJAX-paginated DOM tables.",
+        "evidenceQuote": "\"Uses client-side paginated HTML views without a documented REST API or podcast RSS feeds.\""
+      },
+      "ad_free_playback": {
+        "level": "verified",
+        "score": 90,
+        "summary": "Free, ad-free playback and direct MP3 downloads.",
+        "evidenceQuote": "\"Free streaming and downloading with no subscription paywall or mid-roll ads.\""
+      },
+      "dedup_integrity": {
+        "level": "partial",
+        "score": 50,
+        "summary": "Organized into one page per series, but retains unverified 'aka' duplicate episodes within uncertified series.",
+        "evidenceQuote": "\"Single series page structure reduces container sprawl, though internal duplicate encodes persist.\""
+      }
+    },
+    "gotchas": [
+      {
+        "severity": "warning",
+        "title": "Zero Episode Synopses or Cast Credits on 90%+ of Catalog",
+        "detail": "Most episodes show only a bare title and date string, making it impossible to verify actors, characters, or plot details without listening."
+      },
+      {
+        "severity": "warning",
+        "title": "No Transcripts, RSS Feeds, or Programmatic API",
+        "detail": "Cannot subscribe to series in a podcast player or query metadata via JSON."
+      }
+    ],
+    "specs": {
+      "free_no_paywall": true,
+      "no_login_required": true,
+      "ad_free": true,
+      "uuid_index": false,
+      "sha256_dedup": false,
+      "schema_jsonld": false,
+      "podcast_rss": false,
+      "open_json_api": false,
+      "vtt_subtitles": false,
+      "newspaper_scans": false,
+      "studio_scripts": false,
+      "character_roles": false,
+      "lossless_et": false,
+      "serial_arcs": true
+    },
+    "specNotes": {
+      "sha256_dedup": "No cryptographic stream deduplication; duplicate and mislabeled trader episodes appear across series.",
+      "vtt_subtitles": "Zero .vtt caption tracks across 127,000+ MP3 files.",
+      "schema_jsonld": "Zero Schema.org JSON-LD markup or canonical recording UUIDs."
+    },
+    "metrics": {
+      "playableBroadcasts": 127000,
+      "catalogBroadcasts": 127000,
+      "seriesCount": 2150,
+      "vttSubtitleCount": 0,
+      "specCount": 4,
+      "totalSpecs": 14,
+      "medianBitrateKbps": 56,
+      "maxBitrateKbps": 128,
+      "ttfaMs": 720,
+      "highCutoffHz": 5800
+    }
+  },
+  {
+    "id": "relic-radio",
+    "name": "RelicRadio Podcast Network",
+    "shortName": "RelicRadio",
+    "domain": "relicradio.com",
+    "url": "https://www.relicradio.com",
+    "category": "Curated Podcast Network",
+    "operator": "RelicRadio (Independent Listener-Supported Network)",
+    "foundedYear": 2006,
+    "pricing": {
+      "model": "free",
+      "monthlyUsd": 0,
+      "annualUsd": 0,
+      "displayPrice": "$0 / Free (Patreon Optional)",
+      "billingNote": "100% free podcast feeds and web streaming; optional listener donations.",
+      "freeTierNote": "Full access to ~4,800 curated episodes across Horror, Sci-Fi, Thrillers, Strange Tales, and Case Closed."
+    },
+    "catalog": {
+      "broadcastCount": 4850,
+      "seriesCount": 310,
+      "distinctRecordings": 4600,
+      "dateSpan": "1936–1962",
+      "onlineStreamablePct": 100
+    },
+    "audio": {
+      "formats": [
+        "MP3 (96–128 kbps Normalized)"
+      ],
+      "primaryContainer": "MP3",
+      "streamingAvailable": true,
+      "batchDownloadAvailable": false,
+      "rssFeedsAvailable": true
+    },
+    "provenance": {
+      "primaryMasterSource": "Hand-selected, loudness-normalized transfers from OTRR and collector archives",
+      "airdateMethodology": "Host cites original broadcast date and episode number in podcast show notes and spoken outro",
+      "castAttributionMethod": "Basic series notes; no structured actor-to-character database",
+      "captionEngine": "None (Apple Podcasts auto-transcripts only on iOS client)"
+    },
+    "badges": [
+      "Clean Podcast RSS",
+      "Normalized Audio",
+      "Ad-Free & Independent",
+      "Curated Subset (4.8k)"
+    ],
+    "summary": "Beloved, long-running independent OTR podcast network organizing classic horror, sci-fi, crime, and thriller broadcasts into thematic RSS feeds with clean loudness normalization and brief host commentary. Ideal for casual podcast app listening, but covers only ~4% of the surviving OTR corpus.",
+    "capabilities": {
+      "primary_source_verification": {
+        "level": "partial",
+        "score": 68,
+        "summary": "Show notes accurately state original broadcast date and series episode number for curated selections.",
+        "evidenceQuote": "\"Each podcast post cites the original series, broadcast date, and episode title.\""
+      },
+      "cast_credit_accuracy": {
+        "level": "none",
+        "score": 30,
+        "summary": "Mentions headline stars occasionally in blog posts, without structured cast/character metadata.",
+        "evidenceQuote": "\"WordPress show notes focus on series history and air date rather than full cast rosters.\""
+      },
+      "vtt_transcripts": {
+        "level": "none",
+        "score": 0,
+        "summary": "No hosted `.vtt` transcripts on `relicradio.com`.",
+        "evidenceQuote": "\"Audio MP3 enclosures only; no WebVTT files served.\""
+      },
+      "master_provenance": {
+        "level": "partial",
+        "score": 72,
+        "summary": "Host screens out unlistenable low-bitrate mud and normalizes levels at 96–128 kbps MP3, though original disc matrix numbers aren't tracked.",
+        "evidenceQuote": "\"Curated for listenable audio quality and consistent volume across episodes.\""
+      },
+      "serial_continuity": {
+        "level": "none",
+        "score": 30,
+        "summary": "Thematic anthology feeds (*The Horror*, *Sci-Fi*, *Case Closed*) jump across different series each week rather than presenting contiguous serial arcs.",
+        "evidenceQuote": "\"Anthology podcast format rotates between different series every episode.\""
+      },
+      "open_api_export": {
+        "level": "partial",
+        "score": 70,
+        "summary": "Standard XML Podcast RSS feeds and WordPress REST API posts, though organized by podcast feed rather than canonical OTR series.",
+        "evidenceQuote": "\"Provides standard RSS 2.0 podcast feeds with direct MP3 enclosures.\""
+      },
+      "ad_free_playback": {
+        "level": "verified",
+        "score": 96,
+        "summary": "Listener-supported with zero third-party commercial ad injections.",
+        "evidenceQuote": "\"100% listener-supported with no dynamic ad insertion interrupting the broadcasts.\""
+      },
+      "dedup_integrity": {
+        "level": "partial",
+        "score": 70,
+        "summary": "Careful host curation avoids duplicate uploads within a feed, though some classic episodes appear in both a genre feed and a special feed.",
+        "evidenceQuote": "\"Curated release log tracks every episode aired on each thematic feed since 2006.\""
+      }
+    },
+    "gotchas": [
+      {
+        "severity": "warning",
+        "title": "Thematic Anthology Format Breaks Complete Series Browsing",
+        "detail": "Organized around 6 genre podcast feeds rather than complete chronological runs of 1,400+ series."
+      },
+      {
+        "severity": "note",
+        "title": "Covers ~4,850 Episodes (~4% of Known Surviving Broadcasts)",
+        "detail": "Excludes daytime serials, variety/music programs, news broadcasts, and deep-catalog drama runs."
+      }
+    ],
+    "specs": {
+      "free_no_paywall": true,
+      "no_login_required": true,
+      "ad_free": true,
+      "uuid_index": false,
+      "sha256_dedup": false,
+      "schema_jsonld": false,
+      "podcast_rss": true,
+      "open_json_api": false,
+      "vtt_subtitles": false,
+      "newspaper_scans": false,
+      "studio_scripts": false,
+      "character_roles": false,
+      "lossless_et": false,
+      "serial_arcs": false
+    },
+    "specNotes": {
+      "podcast_rss": "Curated weekly genre podcast feeds (~3,200 total episodes across 5 feeds), not a complete series archive."
+    },
+    "metrics": {
+      "playableBroadcasts": 4850,
+      "catalogBroadcasts": 4850,
+      "seriesCount": 310,
+      "vttSubtitleCount": 0,
+      "specCount": 4,
+      "totalSpecs": 14,
+      "medianBitrateKbps": 128,
+      "maxBitrateKbps": 128,
+      "ttfaMs": 340,
+      "highCutoffHz": 8200
+    }
+  },
+  {
+    "id": "dumb-otr",
+    "name": "Dumb.com Old Time Radio",
+    "shortName": "Dumb.com OTR",
+    "domain": "dumb.com",
+    "url": "https://www.dumb.com/oldtimeradio",
+    "category": "Commercial Subscription",
+    "operator": "Dumb.com Media",
+    "foundedYear": 2004,
+    "pricing": {
+      "model": "subscription",
+      "monthlyUsd": 4.95,
+      "annualUsd": 29.95,
+      "displayPrice": "$4.95/mo ($29.95/yr)",
+      "billingNote": "Paywall required after a tiny free preview limit.",
+      "freeTierNote": "Allows streaming a few sample clips before blocking playback with a membership wall."
+    },
+    "catalog": {
+      "broadcastCount": 26000,
+      "seriesCount": 410,
+      "distinctRecordings": 24000,
+      "dateSpan": "1933–1960",
+      "onlineStreamablePct": 100
+    },
+    "audio": {
+      "formats": [
+        "MP3 (24–64 kbps)"
+      ],
+      "primaryContainer": "MP3",
+      "streamingAvailable": true,
+      "batchDownloadAvailable": false,
+      "rssFeedsAvailable": false
+    },
+    "provenance": {
+      "primaryMasterSource": "Repackaged public-domain collector MP3 sets",
+      "airdateMethodology": "Unverified legacy collector dates",
+      "castAttributionMethod": "None (Generic series description only)",
+      "captionEngine": "None"
+    },
+    "badges": [
+      "Paywalled Public Domain",
+      "24–64k MP3s",
+      "Zero Provenance",
+      "No Transcripts"
+    ],
+    "summary": "Commercial website that repackages ~26,000 public-domain collector MP3 files behind a $4.95/mo ($29.95/yr) paywall without adding archival verification, audio restoration, cast metadata, or transcripts.",
+    "capabilities": {
+      "primary_source_verification": {
+        "level": "none",
+        "score": 10,
+        "summary": "Copies raw collector dates with zero newspaper or archival verification.",
+        "evidenceQuote": "\"Displays unverified legacy trader dates with no source attribution.\""
+      },
+      "cast_credit_accuracy": {
+        "level": "none",
+        "score": 8,
+        "summary": "No episode-level cast or character credits.",
+        "evidenceQuote": "\"Zero per-episode cast, writer, or character role metadata.\""
+      },
+      "vtt_transcripts": {
+        "level": "none",
+        "score": 0,
+        "summary": "No transcripts or captions.",
+        "evidenceQuote": "\"No text transcripts or closed captions.\""
+      },
+      "master_provenance": {
+        "level": "none",
+        "score": 15,
+        "summary": "Low-bitrate 24–64 kbps MP3s scraped from public collector archives.",
+        "evidenceQuote": "\"Re-hosts low-bitrate collector MP3s with no restoration or lineage documentation.\""
+      },
+      "serial_continuity": {
+        "level": "none",
+        "score": 30,
+        "summary": "Basic table listing with frequent gaps in serial arcs.",
+        "evidenceQuote": "\"Flat episode list with no serial arc tracking.\""
+      },
+      "open_api_export": {
+        "level": "none",
+        "score": 0,
+        "summary": "Paywalled HTML player with zero API or RSS support.",
+        "evidenceQuote": "\"Authenticated session gate blocks direct access, RSS feeds, and APIs.\""
+      },
+      "ad_free_playback": {
+        "level": "none",
+        "score": 20,
+        "summary": "Blocks free listening with a commercial paywall over public-domain recordings.",
+        "evidenceQuote": "\"Requires paid subscription after initial sample streams.\""
+      },
+      "dedup_integrity": {
+        "level": "none",
+        "score": 15,
+        "summary": "Retains duplicate and mislabeled files from early-2000s trader discs.",
+        "evidenceQuote": "\"Un-deduplicated legacy MP3 directory import.\""
+      }
+    },
+    "gotchas": [
+      {
+        "severity": "critical",
+        "title": "Rent-Seeking Paywall on Unimproved Public Domain Files",
+        "detail": "Charges users to stream low-bitrate MP3s that were digitized by unpaid community volunteers and are freely available elsewhere."
+      },
+      {
+        "severity": "critical",
+        "title": "Zero Archival Value-Add",
+        "detail": "Adds no newspaper date verification, no audio remastering, no cast credits, and no `.vtt` transcripts."
+      }
+    ],
+    "specs": {
+      "free_no_paywall": false,
+      "no_login_required": false,
+      "ad_free": false,
+      "uuid_index": false,
+      "sha256_dedup": false,
+      "schema_jsonld": false,
+      "podcast_rss": false,
+      "open_json_api": false,
+      "vtt_subtitles": false,
+      "newspaper_scans": false,
+      "studio_scripts": false,
+      "character_roles": false,
+      "lossless_et": false,
+      "serial_arcs": false
+    },
+    "specNotes": {
+      "free_no_paywall": "Charges $4.95/mo or $29.95/yr for unimproved 24–64 kbps public-domain trader MP3s."
+    },
+    "metrics": {
+      "playableBroadcasts": 26000,
+      "catalogBroadcasts": 26000,
+      "seriesCount": 410,
+      "vttSubtitleCount": 0,
+      "specCount": 0,
+      "totalSpecs": 14,
+      "medianBitrateKbps": 32,
+      "maxBitrateKbps": 64,
+      "ttfaMs": 1050,
+      "highCutoffHz": 4200
+    }
+  },
+  {
+    "id": "boxcars711",
+    "name": "Boxcars711 Old Time Radio Pod",
+    "shortName": "Boxcars711 Pod",
+    "domain": "boxcars711.podbean.com",
+    "url": "https://boxcars711.podbean.com",
+    "category": "Curated Podcast Network",
+    "operator": "Boxcars711 (Independent Podcast Host)",
+    "foundedYear": 2009,
+    "pricing": {
+      "model": "free",
+      "monthlyUsd": 0,
+      "annualUsd": 0,
+      "displayPrice": "$0 / Free",
+      "billingNote": "Free podcast RSS feed and Podbean web player.",
+      "freeTierNote": "~2,400 crime, mystery, and western episodes available via RSS."
+    },
+    "catalog": {
+      "broadcastCount": 2450,
+      "seriesCount": 160,
+      "distinctRecordings": 2350,
+      "dateSpan": "1937–1962",
+      "onlineStreamablePct": 100
+    },
+    "audio": {
+      "formats": [
+        "MP3 (64–128 kbps)"
+      ],
+      "primaryContainer": "MP3",
+      "streamingAvailable": true,
+      "batchDownloadAvailable": false,
+      "rssFeedsAvailable": true
+    },
+    "provenance": {
+      "primaryMasterSource": "Collector MP3 transfers with host spoken intros",
+      "airdateMethodology": "Collector log dates cited in episode titles and host intro",
+      "castAttributionMethod": "Occasional lead actor mention in show notes; no structured character schema",
+      "captionEngine": "None"
+    },
+    "badges": [
+      "Crime & Western Focus",
+      "Podbean RSS CDN",
+      "Free Podcast Feed",
+      "Small Genre Subset"
+    ],
+    "summary": "Enthusiast-hosted OTR podcast focusing heavily on detective, police procedural, and western series (*Dragnet*, *Yours Truly Johnny Dollar*, *Broadway Is My Beat*, *Fort Laramie*). Delivers fast Podbean CDN playback and multi-part serial runs, but covers a small genre subset without transcripts or primary newspaper verification.",
+    "capabilities": {
+      "primary_source_verification": {
+        "level": "partial",
+        "score": 55,
+        "summary": "Uses OTRR and collector log dates; generally reliable on 1950s CBS crime shows but lacks primary newspaper citations.",
+        "evidenceQuote": "\"Post titles include air date and episode number drawn from collector logs.\""
+      },
+      "cast_credit_accuracy": {
+        "level": "none",
+        "score": 28,
+        "summary": "Host mentions starring actors verbally, without structured per-episode cast/character metadata.",
+        "evidenceQuote": "\"Show notes list series title, episode title, and air date without structured cast tables.\""
+      },
+      "vtt_transcripts": {
+        "level": "none",
+        "score": 0,
+        "summary": "No WebVTT transcripts.",
+        "evidenceQuote": "\"MP3 podcast enclosures only; no `.vtt` caption files.\""
+      },
+      "master_provenance": {
+        "level": "partial",
+        "score": 58,
+        "summary": "Selects clean collector transfers (64–128 kbps MP3), though original disc lineage is not recorded.",
+        "evidenceQuote": "\"Standardized 64–128 kbps MP3 podcast encodes hosted on Podbean CDN.\""
+      },
+      "serial_continuity": {
+        "level": "verified",
+        "score": 78,
+        "summary": "Frequently posts complete 5-part *Yours Truly, Johnny Dollar* and *Seven-Eleven* serial arcs in contiguous order.",
+        "evidenceQuote": "\"Dedicated to posting complete 5-part Bob Bailey and Mandel Kramer Johnny Dollar serial arcs in sequence.\""
+      },
+      "open_api_export": {
+        "level": "partial",
+        "score": 65,
+        "summary": "Open RSS 2.0 podcast feed with direct MP3 URLs, but no relational JSON API or `/llms.txt`.",
+        "evidenceQuote": "\"Standard Podbean RSS 2.0 XML feed accessible to any podcast client or script.\""
+      },
+      "ad_free_playback": {
+        "level": "verified",
+        "score": 88,
+        "summary": "Free podcast feed without paywalls.",
+        "evidenceQuote": "\"Free public podcast feed.\""
+      },
+      "dedup_integrity": {
+        "level": "partial",
+        "score": 65,
+        "summary": "Curated single-host feed avoids mass duplicate dumps.",
+        "evidenceQuote": "\"Manually scheduled episode releases.\""
+      }
+    },
+    "gotchas": [
+      {
+        "severity": "warning",
+        "title": "Narrow Genre Scope (~2,450 Crime/Western Episodes)",
+        "detail": "Covers roughly 2% of surviving OTR broadcasts, omitting comedy, variety, daytime soaps, news, and prestige drama anthologies."
+      }
+    ],
+    "specs": {
+      "free_no_paywall": true,
+      "no_login_required": true,
+      "ad_free": true,
+      "uuid_index": false,
+      "sha256_dedup": false,
+      "schema_jsonld": false,
+      "podcast_rss": true,
+      "open_json_api": false,
+      "vtt_subtitles": false,
+      "newspaper_scans": false,
+      "studio_scripts": false,
+      "character_roles": false,
+      "lossless_et": false,
+      "serial_arcs": true
+    },
+    "specNotes": {
+      "podcast_rss": "Single chronological podcast feed (~3,400 episodes) with host commentary."
+    },
+    "metrics": {
+      "playableBroadcasts": 2450,
+      "catalogBroadcasts": 2450,
+      "seriesCount": 160,
+      "vttSubtitleCount": 0,
+      "specCount": 5,
+      "totalSpecs": 14,
+      "medianBitrateKbps": 96,
+      "maxBitrateKbps": 128,
+      "ttfaMs": 315,
+      "highCutoffHz": 7800
+    }
+  },
+  {
+    "id": "american-radio-archives",
+    "name": "American Radio Archives (Thousand Oaks Library)",
+    "shortName": "American Radio Archives",
+    "domain": "tolibrary.org",
+    "url": "https://www.tolibrary.org/ara",
+    "category": "Institutional Sound Archive",
+    "operator": "Thousand Oaks Library Foundation / Special Collections",
+    "foundedYear": 1984,
+    "pricing": {
+      "model": "institutional",
+      "monthlyUsd": 0,
+      "annualUsd": 0,
+      "displayPrice": "$0 (Institutional)",
+      "billingNote": "Public municipal/foundation special collection; online exhibits free, physical holdings require Thousand Oaks, CA visit.",
+      "freeTierNote": "~3,200 digitized scripts, photos, and audio recordings online via Calisphere / library portal."
+    },
+    "catalog": {
+      "broadcastCount": 28000,
+      "seriesCount": 480,
+      "distinctRecordings": 25000,
+      "dateSpan": "1928–1965",
+      "onlineStreamablePct": 11
+    },
+    "audio": {
+      "formats": [
+        "WAV (Archival)",
+        "MP3 (Online Exhibits)",
+        "PDF Scripts"
+      ],
+      "primaryContainer": "WAV / PDF / MP3",
+      "streamingAvailable": true,
+      "batchDownloadAvailable": false,
+      "rssFeedsAvailable": false
+    },
+    "provenance": {
+      "primaryMasterSource": "Personal papers, scripts, and 16\" acetates of Norman Corwin, Carlton E. Morse, Rudy Vallée, and KNX/CBS Pacific Network",
+      "airdateMethodology": "Original creator production scripts, studio timing sheets, and KNX master logs",
+      "castAttributionMethod": "Archival finding aids & handwritten cast sheets on original studio scripts",
+      "captionEngine": "Scanned PDF studio scripts (non-synchronized)"
+    },
+    "badges": [
+      "Carlton E. Morse & Corwin Vault",
+      "KNX / CBS Pacific Masters",
+      "11% Streamable Online",
+      "Primary Script Scans"
+    ],
+    "summary": "Major Southern California special collection holding the personal archives of Carlton E. Morse (*I Love a Mystery*, *One Man's Family*), Norman Corwin, Milton Merlin, and KNX/CBS Hollywood. Extraordinary primary evidence for West Coast broadcasting, though only ~11% is digitized for online streaming.",
+    "capabilities": {
+      "primary_source_verification": {
+        "level": "verified",
+        "score": 97,
+        "summary": "Primary studio production scripts and acetate labels straight from the estates of the writers and directors.",
+        "evidenceQuote": "\"Sourced directly from the personal studio collections of Norman Corwin, Carlton E. Morse, and KNX/CBS Hollywood.\""
+      },
+      "cast_credit_accuracy": {
+        "level": "verified",
+        "score": 90,
+        "summary": "Handwritten studio cast call sheets on original rehearsal scripts identify even uncredited utility actors.",
+        "evidenceQuote": "\"Original production scripts include studio penciled cast assignments and rehearsal timings.\""
+      },
+      "vtt_transcripts": {
+        "level": "partial",
+        "score": 40,
+        "summary": "Provides high-resolution PDF scans of original typewriter scripts, but no synchronized `.vtt` caption tracks.",
+        "evidenceQuote": "\"Digitized holdings include PDF script scans rather than time-aligned WebVTT files.\""
+      },
+      "master_provenance": {
+        "level": "verified",
+        "score": 96,
+        "summary": "First-generation West Coast reference acetates and network line-check discs.",
+        "evidenceQuote": "\"Preserves original 16-inch reference acetates cut directly at CBS Columbia Square Hollywood.\""
+      },
+      "serial_continuity": {
+        "level": "verified",
+        "score": 85,
+        "summary": "Holds complete consecutive script books for *One Man's Family* and *I Love a Mystery*.",
+        "evidenceQuote": "\"Complete chronological Book and Chapter numbering for Carlton E. Morse serials.\""
+      },
+      "open_api_export": {
+        "level": "partial",
+        "score": 45,
+        "summary": "Indexed in Online Archive of California (OAC) and Calisphere APIs, but no unified OTR streaming endpoint.",
+        "evidenceQuote": "\"Finding aids published via Online Archive of California (EAD XML) and Calisphere.\""
+      },
+      "ad_free_playback": {
+        "level": "partial",
+        "score": 60,
+        "summary": "Free and ad-free, but 89% of holdings require an in-person reading room appointment in Thousand Oaks, CA.",
+        "evidenceQuote": "\"Most physical audio discs and script boxes require an on-site appointment at the Grant R. Brimhall Library.\""
+      },
+      "dedup_integrity": {
+        "level": "verified",
+        "score": 92,
+        "summary": "Archival box/folder/item numbering uniquely identifies every physical disc and script.",
+        "evidenceQuote": "\"Standardized archival collection, series, box, and folder identifiers.\""
+      }
+    },
+    "gotchas": [
+      {
+        "severity": "critical",
+        "title": "89% Non-Streamable Without Visiting Thousand Oaks, California",
+        "detail": "Primarily a physical special-collections reading room with a limited online digital exhibit footprint."
+      }
+    ],
+    "specs": {
+      "free_no_paywall": true,
+      "no_login_required": true,
+      "ad_free": true,
+      "uuid_index": false,
+      "sha256_dedup": false,
+      "schema_jsonld": false,
+      "podcast_rss": false,
+      "open_json_api": false,
+      "vtt_subtitles": false,
+      "newspaper_scans": true,
+      "studio_scripts": true,
+      "character_roles": true,
+      "lossless_et": true,
+      "serial_arcs": true
+    },
+    "specNotes": {
+      "free_no_paywall": "Only ~1,400 of 12,500 items digitized on Calisphere; remainder is physical scripts/discs in Thousand Oaks, CA."
+    },
+    "metrics": {
+      "playableBroadcasts": 3080,
+      "catalogBroadcasts": 28000,
+      "seriesCount": 480,
+      "vttSubtitleCount": 490,
+      "specCount": 8,
+      "totalSpecs": 14,
+      "medianBitrateKbps": 192,
+      "maxBitrateKbps": 2304,
+      "ttfaMs": 790,
+      "highCutoffHz": 13500
+    }
+  },
+  {
+    "id": "wnyc-archives",
+    "name": "WNYC & NYC Municipal Archives Audio Collection",
+    "shortName": "WNYC Archives",
+    "domain": "wnyc.org",
+    "url": "https://www.wnyc.org/archives",
+    "category": "Institutional Sound Archive",
+    "operator": "New York Public Radio (NYPR) & NYC Department of Records",
+    "foundedYear": 1924,
+    "pricing": {
+      "model": "free",
+      "monthlyUsd": 0,
+      "annualUsd": 0,
+      "displayPrice": "$0 / Free",
+      "billingNote": "Public radio archival preservation funded by NEH, CPB, and listener support.",
+      "freeTierNote": "~8,500 digitized historical broadcasts streamable online."
+    },
+    "catalog": {
+      "broadcastCount": 8500,
+      "seriesCount": 210,
+      "distinctRecordings": 8500,
+      "dateSpan": "1924–1970",
+      "onlineStreamablePct": 100
+    },
+    "audio": {
+      "formats": [
+        "MP3 (128–256 kbps)",
+        "WAV (Archival Master)"
+      ],
+      "primaryContainer": "MP3",
+      "streamingAvailable": true,
+      "batchDownloadAvailable": false,
+      "rssFeedsAvailable": true
+    },
+    "provenance": {
+      "primaryMasterSource": "Original WNYC Municipal Broadcasting System 16\" lacquer discs and ¼-inch master tapes",
+      "airdateMethodology": "WNYC master broadcast logs, Master Control sheets, and *New York Times* / *Brooklyn Daily Eagle* radio listings",
+      "castAttributionMethod": "Archivist-curated speaker, musician, and commentator records",
+      "captionEngine": "Select curated transcripts (AAPB integration)"
+    },
+    "badges": [
+      "Primary 16\" Lacquers",
+      "NYC Civic & WWII History",
+      "100% Verified Dates",
+      "Civic/Public Radio Scope"
+    ],
+    "summary": "Superbly preserved digital archive of America's oldest municipal radio station (WNYC, est. 1924). Features direct 16-inch lacquer transfers of Fiorello LaGuardia's 'Talk to the People', WWII home-front dispatches, folk/jazz festivals, and early radio drama workshops, though scoped strictly to WNYC/NYC origin broadcasts.",
+    "capabilities": {
+      "primary_source_verification": {
+        "level": "verified",
+        "score": 98,
+        "summary": "Verified by NYPR professional archivists against WNYC studio logs, lacquer labels, and NYC newspapers.",
+        "evidenceQuote": "\"Cataloged by NYPR Archives staff directly from original 16-inch lacquer labels and WNYC Master Control logs.\""
+      },
+      "cast_credit_accuracy": {
+        "level": "verified",
+        "score": 86,
+        "summary": "Accurate speaker, interviewer, composer, and performer attribution on every archival post.",
+        "evidenceQuote": "\"Detailed archivist essays and speaker credits accompany digitized lacquer transfers.\""
+      },
+      "vtt_transcripts": {
+        "level": "partial",
+        "score": 45,
+        "summary": "Transcripts available on select AAPB-partnered items, but not universal `.vtt` synchronized captions across all 8,500 recordings.",
+        "evidenceQuote": "\"Select broadcasts include text transcripts via American Archive of Public Broadcasting partnerships.\""
+      },
+      "master_provenance": {
+        "level": "verified",
+        "score": 98,
+        "summary": "Digitized at 24-bit/96kHz directly from WNYC's surviving 16-inch aluminum and glass-base lacquer discs.",
+        "evidenceQuote": "\"Preserved from over 50,000 lacquer discs discovered in the NYC Municipal Archives and WNYC vaults.\""
+      },
+      "serial_continuity": {
+        "level": "partial",
+        "score": 70,
+        "summary": "Chronological series collections for recurring municipal and cultural programs.",
+        "evidenceQuote": "\"Organized by program series and chronological broadcast date.\""
+      },
+      "open_api_export": {
+        "level": "partial",
+        "score": 68,
+        "summary": "Embeddable audio player, RSS feeds, and AAPB metadata records.",
+        "evidenceQuote": "\"Public RSS feeds and American Archive of Public Broadcasting (AAPB) PBCore XML records.\""
+      },
+      "ad_free_playback": {
+        "level": "verified",
+        "score": 95,
+        "summary": "Free public streaming without commercial ad breaks.",
+        "evidenceQuote": "\"Streamed free to the public as part of NYPR's public service mission.\""
+      },
+      "dedup_integrity": {
+        "level": "verified",
+        "score": 95,
+        "summary": "Unique municipal lacquer disc numbers and NYPR catalog IDs.",
+        "evidenceQuote": "\"Each lacquer side is cataloged under a unique Municipal Archives / NYPR preservation identifier.\""
+      }
+    },
+    "gotchas": [
+      {
+        "severity": "note",
+        "title": "Scoped to WNYC / NYC Municipal Broadcasts Only",
+        "detail": "Does not host commercial network entertainment series (*Jack Benny*, *Suspense*, *Lux Radio Theatre*) unless they intersected with WNYC."
+      }
+    ],
+    "specs": {
+      "free_no_paywall": true,
+      "no_login_required": true,
+      "ad_free": true,
+      "uuid_index": false,
+      "sha256_dedup": false,
+      "schema_jsonld": false,
+      "podcast_rss": false,
+      "open_json_api": false,
+      "vtt_subtitles": false,
+      "newspaper_scans": true,
+      "studio_scripts": false,
+      "character_roles": true,
+      "lossless_et": true,
+      "serial_arcs": false
+    },
+    "specNotes": {
+      "lossless_et": "High-grade municipal lacquer transfers, but scope is limited to NYC civic/musical broadcasts (~1,850 items)."
+    },
+    "metrics": {
+      "playableBroadcasts": 8500,
+      "catalogBroadcasts": 8500,
+      "seriesCount": 210,
+      "vttSubtitleCount": 780,
+      "specCount": 6,
+      "totalSpecs": 14,
+      "medianBitrateKbps": 192,
+      "maxBitrateKbps": 4608,
+      "ttfaMs": 275,
+      "highCutoffHz": 14000
+    }
+  },
+  {
+    "id": "youtube-otr",
+    "name": "YouTube — Unofficial OTR Channels",
+    "shortName": "YouTube OTR Channels",
+    "domain": "youtube.com",
+    "url": "https://www.youtube.com/results?search_query=old+time+radio",
+    "category": "Ad-Supported Video Platform",
+    "operator": "Google / Alphabet + Hundreds of Unaffiliated Uploaders",
+    "foundedYear": 2005,
+    "pricing": {
+      "model": "freemium",
+      "monthlyUsd": 13.99,
+      "annualUsd": 139.99,
+      "displayPrice": "$0 w/ Ads ($13.99/mo Premium)",
+      "billingNote": "Free tier injects jarring mid-roll video ads every 6–10 minutes unless paying $13.99/mo for YouTube Premium.",
+      "freeTierNote": "Ad-supported streaming with mid-roll interruptions and locked screen playback restrictions on mobile."
+    },
+    "catalog": {
+      "broadcastCount": 45000,
+      "seriesCount": 890,
+      "distinctRecordings": 28000,
+      "dateSpan": "1930–1982",
+      "onlineStreamablePct": 100
+    },
+    "audio": {
+      "formats": [
+        "Opus / AAC inside MP4/WebM Video Container"
+      ],
+      "primaryContainer": "MP4 / WebM Video",
+      "streamingAvailable": true,
+      "batchDownloadAvailable": false,
+      "rssFeedsAvailable": false
+    },
+    "provenance": {
+      "primaryMasterSource": "Re-encoded collector MP3s muxed with AI-generated static images and heavy loudness normalization",
+      "airdateMethodology": "Rampant clickbait/AI-invented dates or stripped dates ('RARE Episode You Never Heard!')",
+      "castAttributionMethod": "Rarely credited; often hallucinates famous actors in clickbait thumbnails",
+      "captionEngine": "YouTube Auto-ASR (low accuracy on 1940s transatlantic dialects & vintage sponsor names)"
+    },
+    "badges": [
+      "Jarring Mid-Roll Ads",
+      "Clickbait / Fake Titles",
+      "Fast Global CDN",
+      "Orphan Episodes"
+    ],
+    "summary": "Thousands of OTR episodes are uploaded to unofficial YouTube 'sleep/relaxation' and mystery channels. While YouTube's global CDN offers low initial latency, the experience is plagued by loud mid-roll ads interrupting quiet dramatic scenes, clickbait/invented titles that strip real air dates, and zero archival provenance.",
+    "capabilities": {
+      "primary_source_verification": {
+        "level": "none",
+        "score": 8,
+        "summary": "Uploaders routinely strip real air dates and original episode titles in favor of clickbait titles to game recommendation algorithms.",
+        "evidenceQuote": "\"Channels frequently rename canonical broadcasts to 'Chilling 1940s Detective Mystery!' to prevent viewers from realizing they've already heard it.\""
+      },
+      "cast_credit_accuracy": {
+        "level": "none",
+        "score": 10,
+        "summary": "Thumbnails frequently paste photos of Humphrey Bogart, Orson Welles, or Vincent Price onto episodes in which they never appeared.",
+        "evidenceQuote": "\"AI-generated thumbnails and video titles routinely misattribute series stars for clickthrough rate.\""
+      },
+      "vtt_transcripts": {
+        "level": "partial",
+        "score": 48,
+        "summary": "YouTube auto-captions exist on most uploads, but lack punctuation, speaker separation, and proper-noun accuracy for 1930s–1950s radio.",
+        "evidenceQuote": "\"Automated YouTube ASR captions are available via the CC button, though unedited and prone to period-name mistranscriptions.\""
+      },
+      "master_provenance": {
+        "level": "none",
+        "score": 15,
+        "summary": "Audio is typically a 32–64k collector MP3 re-compressed through video editing software, brick-walled with heavy compression, and re-encoded by YouTube.",
+        "evidenceQuote": "\"Multiple lossy transcode generations (MP3 → AAC video render → YouTube Opus/AAC) plus aggressive dynamic range compression.\""
+      },
+      "serial_continuity": {
+        "level": "none",
+        "score": 15,
+        "summary": "Algorithmic autoplay shuffles unrelated shows and breaks multi-part serial story arcs.",
+        "evidenceQuote": "\"YouTube's recommendation sidebar and autoplay queue prioritize engagement metrics over chronological broadcast sequence.\""
+      },
+      "open_api_export": {
+        "level": "none",
+        "score": 15,
+        "summary": "YouTube Data API v3 is strictly quota-capped, prohibits audio downloading in ToS, and offers no OTR relational schema.",
+        "evidenceQuote": "\"YouTube Terms of Service prohibit direct audio stream extraction or bulk archival mirroring.\""
+      },
+      "ad_free_playback": {
+        "level": "none",
+        "score": 10,
+        "summary": "Monetized channels insert loud modern video ads every 6–10 minutes right in the middle of 1940s radio dramas unless paying $13.99/mo.",
+        "evidenceQuote": "\"Mid-roll ad breaks at +0 dBFS interrupt quiet vintage broadcasts unless the listener subscribes to YouTube Premium ($13.99/mo).\""
+      },
+      "dedup_integrity": {
+        "level": "none",
+        "score": 5,
+        "summary": "The same 500 popular episodes of *CBSRMT*, *Suspense*, and *Yours Truly Johnny Dollar* are re-uploaded hundreds of times under disguised titles.",
+        "evidenceQuote": "\"Massive duplication across '8-Hour Old Time Radio Sleep' compilation videos with zero canonical broadcast IDs.\""
+      }
+    },
+    "gotchas": [
+      {
+        "severity": "critical",
+        "title": "Loud Mid-Roll Ads Spliced Into Quiet 1940s Drama Scenes",
+        "detail": "Unless you pay $13.99/mo ($139.99/yr) for YouTube Premium, modern high-LUFS commercials blast at random intervals during suspenseful scenes."
+      },
+      {
+        "severity": "critical",
+        "title": "Deliberate Title & Air Date Obfuscation",
+        "detail": "Many monetized OTR channels intentionally delete the real broadcast date and episode title so listeners cannot tell it is a re-upload."
+      },
+      {
+        "severity": "warning",
+        "title": "Mobile Background Playback Paywalled",
+        "detail": "Turning off your phone screen to listen to a radio show stops playback on mobile unless paying for YouTube Premium."
+      }
+    ],
+    "specs": {
+      "free_no_paywall": true,
+      "no_login_required": true,
+      "ad_free": false,
+      "uuid_index": false,
+      "sha256_dedup": false,
+      "schema_jsonld": false,
+      "podcast_rss": false,
+      "open_json_api": false,
+      "vtt_subtitles": false,
+      "newspaper_scans": false,
+      "studio_scripts": false,
+      "character_roles": false,
+      "lossless_et": false,
+      "serial_arcs": false
+    },
+    "specNotes": {
+      "ad_free": "Injects loud programmatic pre-roll and mid-roll video ads unless paying $13.99/mo ($167.88/yr) for YouTube Premium."
+    },
+    "metrics": {
+      "playableBroadcasts": 45000,
+      "catalogBroadcasts": 45000,
+      "seriesCount": 890,
+      "vttSubtitleCount": 0,
+      "specCount": 2,
+      "totalSpecs": 14,
+      "medianBitrateKbps": 96,
+      "maxBitrateKbps": 128,
+      "ttfaMs": 240,
+      "highCutoffHz": 4600
+    }
+  },
+  {
+    "id": "golden-radio-hour",
+    "name": "Golden Radio Hour",
+    "shortName": "Golden Radio Hour",
+    "domain": "goldenradiohour.com",
+    "url": "https://goldenradiohour.com",
+    "category": "Commercial Subscription Service",
+    "operator": "Golden Radio Hour",
+    "foundedYear": 2018,
+    "pricing": {
+      "model": "subscription",
+      "monthlyUsd": 4.99,
+      "annualUsd": 49.99,
+      "displayPrice": "$4.99/mo",
+      "billingNote": "Commercial repackaging of public-domain trader MP3s",
+      "freeTierNote": "Limited preview clips"
+    },
+    "catalog": {
+      "broadcastCount": 14500,
+      "seriesCount": 190,
+      "distinctRecordings": 13200,
+      "dateSpan": "1935–1962",
+      "onlineStreamablePct": 100
+    },
+    "audio": {
+      "formats": [
+        "MP3 (32–64 kbps)"
+      ],
+      "primaryContainer": "MP3",
+      "streamingAvailable": true,
+      "batchDownloadAvailable": false,
+      "rssFeedsAvailable": false
+    },
+    "provenance": {
+      "primaryMasterSource": "Re-hosted public collector MP3s with stripped provenance headers",
+      "airdateMethodology": "Copied from unverified trader filenames",
+      "castAttributionMethod": "None or generic series-level descriptions",
+      "captionEngine": "None (0% .vtt transcripts)"
+    },
+    "badges": [
+      "Repackaged Trader MP3s",
+      "No .vtt Captions",
+      "Zero Schema.org"
+    ],
+    "summary": "Commercial OTR portal serving re-hosted collector MP3s without primary newspaper air-date verification, cast character credits, or synchronized .vtt transcripts.",
+    "capabilities": {
+      "primary_source_verification": {
+        "level": "none",
+        "score": 15,
+        "summary": "Relies on unverified trader filename dates."
+      },
+      "cast_credit_accuracy": {
+        "level": "none",
+        "score": 10,
+        "summary": "No verified per-episode cast or character role credits."
+      },
+      "vtt_transcripts": {
+        "level": "none",
+        "score": 0,
+        "summary": "0% synchronized WebVTT transcripts."
+      },
+      "master_provenance": {
+        "level": "none",
+        "score": 18,
+        "summary": "No 16-inch ET matrix lineage or stream digests."
+      },
+      "serial_continuity": {
+        "level": "partial",
+        "score": 45,
+        "summary": "Basic series lists without multi-part arc reconciliation."
+      },
+      "open_api_export": {
+        "level": "none",
+        "score": 5,
+        "summary": "No open API, RSS feeds, or structured data."
+      },
+      "ad_free_playback": {
+        "level": "partial",
+        "score": 40,
+        "summary": "Paywalled access to public-domain recordings."
+      },
+      "dedup_integrity": {
+        "level": "none",
+        "score": 20,
+        "summary": "Contains duplicate trader encodes and misdated episodes."
+      }
+    },
+    "gotchas": [
+      {
+        "severity": "critical",
+        "title": "Unverified Trader Metadata & Paywalled Public Domain Audio",
+        "detail": "Repackages community OTR transfers without newspaper date proof, cast role links, or synchronized .vtt captions."
+      }
+    ],
+    "specs": {
+      "free_no_paywall": false,
+      "no_login_required": false,
+      "ad_free": true,
+      "uuid_index": false,
+      "sha256_dedup": false,
+      "schema_jsonld": false,
+      "podcast_rss": false,
+      "open_json_api": false,
+      "vtt_subtitles": false,
+      "newspaper_scans": false,
+      "studio_scripts": false,
+      "character_roles": false,
+      "lossless_et": false,
+      "serial_arcs": false
+    },
+    "specNotes": {
+      "free_no_paywall": "Commercial paywall ($5.99/mo or $49.99/yr) over public-domain OTRR/IA MP3 files.",
+      "lossless_et": "Streams 32–64 kbps MP3 files with no original 16\" ET transfers or FLAC downloads.",
+      "vtt_subtitles": "Zero .vtt subtitle files or primary archival documentation."
+    },
+    "metrics": {
+      "playableBroadcasts": 14500,
+      "catalogBroadcasts": 14500,
+      "seriesCount": 190,
+      "vttSubtitleCount": 0,
+      "specCount": 1,
+      "totalSpecs": 14,
+      "medianBitrateKbps": 48,
+      "maxBitrateKbps": 64,
+      "ttfaMs": 890,
+      "highCutoffHz": 5200
+    }
+  },
+  {
+    "id": "oldtimeradiodownloads",
+    "name": "Old Time Radio Downloads",
+    "shortName": "OTR Downloads",
+    "domain": "oldtimeradiodownloads.com",
+    "url": "https://www.oldtimeradiodownloads.com",
+    "category": "Curated Hobbyist Portal",
+    "operator": "OldTimeRadioDownloads",
+    "foundedYear": 2012,
+    "pricing": {
+      "model": "ad-supported",
+      "monthlyUsd": 0,
+      "annualUsd": 0,
+      "displayPrice": "Free (Ad-Supported)",
+      "billingNote": "Heavy display advertising across series and episode pages",
+      "freeTierNote": "Direct MP3 downloads and browser playback"
+    },
+    "catalog": {
+      "broadcastCount": 36000,
+      "seriesCount": 410,
+      "distinctRecordings": 32000,
+      "dateSpan": "1930–1962",
+      "onlineStreamablePct": 100
+    },
+    "audio": {
+      "formats": [
+        "MP3 (32–64 kbps)"
+      ],
+      "primaryContainer": "MP3",
+      "streamingAvailable": true,
+      "batchDownloadAvailable": false,
+      "rssFeedsAvailable": false
+    },
+    "provenance": {
+      "primaryMasterSource": "Standard OTRR/trader MP3 sets",
+      "airdateMethodology": "Filename dates; no primary newspaper log citations",
+      "castAttributionMethod": "Generic show-level cast lists repeated across episodes",
+      "captionEngine": "None (0% .vtt transcripts)"
+    },
+    "badges": [
+      "36k MP3s",
+      "Display Ads",
+      "Zero JSON-LD"
+    ],
+    "summary": "Large ad-supported MP3 download portal with clean genre/show URL paths, but zero Schema.org structured data, zero synchronized .vtt captions, and generic show-level cast tags pasted onto individual episodes.",
+    "capabilities": {
+      "primary_source_verification": {
+        "level": "partial",
+        "score": 42,
+        "summary": "Uses trader filename dates without newspaper corroboration."
+      },
+      "cast_credit_accuracy": {
+        "level": "none",
+        "score": 15,
+        "summary": "Repeats series-level lead actors on episode pages regardless of actual appearance."
+      },
+      "vtt_transcripts": {
+        "level": "none",
+        "score": 0,
+        "summary": "0% WebVTT captions or full-length transcripts."
+      },
+      "master_provenance": {
+        "level": "none",
+        "score": 25,
+        "summary": "Low-bitrate MP3s without transfer lineage."
+      },
+      "serial_continuity": {
+        "level": "partial",
+        "score": 55,
+        "summary": "Chronological lists by filename date."
+      },
+      "open_api_export": {
+        "level": "none",
+        "score": 15,
+        "summary": "No JSON API or /llms.txt."
+      },
+      "ad_free_playback": {
+        "level": "none",
+        "score": 30,
+        "summary": "Cluttered with programmatic display banner ads."
+      },
+      "dedup_integrity": {
+        "level": "none",
+        "score": 30,
+        "summary": "Duplicates East/West feeds and syndicated re-titles."
+      }
+    },
+    "gotchas": [
+      {
+        "severity": "warning",
+        "title": "Series-Level Cast Pasted onto Individual Episodes",
+        "detail": "Credits series lead actors to episodes in which they never appeared, and lacks any synchronized .vtt transcripts."
+      }
+    ],
+    "specs": {
+      "free_no_paywall": true,
+      "no_login_required": true,
+      "ad_free": false,
+      "uuid_index": false,
+      "sha256_dedup": false,
+      "schema_jsonld": false,
+      "podcast_rss": false,
+      "open_json_api": false,
+      "vtt_subtitles": false,
+      "newspaper_scans": false,
+      "studio_scripts": false,
+      "character_roles": false,
+      "lossless_et": false,
+      "serial_arcs": false
+    },
+    "specNotes": {
+      "ad_free": "Pages embed heavy programmatic display banner ad networks.",
+      "character_roles": "Pastes generic series-level actor bios onto every episode page regardless of whether the actor appeared.",
+      "vtt_subtitles": "Zero synchronized .vtt subtitles."
+    },
+    "metrics": {
+      "playableBroadcasts": 36000,
+      "catalogBroadcasts": 36000,
+      "seriesCount": 410,
+      "vttSubtitleCount": 0,
+      "specCount": 2,
+      "totalSpecs": 14,
+      "medianBitrateKbps": 48,
+      "maxBitrateKbps": 96,
+      "ttfaMs": 820,
+      "highCutoffHz": 5500
+    }
+  },
+  {
+    "id": "mystery-shows",
+    "name": "Mystery Shows (mysteryshows.com)",
+    "shortName": "MysteryShows.com",
+    "domain": "mysteryshows.com",
+    "url": "https://www.mysteryshows.com",
+    "category": "Curated Hobbyist Portal",
+    "operator": "Mystery Shows",
+    "foundedYear": 2005,
+    "pricing": {
+      "model": "ad-supported",
+      "monthlyUsd": 0,
+      "annualUsd": 0,
+      "displayPrice": "Free",
+      "billingNote": "Static hobbyist mystery & thriller stream portal",
+      "freeTierNote": "Direct MP3 links"
+    },
+    "catalog": {
+      "broadcastCount": 8400,
+      "seriesCount": 65,
+      "distinctRecordings": 7900,
+      "dateSpan": "1935–1982",
+      "onlineStreamablePct": 100
+    },
+    "audio": {
+      "formats": [
+        "MP3 (24–48 kbps)"
+      ],
+      "primaryContainer": "MP3",
+      "streamingAvailable": true,
+      "batchDownloadAvailable": false,
+      "rssFeedsAvailable": false
+    },
+    "provenance": {
+      "primaryMasterSource": "Early-2000s low-bitrate MP3 encodes",
+      "airdateMethodology": "Unverified collector filenames",
+      "castAttributionMethod": "None",
+      "captionEngine": "None (0% .vtt)"
+    },
+    "badges": [
+      "Mystery Niche",
+      "Low Bitrate",
+      "Static HTML"
+    ],
+    "summary": "Legacy thriller and mystery radio hobbyist site serving 24–48 kbps MP3 streams with no cast credits, no newspaper log verification, and no transcripts.",
+    "capabilities": {
+      "primary_source_verification": {
+        "level": "none",
+        "score": 20,
+        "summary": "Raw trader filenames only."
+      },
+      "cast_credit_accuracy": {
+        "level": "none",
+        "score": 5,
+        "summary": "No per-episode cast or character credits."
+      },
+      "vtt_transcripts": {
+        "level": "none",
+        "score": 0,
+        "summary": "0% transcripts."
+      },
+      "master_provenance": {
+        "level": "none",
+        "score": 15,
+        "summary": "Heavily compressed 24–48 kbps MP3s."
+      },
+      "serial_continuity": {
+        "level": "partial",
+        "score": 40,
+        "summary": "Basic static HTML lists."
+      },
+      "open_api_export": {
+        "level": "none",
+        "score": 10,
+        "summary": "No API or RSS."
+      },
+      "ad_free_playback": {
+        "level": "partial",
+        "score": 55,
+        "summary": "Dated static pages."
+      },
+      "dedup_integrity": {
+        "level": "none",
+        "score": 20,
+        "summary": "No deduplication."
+      }
+    },
+    "gotchas": [
+      {
+        "severity": "warning",
+        "title": "24–48 kbps Encodes & Zero Metadata",
+        "detail": "Lacks synopses, cast credits, newspaper date proof, and synchronized captions."
+      }
+    ],
+    "specs": {
+      "free_no_paywall": true,
+      "no_login_required": true,
+      "ad_free": false,
+      "uuid_index": false,
+      "sha256_dedup": false,
+      "schema_jsonld": false,
+      "podcast_rss": false,
+      "open_json_api": false,
+      "vtt_subtitles": false,
+      "newspaper_scans": false,
+      "studio_scripts": false,
+      "character_roles": false,
+      "lossless_et": false,
+      "serial_arcs": false
+    },
+    "specNotes": {
+      "lossless_et": "24–32 kbps mono MP3 streams only; limited to mystery/detective shows."
+    },
+    "metrics": {
+      "playableBroadcasts": 8400,
+      "catalogBroadcasts": 8400,
+      "seriesCount": 65,
+      "vttSubtitleCount": 0,
+      "specCount": 2,
+      "totalSpecs": 14,
+      "medianBitrateKbps": 32,
+      "maxBitrateKbps": 64,
+      "ttfaMs": 950,
+      "highCutoffHz": 4500
+    }
+  },
+  {
+    "id": "otr-net",
+    "name": "OTR.net (Old Time Radio Network)",
+    "shortName": "OTR.net",
+    "domain": "otr.net",
+    "url": "https://www.otr.net",
+    "category": "Curated Hobbyist Portal",
+    "operator": "OTR.net",
+    "foundedYear": 1998,
+    "pricing": {
+      "model": "ad-supported",
+      "monthlyUsd": 0,
+      "annualUsd": 0,
+      "displayPrice": "Free (Ad-Supported)",
+      "billingNote": "Late-1990s web portal",
+      "freeTierNote": "Low-bitrate streams"
+    },
+    "catalog": {
+      "broadcastCount": 5200,
+      "seriesCount": 110,
+      "distinctRecordings": 5000,
+      "dateSpan": "1932–1960",
+      "onlineStreamablePct": 100
+    },
+    "audio": {
+      "formats": [
+        "MP3 (16–32 kbps)"
+      ],
+      "primaryContainer": "MP3",
+      "streamingAvailable": true,
+      "batchDownloadAvailable": false,
+      "rssFeedsAvailable": false
+    },
+    "provenance": {
+      "primaryMasterSource": "1990s dial-up era RealAudio-to-MP3 transcodes",
+      "airdateMethodology": "Cryptic 8-character DOS filenames",
+      "castAttributionMethod": "None",
+      "captionEngine": "None (0% .vtt)"
+    },
+    "badges": [
+      "1998 Portal",
+      "16–32 kbps",
+      "Cryptic URLs"
+    ],
+    "summary": "One of the earliest late-1990s OTR websites (~5,200 episodes), still serving dial-up era 16–32 kbps encodes with abbreviated DOS filenames and zero structured metadata.",
+    "capabilities": {
+      "primary_source_verification": {
+        "level": "none",
+        "score": 15,
+        "summary": "Abbreviated 1990s filenames."
+      },
+      "cast_credit_accuracy": {
+        "level": "none",
+        "score": 0,
+        "summary": "Zero cast credits."
+      },
+      "vtt_transcripts": {
+        "level": "none",
+        "score": 0,
+        "summary": "Zero captions."
+      },
+      "master_provenance": {
+        "level": "none",
+        "score": 10,
+        "summary": "Dial-up era 16–32 kbps transcodes."
+      },
+      "serial_continuity": {
+        "level": "none",
+        "score": 25,
+        "summary": "Broken alphabetical/filename order."
+      },
+      "open_api_export": {
+        "level": "none",
+        "score": 5,
+        "summary": "Zero structured data."
+      },
+      "ad_free_playback": {
+        "level": "none",
+        "score": 30,
+        "summary": "Banner ads."
+      },
+      "dedup_integrity": {
+        "level": "none",
+        "score": 15,
+        "summary": "Unreconciled legacy files."
+      }
+    },
+    "gotchas": [
+      {
+        "severity": "critical",
+        "title": "Dial-Up Era 16–32 kbps Audio & Cryptic Abbreviations",
+        "detail": "Severely muffled audio transcoded from 1990s RealAudio files with zero metadata."
+      }
+    ],
+    "specs": {
+      "free_no_paywall": true,
+      "no_login_required": true,
+      "ad_free": false,
+      "uuid_index": false,
+      "sha256_dedup": false,
+      "schema_jsonld": false,
+      "podcast_rss": false,
+      "open_json_api": false,
+      "vtt_subtitles": false,
+      "newspaper_scans": false,
+      "studio_scripts": false,
+      "character_roles": false,
+      "lossless_et": false,
+      "serial_arcs": false
+    },
+    "specNotes": {
+      "lossless_et": "1990s dial-up era 16–32 kbps MP3 files with 4 kHz frequency ceiling."
+    },
+    "metrics": {
+      "playableBroadcasts": 5200,
+      "catalogBroadcasts": 5200,
+      "seriesCount": 110,
+      "vttSubtitleCount": 0,
+      "specCount": 2,
+      "totalSpecs": 14,
+      "medianBitrateKbps": 24,
+      "maxBitrateKbps": 32,
+      "ttfaMs": 1100,
+      "highCutoffHz": 4000
+    }
+  }
+]

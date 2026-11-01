@@ -1,0 +1,226 @@
+{
+  "schemaVersion": "2026.11",
+  "updatedAt": "2026-11-01",
+  "specGroups": [
+    {
+      "id": "access",
+      "title": "Access & Pricing",
+      "specs": [
+        {
+          "id": "free_no_paywall",
+          "name": "100% Free Catalog ($0/mo)",
+          "shortName": "Free ($0)",
+          "unit": "boolean",
+          "verificationMethod": "HTTP 200 stream access without subscription checkout wall",
+          "description": "Full playable broadcast catalog is accessible at $0/month without a recurring subscription paywall or credit card gate."
+        },
+        {
+          "id": "no_login_required",
+          "name": "Instant Play (No Account Login)",
+          "shortName": "No Login",
+          "unit": "boolean",
+          "verificationMethod": "Unauthenticated curl / browser audio playback test",
+          "description": "Listeners and external clients can stream audio immediately without registering an account or maintaining session cookies."
+        },
+        {
+          "id": "ad_free",
+          "name": "Zero Mid-Roll or Display Ads",
+          "shortName": "Zero Ads",
+          "unit": "boolean",
+          "verificationMethod": "DOM ad-network script audit & audio stream inspection",
+          "description": "Zero third-party banner ads, pop-unders, or modern programmatic mid-roll audio ads spliced into historical broadcasts."
+        }
+      ]
+    },
+    {
+      "id": "protocol",
+      "title": "Open UUID Index & Protocols",
+      "specs": [
+        {
+          "id": "uuid_index",
+          "name": "Public Recording UUID / RID Index",
+          "shortName": "Public UUID Index",
+          "unit": "boolean",
+          "verificationMethod": "Canonical /listen?id={uuid|rid} & radioindex.org-ids resolution",
+          "description": "Every broadcast and recording has a permanent, canonical public UUID and short RID decoupled from storage URLs—enabling any external media player, catalog, or addon to resolve verified metadata, multi-mirror audio streams, and .vtt subtitles by ID."
+        },
+        {
+          "id": "sha256_dedup",
+          "name": "SHA-256 Audio Stream Deduplication",
+          "shortName": "SHA-256 Dedup",
+          "unit": "boolean",
+          "verificationMethod": "Cryptographic sha256 stream digest manifest per recording",
+          "description": "Every audio file across public mirrors is fingerprinted by SHA-256 hash to merge identical mislabeled trader files while preserving distinct East/West Coast network broadcasts."
+        },
+        {
+          "id": "schema_jsonld",
+          "name": "Schema.org RadioEpisode JSON-LD",
+          "shortName": "JSON-LD Schema",
+          "unit": "boolean",
+          "verificationMethod": "<script type=\"application/ld+json\"> DOM inspection on episode URLs",
+          "description": "Every broadcast page embeds structured Schema.org RadioEpisode / RadioSeries JSON-LD and OpenGraph metadata for search engines and AI agents."
+        },
+        {
+          "id": "podcast_rss",
+          "name": "Per-Series Podcast RSS Feeds",
+          "shortName": "Per-Series RSS",
+          "unit": "boolean",
+          "verificationMethod": "HTTP 200 application/rss+xml per series (/rss?series=)",
+          "description": "Dedicated RSS 2.0 / Apple Podcasts enclosure feed generated for every individual series rather than a single 10-episode sampler feed."
+        },
+        {
+          "id": "open_json_api",
+          "name": "Public JSON API & /llms.txt",
+          "shortName": "JSON API / llms.txt",
+          "unit": "boolean",
+          "verificationMethod": "Unauthenticated JSON endpoint & /llms.txt HTTP 200 check",
+          "description": "Exposes structured JSON metadata endpoints and a static /llms.txt index without CAPTCHA or API key paywalls."
+        }
+      ]
+    },
+    {
+      "id": "archival",
+      "title": "Transcripts & Primary Evidence",
+      "specs": [
+        {
+          "id": "vtt_subtitles",
+          "name": "100% Full-Length .vtt Subtitles",
+          "shortName": "Full .vtt Subtitles",
+          "unit": "boolean",
+          "verificationMethod": "Time-synced WebVTT (.vtt) track covering 100% of audio duration",
+          "description": "Complete start-to-finish word-timed WebVTT (.vtt) caption tracks generated across the full recording length via faster-whisper VAD (never 30–90s snippets)."
+        },
+        {
+          "id": "newspaper_scans",
+          "name": "Primary Newspaper & Trade Log Scans",
+          "shortName": "Newspaper Scans",
+          "unit": "boolean",
+          "verificationMethod": "Linked newspaper clipping / trade magazine scan citations",
+          "description": "Air dates corroborated by linked primary scans from Library of Congress Chronicling America, Fulton History, JJonz RadioLogs, Variety, Broadcasting, and Radio Daily."
+        },
+        {
+          "id": "studio_scripts",
+          "name": "Original Studio Broadcast Scripts",
+          "shortName": "Studio Scripts",
+          "unit": "boolean",
+          "verificationMethod": "Linked archival script PDF/text in episode record",
+          "description": "Links surviving network continuity and studio production scripts directly to the corresponding broadcast record."
+        },
+        {
+          "id": "character_roles",
+          "name": "Per-Episode Actor ↔ Character Graph",
+          "shortName": "Actor ↔ Role Graph",
+          "unit": "boolean",
+          "verificationMethod": "Relational actor-to-character links[] per episode",
+          "description": "Maps each credited actor to the specific character role played in that individual broadcast rather than pasting generic series leads."
+        }
+      ]
+    },
+    {
+      "id": "audio",
+      "title": "Audio Fidelity & Continuity",
+      "specs": [
+        {
+          "id": "lossless_et",
+          "name": "16\" ET Disc / Lossless FLAC Streams",
+          "shortName": "FLAC / 16\" ET",
+          "unit": "boolean",
+          "verificationMethod": "Audio stream Content-Type & bitrate >= 128 kbps / FLAC inspection",
+          "description": "Provides uncompressed FLAC/WAV or high-bitrate (>=128 kbps) transfers sourced from 16-inch 33⅓ RPM electrical transcription discs rather than 24–56 kbps MP3 dubs."
+        },
+        {
+          "id": "serial_arcs",
+          "name": "Sequential Multi-Part Serial Arcs",
+          "shortName": "Serial Continuity",
+          "unit": "boolean",
+          "verificationMethod": "Chronological multi-part episode ordering on series pages",
+          "description": "Preserves contiguous multi-part serial story arcs (e.g., 5-part Johnny Dollar, I Love a Mystery) in chronological sequence instead of alphabetical title shuffle."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "id": "all_open",
+      "name": "Casual Listener",
+      "shortLabel": "Casual Listener",
+      "scenarioTitle": "Stream any classic radio series immediately with zero ads and $0 subscription cost",
+      "metricKey": "broadcastCount",
+      "maxMonthlyUsd": 0,
+      "minBroadcasts": 5000,
+      "minBitrateKbps": 64,
+      "requiredSpecs": [
+        "free_no_paywall",
+        "no_login_required",
+        "ad_free"
+      ],
+      "suggestedSpecs": [
+        "podcast_rss",
+        "vtt_subtitles",
+        "serial_arcs",
+        "lossless_et"
+      ]
+    },
+    {
+      "id": "uuid_developer",
+      "name": "Universal Player / AI Agent",
+      "shortLabel": "UUID Index / Dev",
+      "scenarioTitle": "Resolve streams, .vtt subtitles, and JSON-LD metadata by canonical public recording UUID",
+      "metricKey": "vttCount",
+      "maxMonthlyUsd": 25,
+      "minBroadcasts": 1000,
+      "minBitrateKbps": 0,
+      "requiredSpecs": [
+        "uuid_index",
+        "vtt_subtitles",
+        "open_json_api"
+      ],
+      "suggestedSpecs": [
+        "sha256_dedup",
+        "schema_jsonld",
+        "podcast_rss",
+        "free_no_paywall"
+      ]
+    },
+    {
+      "id": "historian",
+      "name": "Archival Historian",
+      "shortLabel": "Archival Historian",
+      "scenarioTitle": "Newspaper-corroborated air dates, linked studio scripts, and per-episode character roles",
+      "metricKey": "specCount",
+      "maxMonthlyUsd": 25,
+      "minBroadcasts": 0,
+      "minBitrateKbps": 0,
+      "requiredSpecs": [
+        "newspaper_scans",
+        "character_roles"
+      ],
+      "suggestedSpecs": [
+        "studio_scripts",
+        "vtt_subtitles",
+        "sha256_dedup",
+        "uuid_index"
+      ]
+    },
+    {
+      "id": "audiophile",
+      "name": "16\" ET Collector",
+      "shortLabel": "16\" ET Collector",
+      "scenarioTitle": "High-bitrate 16-inch transcription disc transfers, FLAC availability, and SHA-256 dedup",
+      "metricKey": "medianBitrate",
+      "maxMonthlyUsd": 25,
+      "minBroadcasts": 1000,
+      "minBitrateKbps": 96,
+      "requiredSpecs": [
+        "lossless_et",
+        "serial_arcs"
+      ],
+      "suggestedSpecs": [
+        "sha256_dedup",
+        "free_no_paywall",
+        "ad_free",
+        "uuid_index"
+      ]
+    }
+  ]
+}

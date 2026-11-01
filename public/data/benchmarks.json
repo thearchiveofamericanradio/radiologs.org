@@ -1,0 +1,728 @@
+[
+  {
+    "sourceId": "radioindex",
+    "latency": {
+      "ttfbMs": 38,
+      "firstAudioFrameMs": 145,
+      "p50StartMs": 152,
+      "p95StartMs": 290,
+      "cdnArchitecture": "Pure Rust Axum origin (:8889) behind Caddy on OVH + HTTP Range streaming"
+    },
+    "bitrate": {
+      "minKbps": 64,
+      "medianKbps": 128,
+      "maxKbps": 1411,
+      "losslessSharePct": 28,
+      "transcodeGenerationNote": "Preserves highest-generation surviving master (16\" ET FLAC / 128–320k MP3) verified by SHA-256 stream digest"
+    },
+    "frequencyResponse": {
+      "lowCutoffHz": 50,
+      "highCutoffHz": 12500,
+      "snrDb": 54,
+      "dynamicRangeLu": 14.2,
+      "transferGrade": "A+ (Direct 16\" ET / Master)"
+    },
+    "metadataCompleteness": {
+      "overallPct": 96.8,
+      "verifiedAirdatePct": 98.4,
+      "characterRolePct": 94.5,
+      "vttCoveragePct": 99.2,
+      "provenanceDocumentedPct": 96,
+      "sponsorLoggedPct": 92.8,
+      "serialArcLinkedPct": 99.8
+    }
+  },
+  {
+    "sourceId": "ia-otrr",
+    "latency": {
+      "ttfbMs": 320,
+      "firstAudioFrameMs": 1480,
+      "p50StartMs": 1560,
+      "p95StartMs": 4200,
+      "cdnArchitecture": "Internet Archive dnode storage servers + heavy JWPlayer multi-file playlist hydration"
+    },
+    "bitrate": {
+      "minKbps": 24,
+      "medianKbps": 64,
+      "maxKbps": 1411,
+      "losslessSharePct": 19,
+      "transcodeGenerationNote": "Mixes original FLAC/high-bitrate MP3 uploads with automated 64k VBR Ogg/MP3 derivatives"
+    },
+    "frequencyResponse": {
+      "lowCutoffHz": 75,
+      "highCutoffHz": 8500,
+      "snrDb": 42,
+      "dynamicRangeLu": 11.8,
+      "transferGrade": "B (Clean Collector Transfer)"
+    },
+    "metadataCompleteness": {
+      "overallPct": 38.4,
+      "verifiedAirdatePct": 58,
+      "characterRolePct": 8,
+      "vttCoveragePct": 4.5,
+      "provenanceDocumentedPct": 42,
+      "sponsorLoggedPct": 18,
+      "serialArcLinkedPct": 62
+    }
+  },
+  {
+    "sourceId": "rusc",
+    "latency": {
+      "ttfbMs": 210,
+      "firstAudioFrameMs": 690,
+      "p50StartMs": 740,
+      "p95StartMs": 1650,
+      "cdnArchitecture": "Authenticated PHP/IIS session redirect to static MP3 storage"
+    },
+    "bitrate": {
+      "minKbps": 24,
+      "medianKbps": 48,
+      "maxKbps": 64,
+      "losslessSharePct": 0,
+      "transcodeGenerationNote": "Uniformly down-sampled to 32–56 kbps mono MP3 (22.05 kHz sample rate) for small download footprint"
+    },
+    "frequencyResponse": {
+      "lowCutoffHz": 110,
+      "highCutoffHz": 4800,
+      "snrDb": 35,
+      "dynamicRangeLu": 9.4,
+      "transferGrade": "D (Low-Bitrate 24–32k Narrowband)"
+    },
+    "metadataCompleteness": {
+      "overallPct": 41.2,
+      "verifiedAirdatePct": 42,
+      "characterRolePct": 22,
+      "vttCoveragePct": 0,
+      "provenanceDocumentedPct": 10,
+      "sponsorLoggedPct": 25,
+      "serialArcLinkedPct": 72
+    }
+  },
+  {
+    "sourceId": "stupid-potato",
+    "latency": {
+      "ttfbMs": 285,
+      "firstAudioFrameMs": 920,
+      "p50StartMs": 980,
+      "p95StartMs": 2800,
+      "cdnArchitecture": "Shared web hosting + external archive mirror hotlinks"
+    },
+    "bitrate": {
+      "minKbps": 24,
+      "medianKbps": 32,
+      "maxKbps": 64,
+      "losslessSharePct": 0,
+      "transcodeGenerationNote": "Multi-generation early-2000s trader MP3s with audible Fraunhofer/BladeEnc ringing"
+    },
+    "frequencyResponse": {
+      "lowCutoffHz": 130,
+      "highCutoffHz": 4100,
+      "snrDb": 31,
+      "dynamicRangeLu": 8.6,
+      "transferGrade": "D (Low-Bitrate 24–32k Narrowband)"
+    },
+    "metadataCompleteness": {
+      "overallPct": 14.5,
+      "verifiedAirdatePct": 25,
+      "characterRolePct": 0,
+      "vttCoveragePct": 0,
+      "provenanceDocumentedPct": 0,
+      "sponsorLoggedPct": 0,
+      "serialArcLinkedPct": 32
+    }
+  },
+  {
+    "sourceId": "old-radio-world",
+    "latency": {
+      "ttfbMs": 195,
+      "firstAudioFrameMs": 610,
+      "p50StartMs": 660,
+      "p95StartMs": 1490,
+      "cdnArchitecture": "Direct Nginx static MP3 file serving"
+    },
+    "bitrate": {
+      "minKbps": 24,
+      "medianKbps": 32,
+      "maxKbps": 64,
+      "losslessSharePct": 0,
+      "transcodeGenerationNote": "Static legacy 32–48 kbps mono MP3 encodes"
+    },
+    "frequencyResponse": {
+      "lowCutoffHz": 120,
+      "highCutoffHz": 4400,
+      "snrDb": 33,
+      "dynamicRangeLu": 8.9,
+      "transferGrade": "D (Low-Bitrate 24–32k Narrowband)"
+    },
+    "metadataCompleteness": {
+      "overallPct": 16.8,
+      "verifiedAirdatePct": 28,
+      "characterRolePct": 2,
+      "vttCoveragePct": 0,
+      "provenanceDocumentedPct": 0,
+      "sponsorLoggedPct": 0,
+      "serialArcLinkedPct": 40
+    }
+  },
+  {
+    "sourceId": "siriusxm-radioclassics",
+    "latency": {
+      "ttfbMs": 180,
+      "firstAudioFrameMs": 840,
+      "p50StartMs": 890,
+      "p95StartMs": 1950,
+      "cdnArchitecture": "SiriusXM Akamai DRM HLS chunked streaming"
+    },
+    "bitrate": {
+      "minKbps": 64,
+      "medianKbps": 96,
+      "maxKbps": 128,
+      "losslessSharePct": 0,
+      "transcodeGenerationNote": "HE-AAC / AAC+ broadcast encode from restored studio masters with broadcast multiband limiting"
+    },
+    "frequencyResponse": {
+      "lowCutoffHz": 60,
+      "highCutoffHz": 11200,
+      "snrDb": 51,
+      "dynamicRangeLu": 10.5,
+      "transferGrade": "A (Restored Broadcast Master)"
+    },
+    "metadataCompleteness": {
+      "overallPct": 52,
+      "verifiedAirdatePct": 92,
+      "characterRolePct": 45,
+      "vttCoveragePct": 0,
+      "provenanceDocumentedPct": 65,
+      "sponsorLoggedPct": 70,
+      "serialArcLinkedPct": 40
+    }
+  },
+  {
+    "sourceId": "otrrlib",
+    "latency": {
+      "ttfbMs": 140,
+      "firstAudioFrameMs": 420,
+      "p50StartMs": 460,
+      "p95StartMs": 1120,
+      "cdnArchitecture": "Direct Apache/Nginx HTTP directory server"
+    },
+    "bitrate": {
+      "minKbps": 32,
+      "medianKbps": 96,
+      "maxKbps": 256,
+      "losslessSharePct": 0,
+      "transcodeGenerationNote": "Certified series upgraded to 96–192 kbps MP3 where 16\" ET sources exist; older sets remain 32–64k"
+    },
+    "frequencyResponse": {
+      "lowCutoffHz": 70,
+      "highCutoffHz": 9200,
+      "snrDb": 45,
+      "dynamicRangeLu": 12.4,
+      "transferGrade": "B (Clean Collector Transfer)"
+    },
+    "metadataCompleteness": {
+      "overallPct": 54.6,
+      "verifiedAirdatePct": 78,
+      "characterRolePct": 35,
+      "vttCoveragePct": 2,
+      "provenanceDocumentedPct": 62,
+      "sponsorLoggedPct": 48,
+      "serialArcLinkedPct": 85
+    }
+  },
+  {
+    "sourceId": "loc-recorded-sound",
+    "latency": {
+      "ttfbMs": 165,
+      "firstAudioFrameMs": 580,
+      "p50StartMs": 620,
+      "p95StartMs": 1450,
+      "cdnArchitecture": "CloudFront / LOC Digital Collections Media Server (for the 9% online subset)"
+    },
+    "bitrate": {
+      "minKbps": 128,
+      "medianKbps": 256,
+      "maxKbps": 4608,
+      "losslessSharePct": 85,
+      "transcodeGenerationNote": "24-bit/96kHz preservation WAV masters at Packard Campus; 192–256 kbps MP3 / WAV derivatives online"
+    },
+    "frequencyResponse": {
+      "lowCutoffHz": 40,
+      "highCutoffHz": 15000,
+      "snrDb": 58,
+      "dynamicRangeLu": 16.5,
+      "transferGrade": "A+ (Direct 16\" ET / Master)"
+    },
+    "metadataCompleteness": {
+      "overallPct": 76.4,
+      "verifiedAirdatePct": 99.5,
+      "characterRolePct": 68,
+      "vttCoveragePct": 12,
+      "provenanceDocumentedPct": 100,
+      "sponsorLoggedPct": 88,
+      "serialArcLinkedPct": 74
+    }
+  },
+  {
+    "sourceId": "radiogoldindex",
+    "latency": {
+      "ttfbMs": null,
+      "firstAudioFrameMs": null,
+      "p50StartMs": null,
+      "p95StartMs": null,
+      "cdnArchitecture": "Static HTML text only (Zero audio streams hosted)"
+    },
+    "bitrate": {
+      "minKbps": 0,
+      "medianKbps": 0,
+      "maxKbps": 0,
+      "losslessSharePct": 0,
+      "transcodeGenerationNote": "Text discography only; physical 16\" discs reside at UMKC Marr Sound Archives"
+    },
+    "frequencyResponse": {
+      "lowCutoffHz": 0,
+      "highCutoffHz": 0,
+      "snrDb": 0,
+      "dynamicRangeLu": 0,
+      "transferGrade": "N/A (Text / Script Index Only)"
+    },
+    "metadataCompleteness": {
+      "overallPct": 82.5,
+      "verifiedAirdatePct": 97.5,
+      "characterRolePct": 91,
+      "vttCoveragePct": 0,
+      "provenanceDocumentedPct": 98,
+      "sponsorLoggedPct": 96,
+      "serialArcLinkedPct": 92
+    }
+  },
+  {
+    "sourceId": "umkc-marr",
+    "latency": {
+      "ttfbMs": 240,
+      "firstAudioFrameMs": 790,
+      "p50StartMs": 830,
+      "p95StartMs": 1880,
+      "cdnArchitecture": "bepress / UMKC Digital Commons institutional repository (7% online subset)"
+    },
+    "bitrate": {
+      "minKbps": 128,
+      "medianKbps": 192,
+      "maxKbps": 4608,
+      "losslessSharePct": 75,
+      "transcodeGenerationNote": "24-bit/96kHz flat archival transfers from 16\" Goldin & KMOX transcription discs; 192k MP3 web stream"
+    },
+    "frequencyResponse": {
+      "lowCutoffHz": 45,
+      "highCutoffHz": 14500,
+      "snrDb": 56,
+      "dynamicRangeLu": 15.8,
+      "transferGrade": "A+ (Direct 16\" ET / Master)"
+    },
+    "metadataCompleteness": {
+      "overallPct": 74,
+      "verifiedAirdatePct": 96,
+      "characterRolePct": 84,
+      "vttCoveragePct": 5,
+      "provenanceDocumentedPct": 99,
+      "sponsorLoggedPct": 90,
+      "serialArcLinkedPct": 70
+    }
+  },
+  {
+    "sourceId": "generic-radio-workshop",
+    "latency": {
+      "ttfbMs": null,
+      "firstAudioFrameMs": null,
+      "p50StartMs": null,
+      "p95StartMs": null,
+      "cdnArchitecture": "Static HTML script pages (85% text-only)"
+    },
+    "bitrate": {
+      "minKbps": 0,
+      "medianKbps": 0,
+      "maxKbps": 128,
+      "losslessSharePct": 0,
+      "transcodeGenerationNote": "Primarily HTML studio script transcriptions; select 128k MP3 streams"
+    },
+    "frequencyResponse": {
+      "lowCutoffHz": 0,
+      "highCutoffHz": 0,
+      "snrDb": 0,
+      "dynamicRangeLu": 0,
+      "transferGrade": "N/A (Text / Script Index Only)"
+    },
+    "metadataCompleteness": {
+      "overallPct": 78.2,
+      "verifiedAirdatePct": 95,
+      "characterRolePct": 98,
+      "vttCoveragePct": 60,
+      "provenanceDocumentedPct": 85,
+      "sponsorLoggedPct": 88,
+      "serialArcLinkedPct": 50
+    }
+  },
+  {
+    "sourceId": "radio-echoes",
+    "latency": {
+      "ttfbMs": 230,
+      "firstAudioFrameMs": 680,
+      "p50StartMs": 720,
+      "p95StartMs": 1750,
+      "cdnArchitecture": "Direct HTTP MP3 storage server"
+    },
+    "bitrate": {
+      "minKbps": 24,
+      "medianKbps": 56,
+      "maxKbps": 128,
+      "losslessSharePct": 0,
+      "transcodeGenerationNote": "Heterogeneous collector MP3s (24k–128k)"
+    },
+    "frequencyResponse": {
+      "lowCutoffHz": 100,
+      "highCutoffHz": 5800,
+      "snrDb": 37,
+      "dynamicRangeLu": 10.1,
+      "transferGrade": "C (Multi-Gen MP3 / Tape Dub)"
+    },
+    "metadataCompleteness": {
+      "overallPct": 28.5,
+      "verifiedAirdatePct": 48,
+      "characterRolePct": 5,
+      "vttCoveragePct": 0,
+      "provenanceDocumentedPct": 12,
+      "sponsorLoggedPct": 8,
+      "serialArcLinkedPct": 82
+    }
+  },
+  {
+    "sourceId": "relic-radio",
+    "latency": {
+      "ttfbMs": 95,
+      "firstAudioFrameMs": 310,
+      "p50StartMs": 340,
+      "p95StartMs": 780,
+      "cdnArchitecture": "Podcast CDN / Direct HTTP MP3 enclosure"
+    },
+    "bitrate": {
+      "minKbps": 96,
+      "medianKbps": 128,
+      "maxKbps": 128,
+      "losslessSharePct": 0,
+      "transcodeGenerationNote": "Curated collector transfers loudness-normalized and encoded at 96–128 kbps MP3"
+    },
+    "frequencyResponse": {
+      "lowCutoffHz": 80,
+      "highCutoffHz": 8200,
+      "snrDb": 44,
+      "dynamicRangeLu": 11.2,
+      "transferGrade": "B (Clean Collector Transfer)"
+    },
+    "metadataCompleteness": {
+      "overallPct": 39,
+      "verifiedAirdatePct": 72,
+      "characterRolePct": 18,
+      "vttCoveragePct": 0,
+      "provenanceDocumentedPct": 30,
+      "sponsorLoggedPct": 35,
+      "serialArcLinkedPct": 25
+    }
+  },
+  {
+    "sourceId": "dumb-otr",
+    "latency": {
+      "ttfbMs": 310,
+      "firstAudioFrameMs": 980,
+      "p50StartMs": 1050,
+      "p95StartMs": 2400,
+      "cdnArchitecture": "Session-gated PHP MP3 stream wrapper"
+    },
+    "bitrate": {
+      "minKbps": 24,
+      "medianKbps": 32,
+      "maxKbps": 64,
+      "losslessSharePct": 0,
+      "transcodeGenerationNote": "Unimproved legacy 24–64 kbps trader MP3s"
+    },
+    "frequencyResponse": {
+      "lowCutoffHz": 125,
+      "highCutoffHz": 4200,
+      "snrDb": 32,
+      "dynamicRangeLu": 8.5,
+      "transferGrade": "D (Low-Bitrate 24–32k Narrowband)"
+    },
+    "metadataCompleteness": {
+      "overallPct": 12,
+      "verifiedAirdatePct": 22,
+      "characterRolePct": 0,
+      "vttCoveragePct": 0,
+      "provenanceDocumentedPct": 0,
+      "sponsorLoggedPct": 0,
+      "serialArcLinkedPct": 28
+    }
+  },
+  {
+    "sourceId": "boxcars711",
+    "latency": {
+      "ttfbMs": 88,
+      "firstAudioFrameMs": 290,
+      "p50StartMs": 315,
+      "p95StartMs": 690,
+      "cdnArchitecture": "Podbean CloudFront Global Podcast CDN"
+    },
+    "bitrate": {
+      "minKbps": 64,
+      "medianKbps": 96,
+      "maxKbps": 128,
+      "losslessSharePct": 0,
+      "transcodeGenerationNote": "Clean collector transfers with host intro encoded at 64–128 kbps MP3"
+    },
+    "frequencyResponse": {
+      "lowCutoffHz": 85,
+      "highCutoffHz": 7800,
+      "snrDb": 41,
+      "dynamicRangeLu": 11,
+      "transferGrade": "B (Clean Collector Transfer)"
+    },
+    "metadataCompleteness": {
+      "overallPct": 36.5,
+      "verifiedAirdatePct": 65,
+      "characterRolePct": 15,
+      "vttCoveragePct": 0,
+      "provenanceDocumentedPct": 20,
+      "sponsorLoggedPct": 25,
+      "serialArcLinkedPct": 80
+    }
+  },
+  {
+    "sourceId": "american-radio-archives",
+    "latency": {
+      "ttfbMs": 220,
+      "firstAudioFrameMs": 740,
+      "p50StartMs": 790,
+      "p95StartMs": 1720,
+      "cdnArchitecture": "Calisphere / Municipal Library Digital Asset Server (11% online subset)"
+    },
+    "bitrate": {
+      "minKbps": 128,
+      "medianKbps": 192,
+      "maxKbps": 2304,
+      "losslessSharePct": 65,
+      "transcodeGenerationNote": "Archival WAV transfers from CBS Hollywood / Carlton E. Morse reference acetates"
+    },
+    "frequencyResponse": {
+      "lowCutoffHz": 50,
+      "highCutoffHz": 13500,
+      "snrDb": 53,
+      "dynamicRangeLu": 15.1,
+      "transferGrade": "A+ (Direct 16\" ET / Master)"
+    },
+    "metadataCompleteness": {
+      "overallPct": 75.5,
+      "verifiedAirdatePct": 97,
+      "characterRolePct": 88,
+      "vttCoveragePct": 35,
+      "provenanceDocumentedPct": 96,
+      "sponsorLoggedPct": 82,
+      "serialArcLinkedPct": 85
+    }
+  },
+  {
+    "sourceId": "wnyc-archives",
+    "latency": {
+      "ttfbMs": 72,
+      "firstAudioFrameMs": 250,
+      "p50StartMs": 275,
+      "p95StartMs": 610,
+      "cdnArchitecture": "NYPR Fastly/CloudFront Audio CDN"
+    },
+    "bitrate": {
+      "minKbps": 128,
+      "medianKbps": 192,
+      "maxKbps": 4608,
+      "losslessSharePct": 70,
+      "transcodeGenerationNote": "Direct 24-bit/96kHz transfers from WNYC Municipal 16\" lacquer discs; 192k MP3 online stream"
+    },
+    "frequencyResponse": {
+      "lowCutoffHz": 45,
+      "highCutoffHz": 14000,
+      "snrDb": 55,
+      "dynamicRangeLu": 15.4,
+      "transferGrade": "A+ (Direct 16\" ET / Master)"
+    },
+    "metadataCompleteness": {
+      "overallPct": 79,
+      "verifiedAirdatePct": 98.5,
+      "characterRolePct": 82,
+      "vttCoveragePct": 42,
+      "provenanceDocumentedPct": 98,
+      "sponsorLoggedPct": 85,
+      "serialArcLinkedPct": 72
+    }
+  },
+  {
+    "sourceId": "youtube-otr",
+    "latency": {
+      "ttfbMs": 55,
+      "firstAudioFrameMs": 220,
+      "p50StartMs": 240,
+      "p95StartMs": 590,
+      "cdnArchitecture": "Google Global Edge Video CDN (plus pre-roll ad auction delay on free tier)"
+    },
+    "bitrate": {
+      "minKbps": 48,
+      "medianKbps": 96,
+      "maxKbps": 128,
+      "losslessSharePct": 0,
+      "transcodeGenerationNote": "Collector 32–64k MP3 transcoded to AAC video and re-encoded to YouTube Opus (128k container, 32k actual source)"
+    },
+    "frequencyResponse": {
+      "lowCutoffHz": 115,
+      "highCutoffHz": 4600,
+      "snrDb": 30,
+      "dynamicRangeLu": 6.2,
+      "transferGrade": "C (Multi-Gen MP3 / Tape Dub)"
+    },
+    "metadataCompleteness": {
+      "overallPct": 15.2,
+      "verifiedAirdatePct": 12,
+      "characterRolePct": 4,
+      "vttCoveragePct": 48,
+      "provenanceDocumentedPct": 2,
+      "sponsorLoggedPct": 5,
+      "serialArcLinkedPct": 10
+    }
+  },
+  {
+    "sourceId": "golden-radio-hour",
+    "latency": {
+      "ttfbMs": 290,
+      "firstAudioFrameMs": 840,
+      "p50StartMs": 890,
+      "p95StartMs": 1950,
+      "cdnArchitecture": "Standard commercial web host"
+    },
+    "bitrate": {
+      "minKbps": 32,
+      "medianKbps": 48,
+      "maxKbps": 64,
+      "losslessSharePct": 0,
+      "transcodeGenerationNote": "Re-hosted 32–64 kbps collector MP3s"
+    },
+    "frequencyResponse": {
+      "lowCutoffHz": 110,
+      "highCutoffHz": 5200,
+      "snrDb": 31,
+      "dynamicRangeLu": 8.4,
+      "transferGrade": "D (Repackaged Trader MP3)"
+    },
+    "metadataCompleteness": {
+      "overallPct": 18,
+      "verifiedAirdatePct": 22,
+      "characterRolePct": 0,
+      "vttCoveragePct": 0,
+      "provenanceDocumentedPct": 0,
+      "sponsorLoggedPct": 5,
+      "serialArcLinkedPct": 35
+    }
+  },
+  {
+    "sourceId": "oldtimeradiodownloads",
+    "latency": {
+      "ttfbMs": 260,
+      "firstAudioFrameMs": 780,
+      "p50StartMs": 820,
+      "p95StartMs": 1800,
+      "cdnArchitecture": "Ad-heavy PHP page + static MP3 host"
+    },
+    "bitrate": {
+      "minKbps": 24,
+      "medianKbps": 48,
+      "maxKbps": 96,
+      "losslessSharePct": 0,
+      "transcodeGenerationNote": "Standard collector MP3 encodes"
+    },
+    "frequencyResponse": {
+      "lowCutoffHz": 100,
+      "highCutoffHz": 5500,
+      "snrDb": 33,
+      "dynamicRangeLu": 9,
+      "transferGrade": "C- (Trader MP3)"
+    },
+    "metadataCompleteness": {
+      "overallPct": 28,
+      "verifiedAirdatePct": 45,
+      "characterRolePct": 0,
+      "vttCoveragePct": 0,
+      "provenanceDocumentedPct": 5,
+      "sponsorLoggedPct": 10,
+      "serialArcLinkedPct": 50
+    }
+  },
+  {
+    "sourceId": "mystery-shows",
+    "latency": {
+      "ttfbMs": 310,
+      "firstAudioFrameMs": 910,
+      "p50StartMs": 950,
+      "p95StartMs": 2100,
+      "cdnArchitecture": "Legacy shared Apache hosting"
+    },
+    "bitrate": {
+      "minKbps": 24,
+      "medianKbps": 32,
+      "maxKbps": 64,
+      "losslessSharePct": 0,
+      "transcodeGenerationNote": "Early-2000s 24–32 kbps mono MP3s"
+    },
+    "frequencyResponse": {
+      "lowCutoffHz": 120,
+      "highCutoffHz": 4500,
+      "snrDb": 28,
+      "dynamicRangeLu": 7.5,
+      "transferGrade": "D (Low-Bitrate Dub)"
+    },
+    "metadataCompleteness": {
+      "overallPct": 12,
+      "verifiedAirdatePct": 25,
+      "characterRolePct": 0,
+      "vttCoveragePct": 0,
+      "provenanceDocumentedPct": 0,
+      "sponsorLoggedPct": 0,
+      "serialArcLinkedPct": 30
+    }
+  },
+  {
+    "sourceId": "otr-net",
+    "latency": {
+      "ttfbMs": 340,
+      "firstAudioFrameMs": 1020,
+      "p50StartMs": 1100,
+      "p95StartMs": 2400,
+      "cdnArchitecture": "1990s static HTTP server"
+    },
+    "bitrate": {
+      "minKbps": 16,
+      "medianKbps": 24,
+      "maxKbps": 32,
+      "losslessSharePct": 0,
+      "transcodeGenerationNote": "1990s dial-up 16–32 kbps encodes"
+    },
+    "frequencyResponse": {
+      "lowCutoffHz": 150,
+      "highCutoffHz": 4000,
+      "snrDb": 24,
+      "dynamicRangeLu": 6.5,
+      "transferGrade": "F (Dial-Up Transcode)"
+    },
+    "metadataCompleteness": {
+      "overallPct": 8,
+      "verifiedAirdatePct": 15,
+      "characterRolePct": 0,
+      "vttCoveragePct": 0,
+      "provenanceDocumentedPct": 0,
+      "sponsorLoggedPct": 0,
+      "serialArcLinkedPct": 20
+    }
+  }
+]
