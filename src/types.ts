@@ -180,9 +180,15 @@ export interface SeriesBacklinksData {
     vttPct: number;
     eastWestSeparated: boolean;
     competitorDefect: string;
+    primaryListenUrl?: string;
     episodeId?: string;
     episodeTitle?: string;
     episodeUrl?: string;
+    episodes?: Array<{
+      id: string;
+      title: string;
+      url: string;
+    }>;
   }>;
   uuidProtocol: {
     name: string;

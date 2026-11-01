@@ -85,8 +85,31 @@
       "eastWestSeparated": true,
       "competitorDefect": "Internet Archive & trader sets mix East/West coast Agnes Moorehead/Orson Welles repeats and duplicate Roma Wine vs. Autolite runs under wrong dates.",
       "episodeId": "43766c38-39db-4bcd-b1ff-5c044c5474a9",
-      "episodeTitle": "The Last Days of John Dillinger",
-      "episodeUrl": "https://www.radioindex.org/listen?id=43766c38-39db-4bcd-b1ff-5c044c5474a9"
+      "episodeTitle": "The Last Days of John Dillinger — Suspense",
+      "episodeUrl": "https://www.radioindex.org/listen?id=43766c38-39db-4bcd-b1ff-5c044c5474a9",
+      "episodes": [
+        {
+          "id": "43766c38-39db-4bcd-b1ff-5c044c5474a9",
+          "title": "The Last Days of John Dillinger — Suspense",
+          "url": "https://www.radioindex.org/listen?id=43766c38-39db-4bcd-b1ff-5c044c5474a9"
+        },
+        {
+          "id": "3c5fecfe-0bc0-43d0-a748-63c4829fd2f7",
+          "title": "Last Days of John Dillinger — Suspense",
+          "url": "https://www.radioindex.org/listen?id=3c5fecfe-0bc0-43d0-a748-63c4829fd2f7"
+        },
+        {
+          "id": "88d02293-7e81-41e5-9746-eb8ae20fe426",
+          "title": "Olympic Fire Handed Over at the Czech German Border…",
+          "url": "https://www.radioindex.org/listen?id=88d02293-7e81-41e5-9746-eb8ae20fe426"
+        },
+        {
+          "id": "4d64d3f4-780f-4c29-b90d-55adaabee70a",
+          "title": "Emergency Defense Regulations Announcement on…",
+          "url": "https://www.radioindex.org/listen?id=4d64d3f4-780f-4c29-b90d-55adaabee70a"
+        }
+      ],
+      "primaryListenUrl": "https://www.radioindex.org/listen?id=43766c38-39db-4bcd-b1ff-5c044c5474a9"
     },
     {
       "slug": "yours-truly-johnny-dollar",
@@ -100,8 +123,31 @@
       "eastWestSeparated": true,
       "competitorDefect": "1955–1956 Bob Bailey 5-part daily serial arcs are scrambled by alphabetical sorting on Old Radio World, Stupid Potato, and YouTube.",
       "episodeId": "a1e49807-e053-4959-9460-a64a77177304",
-      "episodeTitle": "The Diamond Quartet",
-      "episodeUrl": "https://www.radioindex.org/listen?id=a1e49807-e053-4959-9460-a64a77177304"
+      "episodeTitle": "The Diamond Quartet — Yours Truly, Johnny Dollar",
+      "episodeUrl": "https://www.radioindex.org/listen?id=a1e49807-e053-4959-9460-a64a77177304",
+      "episodes": [
+        {
+          "id": "a1e49807-e053-4959-9460-a64a77177304",
+          "title": "The Diamond Quartet — Yours Truly, Johnny Dollar",
+          "url": "https://www.radioindex.org/listen?id=a1e49807-e053-4959-9460-a64a77177304"
+        },
+        {
+          "id": "9e351f3c-511a-4cda-81d9-a70f7cb2d6f5",
+          "title": "The Milford Brooks III Audition — Yours Truly,…",
+          "url": "https://www.radioindex.org/listen?id=9e351f3c-511a-4cda-81d9-a70f7cb2d6f5"
+        },
+        {
+          "id": "374cd852-8cac-40ac-8a67-328e6eb109b0",
+          "title": "The Robert W. Perry Case Audition — Yours Truly,…",
+          "url": "https://www.radioindex.org/listen?id=374cd852-8cac-40ac-8a67-328e6eb109b0"
+        },
+        {
+          "id": "7660e30e-a5ae-49ac-aca2-09050053650a",
+          "title": "The Robert W. Perry Case — Yours Truly, Johnny…",
+          "url": "https://www.radioindex.org/listen?id=7660e30e-a5ae-49ac-aca2-09050053650a"
+        }
+      ],
+      "primaryListenUrl": "https://www.radioindex.org/listen?id=a1e49807-e053-4959-9460-a64a77177304"
     },
     {
       "slug": "cbs-radio-mystery-theater",
@@ -115,8 +161,31 @@
       "eastWestSeparated": false,
       "competitorDefect": "All 1,399 Himan Brown episodes verified with E.G. Marshall intros, full-length .vtt captions, and cast/role reconciliation; YouTube channels rename episodes to clickbait titles.",
       "episodeId": "ddd0f2a0-aceb-43a7-8363-0eb769f7981d",
-      "episodeTitle": "The Old Ones Are Hard to Kill",
-      "episodeUrl": "https://www.radioindex.org/listen?id=ddd0f2a0-aceb-43a7-8363-0eb769f7981d"
+      "episodeTitle": "The Old Ones Are Hard to Kill — CBS Radio Mystery…",
+      "episodeUrl": "https://www.radioindex.org/listen?id=ddd0f2a0-aceb-43a7-8363-0eb769f7981d",
+      "episodes": [
+        {
+          "id": "ddd0f2a0-aceb-43a7-8363-0eb769f7981d",
+          "title": "The Old Ones Are Hard to Kill — CBS Radio Mystery…",
+          "url": "https://www.radioindex.org/listen?id=ddd0f2a0-aceb-43a7-8363-0eb769f7981d"
+        },
+        {
+          "id": "59fbc46f-4dcf-4eed-aa9c-7c474384c638",
+          "title": "The Return of the Moresbys — CBS Radio Mystery…",
+          "url": "https://www.radioindex.org/listen?id=59fbc46f-4dcf-4eed-aa9c-7c474384c638"
+        },
+        {
+          "id": "c589cb36-9a7e-435a-af3d-f51472c72184",
+          "title": "The Bullet — CBS Radio Mystery Theater",
+          "url": "https://www.radioindex.org/listen?id=c589cb36-9a7e-435a-af3d-f51472c72184"
+        },
+        {
+          "id": "a2ff1a9c-3317-48e5-991e-4b5771e7c87b",
+          "title": "Lost Dog — CBS Radio Mystery Theater",
+          "url": "https://www.radioindex.org/listen?id=a2ff1a9c-3317-48e5-991e-4b5771e7c87b"
+        }
+      ],
+      "primaryListenUrl": "https://www.radioindex.org/listen?id=ddd0f2a0-aceb-43a7-8363-0eb769f7981d"
     },
     {
       "slug": "escape",
@@ -130,8 +199,31 @@
       "eastWestSeparated": true,
       "competitorDefect": "Legacy sites blindly credit William Conrad or Paul Frees to episodes they did not appear in; RadioIndex verifies exact actor-to-character assignments from full audio.",
       "episodeId": "5f7144da-1e28-45d5-a6a7-8cf04bd7041e",
-      "episodeTitle": "Escape from Easy Money",
-      "episodeUrl": "https://www.radioindex.org/listen?id=5f7144da-1e28-45d5-a6a7-8cf04bd7041e"
+      "episodeTitle": "Escape from Easy Money — Escape",
+      "episodeUrl": "https://www.radioindex.org/listen?id=5f7144da-1e28-45d5-a6a7-8cf04bd7041e",
+      "episodes": [
+        {
+          "id": "5f7144da-1e28-45d5-a6a7-8cf04bd7041e",
+          "title": "Escape from Easy Money — Escape",
+          "url": "https://www.radioindex.org/listen?id=5f7144da-1e28-45d5-a6a7-8cf04bd7041e"
+        },
+        {
+          "id": "fc0aa8e0-5399-4516-8118-81288f810618",
+          "title": "Escape from a Red Carnation — Escape",
+          "url": "https://www.radioindex.org/listen?id=fc0aa8e0-5399-4516-8118-81288f810618"
+        },
+        {
+          "id": "3280a87c-5a68-494a-9cfd-bc105668c196",
+          "title": "Escape from Peace — Escape",
+          "url": "https://www.radioindex.org/listen?id=3280a87c-5a68-494a-9cfd-bc105668c196"
+        },
+        {
+          "id": "4170f4dc-5574-4187-ac85-8099fb88c2c4",
+          "title": "Escape from Love — Escape",
+          "url": "https://www.radioindex.org/listen?id=4170f4dc-5574-4187-ac85-8099fb88c2c4"
+        }
+      ],
+      "primaryListenUrl": "https://www.radioindex.org/listen?id=5f7144da-1e28-45d5-a6a7-8cf04bd7041e"
     },
     {
       "slug": "gunsmoke",
@@ -145,8 +237,31 @@
       "eastWestSeparated": true,
       "competitorDefect": "RUSC and Dumb.com serve 32 kbps muffled encodes behind a paywall; RadioIndex streams clean high-bitrate transfers free with full .vtt dialogue search.",
       "episodeId": "71b09eed-d3cf-4c7a-9ef4-2d38c679a53c",
-      "episodeTitle": "Mark Dillon Goes to Dodge City",
-      "episodeUrl": "https://www.radioindex.org/listen?id=71b09eed-d3cf-4c7a-9ef4-2d38c679a53c"
+      "episodeTitle": "Audition: Mark Dillon Goes to Dodge City — Gunsmoke",
+      "episodeUrl": "https://www.radioindex.org/listen?id=71b09eed-d3cf-4c7a-9ef4-2d38c679a53c",
+      "episodes": [
+        {
+          "id": "71b09eed-d3cf-4c7a-9ef4-2d38c679a53c",
+          "title": "Audition: Mark Dillon Goes to Dodge City — Gunsmoke",
+          "url": "https://www.radioindex.org/listen?id=71b09eed-d3cf-4c7a-9ef4-2d38c679a53c"
+        },
+        {
+          "id": "6e17b5d2-8a6c-456e-8b39-0cd2d5dbda26",
+          "title": "Audition: Mark Dillon Goes to Dodge City — Gunsmoke",
+          "url": "https://www.radioindex.org/listen?id=6e17b5d2-8a6c-456e-8b39-0cd2d5dbda26"
+        },
+        {
+          "id": "b1c23dd4-f246-4a87-ba3e-5e0cd45a5da2",
+          "title": "Audition: Mark Dillon Goes to Dodge City — Gunsmoke",
+          "url": "https://www.radioindex.org/listen?id=b1c23dd4-f246-4a87-ba3e-5e0cd45a5da2"
+        },
+        {
+          "id": "085a66d2-0507-47b4-9d2c-1931077594bd",
+          "title": "Audition — Gunsmoke",
+          "url": "https://www.radioindex.org/listen?id=085a66d2-0507-47b4-9d2c-1931077594bd"
+        }
+      ],
+      "primaryListenUrl": "https://www.radioindex.org/listen?id=71b09eed-d3cf-4c7a-9ef4-2d38c679a53c"
     },
     {
       "slug": "dimension-x",
@@ -160,8 +275,31 @@
       "eastWestSeparated": false,
       "competitorDefect": "All 50 NBC science-fiction broadcasts verified against NBC master ledgers with author adaptation credits (Bradbury, Asimov, Heinlein, Vonnegut).",
       "episodeId": "315e4728-c436-49dc-98ae-b8b37b184893",
-      "episodeTitle": "The Outer Limit",
-      "episodeUrl": "https://www.radioindex.org/listen?id=315e4728-c436-49dc-98ae-b8b37b184893"
+      "episodeTitle": "Outer Limit — Dimension X",
+      "episodeUrl": "https://www.radioindex.org/listen?id=315e4728-c436-49dc-98ae-b8b37b184893",
+      "episodes": [
+        {
+          "id": "315e4728-c436-49dc-98ae-b8b37b184893",
+          "title": "Outer Limit — Dimension X",
+          "url": "https://www.radioindex.org/listen?id=315e4728-c436-49dc-98ae-b8b37b184893"
+        },
+        {
+          "id": "a296e7cd-35cb-4459-a482-5756021e0e8c",
+          "title": "With Folded Hands — Dimension X",
+          "url": "https://www.radioindex.org/listen?id=a296e7cd-35cb-4459-a482-5756021e0e8c"
+        },
+        {
+          "id": "41c45473-2448-42ee-95e3-7c64da90d5de",
+          "title": "Report on Barnhouse Effect — Dimension X",
+          "url": "https://www.radioindex.org/listen?id=41c45473-2448-42ee-95e3-7c64da90d5de"
+        },
+        {
+          "id": "13a5bc70-6005-4b6e-a1ab-fe53d16c7861",
+          "title": "No Contact — Dimension X",
+          "url": "https://www.radioindex.org/listen?id=13a5bc70-6005-4b6e-a1ab-fe53d16c7861"
+        }
+      ],
+      "primaryListenUrl": "https://www.radioindex.org/listen?id=315e4728-c436-49dc-98ae-b8b37b184893"
     },
     {
       "slug": "x-minus-one",
@@ -175,8 +313,31 @@
       "eastWestSeparated": false,
       "competitorDefect": "Separates Dimension X script re-adaptations from original Galaxy Science Fiction stories with 100% synchronized .vtt transcripts.",
       "episodeId": "5c763735-5513-410d-a27c-09eb6406fe74",
-      "episodeTitle": "Competition",
-      "episodeUrl": "https://www.radioindex.org/listen?id=5c763735-5513-410d-a27c-09eb6406fe74"
+      "episodeTitle": "Competition — X Minus One",
+      "episodeUrl": "https://www.radioindex.org/listen?id=5c763735-5513-410d-a27c-09eb6406fe74",
+      "episodes": [
+        {
+          "id": "5c763735-5513-410d-a27c-09eb6406fe74",
+          "title": "Competition — X Minus One",
+          "url": "https://www.radioindex.org/listen?id=5c763735-5513-410d-a27c-09eb6406fe74"
+        },
+        {
+          "id": "e77bc1ea-dd00-4b52-941e-4f11b68f130e",
+          "title": "And the Moon Be Still as Bright Audition — X Minus…",
+          "url": "https://www.radioindex.org/listen?id=e77bc1ea-dd00-4b52-941e-4f11b68f130e"
+        },
+        {
+          "id": "7d6b5a3e-c1c5-48e7-9bab-033053a29096",
+          "title": "No Contact — X Minus One",
+          "url": "https://www.radioindex.org/listen?id=7d6b5a3e-c1c5-48e7-9bab-033053a29096"
+        },
+        {
+          "id": "a904b087-4836-4680-8b0b-92fadf753666",
+          "title": "The Parade — X Minus One",
+          "url": "https://www.radioindex.org/listen?id=a904b087-4836-4680-8b0b-92fadf753666"
+        }
+      ],
+      "primaryListenUrl": "https://www.radioindex.org/listen?id=5c763735-5513-410d-a27c-09eb6406fe74"
     },
     {
       "slug": "dragnet",
@@ -189,9 +350,32 @@
       "vttPct": 100,
       "eastWestSeparated": false,
       "competitorDefect": "Reconciles Fatima vs. Chesterfield sponsor periods and purges duplicate 'Big' episode re-titles common in uncurated IA folders.",
-      "episodeId": "5f67b8a7-f6f1-4740-9b4d-9752dabf299f",
-      "episodeTitle": "The Nickel Plated Gun",
-      "episodeUrl": "https://www.radioindex.org/listen?id=5f67b8a7-f6f1-4740-9b4d-9752dabf299f"
+      "episodeId": "5e6d25de-a503-4230-95c3-d92d9fe68fb7",
+      "episodeTitle": "Production 1 — Dragnet",
+      "episodeUrl": "https://www.radioindex.org/listen?id=5e6d25de-a503-4230-95c3-d92d9fe68fb7",
+      "episodes": [
+        {
+          "id": "5e6d25de-a503-4230-95c3-d92d9fe68fb7",
+          "title": "Production 1 — Dragnet",
+          "url": "https://www.radioindex.org/listen?id=5e6d25de-a503-4230-95c3-d92d9fe68fb7"
+        },
+        {
+          "id": "5f67b8a7-f6f1-4740-9b4d-9752dabf299f",
+          "title": "The Nickel Plated Gun — Dragnet",
+          "url": "https://www.radioindex.org/listen?id=5f67b8a7-f6f1-4740-9b4d-9752dabf299f"
+        },
+        {
+          "id": "c4e4d600-356e-49ae-9a6e-559989b1c1d7",
+          "title": "The Werewolf Robbery — Dragnet",
+          "url": "https://www.radioindex.org/listen?id=c4e4d600-356e-49ae-9a6e-559989b1c1d7"
+        },
+        {
+          "id": "5833bb9a-d15f-4dfd-bf4d-7d5095d0fa16",
+          "title": "Quick Trigger Gun Men — Dragnet",
+          "url": "https://www.radioindex.org/listen?id=5833bb9a-d15f-4dfd-bf4d-7d5095d0fa16"
+        }
+      ],
+      "primaryListenUrl": "https://www.radioindex.org/listen?id=5e6d25de-a503-4230-95c3-d92d9fe68fb7"
     },
     {
       "slug": "the-shadow",
@@ -205,8 +389,31 @@
       "eastWestSeparated": false,
       "competitorDefect": "Correctly distinguishes Orson Welles, Bill Johnstone, and Bret Morrison eras instead of pasting Orson Welles onto 1940s/1950s broadcasts.",
       "episodeId": "4045d7d5-a0ee-412b-8685-06ea2567e33b",
-      "episodeTitle": "Death House Rescue",
-      "episodeUrl": "https://www.radioindex.org/listen?id=4045d7d5-a0ee-412b-8685-06ea2567e33b"
+      "episodeTitle": "Death House Rescue — The Shadow",
+      "episodeUrl": "https://www.radioindex.org/listen?id=4045d7d5-a0ee-412b-8685-06ea2567e33b",
+      "episodes": [
+        {
+          "id": "4045d7d5-a0ee-412b-8685-06ea2567e33b",
+          "title": "Death House Rescue — The Shadow",
+          "url": "https://www.radioindex.org/listen?id=4045d7d5-a0ee-412b-8685-06ea2567e33b"
+        },
+        {
+          "id": "230bb8d9-9084-4c26-91a2-897a6ca540ab",
+          "title": "The Red Macaw (Ocp Recreation 8-11-2020) — The…",
+          "url": "https://www.radioindex.org/listen?id=230bb8d9-9084-4c26-91a2-897a6ca540ab"
+        },
+        {
+          "id": "4af5f8c9-6b67-4e9f-9a06-66e34c941746",
+          "title": "Murder by the Dead — The Shadow",
+          "url": "https://www.radioindex.org/listen?id=4af5f8c9-6b67-4e9f-9a06-66e34c941746"
+        },
+        {
+          "id": "ac038acc-d057-4c4f-ab0e-ceb2bd84e428",
+          "title": "The Temple Bells of Neban — The Shadow",
+          "url": "https://www.radioindex.org/listen?id=ac038acc-d057-4c4f-ab0e-ceb2bd84e428"
+        }
+      ],
+      "primaryListenUrl": "https://www.radioindex.org/listen?id=4045d7d5-a0ee-412b-8685-06ea2567e33b"
     },
     {
       "slug": "lights-out",
@@ -220,8 +427,31 @@
       "eastWestSeparated": false,
       "competitorDefect": "Separates Wyllis Cooper (1934–1936) and Arch Oboler (1936–1947) runs from later syndicated Devil's Scrapbook re-pressings.",
       "episodeId": "696b3f0c-dbd4-4c11-8685-ab79abd041bd",
-      "episodeTitle": "Happy Ending",
-      "episodeUrl": "https://www.radioindex.org/listen?id=696b3f0c-dbd4-4c11-8685-ab79abd041bd"
+      "episodeTitle": "Happy Ending — Lights Out",
+      "episodeUrl": "https://www.radioindex.org/listen?id=696b3f0c-dbd4-4c11-8685-ab79abd041bd",
+      "episodes": [
+        {
+          "id": "696b3f0c-dbd4-4c11-8685-ab79abd041bd",
+          "title": "Happy Ending — Lights Out",
+          "url": "https://www.radioindex.org/listen?id=696b3f0c-dbd4-4c11-8685-ab79abd041bd"
+        },
+        {
+          "id": "15ddf73b-09ad-4479-9dbe-da82514b53bd",
+          "title": "Strange Couple Stays Overnight — Lights Out",
+          "url": "https://www.radioindex.org/listen?id=15ddf73b-09ad-4479-9dbe-da82514b53bd"
+        },
+        {
+          "id": "27a77ebf-48d6-4ab5-8b69-fd299b765fd8",
+          "title": "A Room for the Night — Lights Out",
+          "url": "https://www.radioindex.org/listen?id=27a77ebf-48d6-4ab5-8b69-fd299b765fd8"
+        },
+        {
+          "id": "21918cbe-2807-468f-9b71-964541378f61",
+          "title": "Burial Service — Lights Out",
+          "url": "https://www.radioindex.org/listen?id=21918cbe-2807-468f-9b71-964541378f61"
+        }
+      ],
+      "primaryListenUrl": "https://www.radioindex.org/listen?id=696b3f0c-dbd4-4c11-8685-ab79abd041bd"
     },
     {
       "slug": "inner-sanctum",
@@ -235,8 +465,31 @@
       "eastWestSeparated": false,
       "competitorDefect": "Corroborates surviving Raymond/Paul McGrath broadcasts against newspaper logs and flags AFRS Mystery Playhouse re-titles.",
       "episodeId": "ddce19b8-db5c-4167-b229-7fd5920d39e3",
-      "episodeTitle": "Amazing Death of Mrs. Putnam",
-      "episodeUrl": "https://www.radioindex.org/listen?id=ddce19b8-db5c-4167-b229-7fd5920d39e3"
+      "episodeTitle": "Amazing Death of Mrs. Putnam — Inner Sanctum",
+      "episodeUrl": "https://www.radioindex.org/listen?id=ddce19b8-db5c-4167-b229-7fd5920d39e3",
+      "episodes": [
+        {
+          "id": "ddce19b8-db5c-4167-b229-7fd5920d39e3",
+          "title": "Amazing Death of Mrs. Putnam — Inner Sanctum",
+          "url": "https://www.radioindex.org/listen?id=ddce19b8-db5c-4167-b229-7fd5920d39e3"
+        },
+        {
+          "id": "7864bcfd-1d35-4b31-b448-959047138492",
+          "title": "Nursery Rhyme Murders — Inner Sanctum",
+          "url": "https://www.radioindex.org/listen?id=7864bcfd-1d35-4b31-b448-959047138492"
+        },
+        {
+          "id": "1f3bfe4e-9845-4972-85d0-7a0d1d3a2611",
+          "title": "The Magic Curse — Inner Sanctum",
+          "url": "https://www.radioindex.org/listen?id=1f3bfe4e-9845-4972-85d0-7a0d1d3a2611"
+        },
+        {
+          "id": "3d668e7a-71a4-477c-9f10-2981204f4d1b",
+          "title": "The Vampire Strikes — Inner Sanctum",
+          "url": "https://www.radioindex.org/listen?id=3d668e7a-71a4-477c-9f10-2981204f4d1b"
+        }
+      ],
+      "primaryListenUrl": "https://www.radioindex.org/listen?id=ddce19b8-db5c-4167-b229-7fd5920d39e3"
     },
     {
       "slug": "i-love-a-mystery",
@@ -250,8 +503,175 @@
       "eastWestSeparated": false,
       "competitorDefect": "Preserves Carlton E. Morse's 15-part and 20-part serial books in strict chapter order with West Coast vs. New York cast attribution.",
       "episodeId": "be336149-bfca-4517-954a-02eaedad6151",
-      "episodeTitle": "The Case of the Roxy Mob, Part 1",
-      "episodeUrl": "https://www.radioindex.org/listen?id=be336149-bfca-4517-954a-02eaedad6151"
+      "episodeTitle": "The Case of the Roxy Mob, Part 1 of 14 — I Love a…",
+      "episodeUrl": "https://www.radioindex.org/listen?id=be336149-bfca-4517-954a-02eaedad6151",
+      "episodes": [
+        {
+          "id": "be336149-bfca-4517-954a-02eaedad6151",
+          "title": "The Case of the Roxy Mob, Part 1 of 14 — I Love a…",
+          "url": "https://www.radioindex.org/listen?id=be336149-bfca-4517-954a-02eaedad6151"
+        },
+        {
+          "id": "dcef20a5-9227-4ea5-b10c-063fa542ac8f",
+          "title": "The Case of the Roxy Mob, Part 2 of 14 — I Love a…",
+          "url": "https://www.radioindex.org/listen?id=dcef20a5-9227-4ea5-b10c-063fa542ac8f"
+        },
+        {
+          "id": "92ab79f4-3d62-4443-bbad-a0a94d9d6458",
+          "title": "The Case of the Roxy Mob, Part 3 of 14 — I Love a…",
+          "url": "https://www.radioindex.org/listen?id=92ab79f4-3d62-4443-bbad-a0a94d9d6458"
+        },
+        {
+          "id": "48bcbf42-139f-4d77-b736-654723b9af6c",
+          "title": "The Case of the Roxy Mob, Part 4 of 14 — I Love a…",
+          "url": "https://www.radioindex.org/listen?id=48bcbf42-139f-4d77-b736-654723b9af6c"
+        }
+      ],
+      "primaryListenUrl": "https://www.radioindex.org/listen?id=be336149-bfca-4517-954a-02eaedad6151"
+    },
+    {
+      "slug": "the-jack-benny-program",
+      "title": "The Jack Benny Program",
+      "network": "NBC / CBS",
+      "runYears": "1932–1955",
+      "verifiedBroadcasts": 845,
+      "vttPct": 100,
+      "eastWestSeparated": true,
+      "competitorDefect": "Newspaper-corroborated Lucky Strike broadcasts with full .vtt subtitles.",
+      "episodes": [
+        {
+          "id": "362655ff-e1a1-43b9-b176-aafd887312d6",
+          "title": "Jack&#39;s Mistakes — The Jack Benny Program",
+          "url": "https://www.radioindex.org/listen?id=362655ff-e1a1-43b9-b176-aafd887312d6"
+        },
+        {
+          "id": "f11c71bc-f205-4205-8554-da0b2c88a8bc",
+          "title": "Jack&#39;s Skills — The Jack Benny Program",
+          "url": "https://www.radioindex.org/listen?id=f11c71bc-f205-4205-8554-da0b2c88a8bc"
+        },
+        {
+          "id": "18a65965-d6ff-43a7-ac21-2a96cffd9d3c",
+          "title": "Tribute to Mary Livingstone — The Jack Benny Program",
+          "url": "https://www.radioindex.org/listen?id=18a65965-d6ff-43a7-ac21-2a96cffd9d3c"
+        },
+        {
+          "id": "5a774a10-2291-498c-838b-c6a7d168db31",
+          "title": "Jack&#39;s First Program — The Jack Benny Program",
+          "url": "https://www.radioindex.org/listen?id=5a774a10-2291-498c-838b-c6a7d168db31"
+        }
+      ],
+      "primaryListenUrl": "https://www.radioindex.org/listen?id=362655ff-e1a1-43b9-b176-aafd887312d6",
+      "episodeId": "362655ff-e1a1-43b9-b176-aafd887312d6",
+      "episodeTitle": "Jack&#39;s Mistakes — The Jack Benny Program",
+      "episodeUrl": "https://www.radioindex.org/listen?id=362655ff-e1a1-43b9-b176-aafd887312d6"
+    },
+    {
+      "slug": "fibber-mcgee-and-molly",
+      "title": "Fibber McGee and Molly",
+      "network": "NBC",
+      "runYears": "1935–1959",
+      "verifiedBroadcasts": 790,
+      "vttPct": 100,
+      "eastWestSeparated": false,
+      "competitorDefect": "Complete Johnson Wax runs with full-length word-timed .vtt captions.",
+      "episodes": [
+        {
+          "id": "7a0dee1f-d8d8-4d3b-a243-653de8e54714",
+          "title": "Smackout — Fibber McGee and Molly",
+          "url": "https://www.radioindex.org/listen?id=7a0dee1f-d8d8-4d3b-a243-653de8e54714"
+        },
+        {
+          "id": "6b9e0e87-4595-457b-983a-bca03b80e609",
+          "title": "The Motorcycle Cop, the Judge, and Fibber — Fibber…",
+          "url": "https://www.radioindex.org/listen?id=6b9e0e87-4595-457b-983a-bca03b80e609"
+        },
+        {
+          "id": "7b466559-ba0f-422e-93e6-458f884de4fb",
+          "title": "The One Man, Top and Rain — Fibber McGee and Molly",
+          "url": "https://www.radioindex.org/listen?id=7b466559-ba0f-422e-93e6-458f884de4fb"
+        },
+        {
+          "id": "9dd66f3d-100a-4f81-b025-c8d966988627",
+          "title": "Hot Dogs and a Blowout — Fibber McGee and Molly",
+          "url": "https://www.radioindex.org/listen?id=9dd66f3d-100a-4f81-b025-c8d966988627"
+        }
+      ],
+      "primaryListenUrl": "https://www.radioindex.org/listen?id=7a0dee1f-d8d8-4d3b-a243-653de8e54714",
+      "episodeId": "7a0dee1f-d8d8-4d3b-a243-653de8e54714",
+      "episodeTitle": "Smackout — Fibber McGee and Molly",
+      "episodeUrl": "https://www.radioindex.org/listen?id=7a0dee1f-d8d8-4d3b-a243-653de8e54714"
+    },
+    {
+      "slug": "the-adventures-of-philip-marlowe",
+      "title": "The Adventures of Philip Marlowe",
+      "network": "NBC / CBS",
+      "runYears": "1947–1951",
+      "verifiedBroadcasts": 114,
+      "vttPct": 100,
+      "eastWestSeparated": true,
+      "competitorDefect": "Separates Van Heflin (NBC) and Gerald Mohr (CBS) runs with verified character roles.",
+      "episodes": [
+        {
+          "id": "6f325073-39ca-4985-84ee-c7f1abeb9e0d",
+          "title": "Who Shot Waldo — The Adventures of Philip Marlowe",
+          "url": "https://www.radioindex.org/listen?id=6f325073-39ca-4985-84ee-c7f1abeb9e0d"
+        },
+        {
+          "id": "4a13254b-aaec-432a-9a66-7d96d700fc56",
+          "title": "Red Wind — The Adventures of Philip Marlowe",
+          "url": "https://www.radioindex.org/listen?id=4a13254b-aaec-432a-9a66-7d96d700fc56"
+        },
+        {
+          "id": "4886100d-1118-46f1-bc11-70a195896fd2",
+          "title": "Trouble Is My Business — The Adventures of Philip…",
+          "url": "https://www.radioindex.org/listen?id=4886100d-1118-46f1-bc11-70a195896fd2"
+        },
+        {
+          "id": "06b34e78-80ea-4897-9b45-3e188df60e3c",
+          "title": "The Daring Young Dame on the Flying Trapeze — The…",
+          "url": "https://www.radioindex.org/listen?id=06b34e78-80ea-4897-9b45-3e188df60e3c"
+        }
+      ],
+      "primaryListenUrl": "https://www.radioindex.org/listen?id=6f325073-39ca-4985-84ee-c7f1abeb9e0d",
+      "episodeId": "6f325073-39ca-4985-84ee-c7f1abeb9e0d",
+      "episodeTitle": "Who Shot Waldo — The Adventures of Philip Marlowe",
+      "episodeUrl": "https://www.radioindex.org/listen?id=6f325073-39ca-4985-84ee-c7f1abeb9e0d"
+    },
+    {
+      "slug": "have-gun-will-travel",
+      "title": "Have Gun – Will Travel",
+      "network": "CBS",
+      "runYears": "1958–1960",
+      "verifiedBroadcasts": 106,
+      "vttPct": 100,
+      "eastWestSeparated": false,
+      "competitorDefect": "All 106 John Dehner broadcasts verified with full-length .vtt subtitles.",
+      "episodes": [
+        {
+          "id": "0a35a0d4-bae8-4811-bd53-5b64e457e18a",
+          "title": "Audition — Have Gun Will Travel",
+          "url": "https://www.radioindex.org/listen?id=0a35a0d4-bae8-4811-bd53-5b64e457e18a"
+        },
+        {
+          "id": "7b27dd87-37e9-49b2-9fc9-4de3f47b17b5",
+          "title": "Pilot Show — Have Gun Will Travel",
+          "url": "https://www.radioindex.org/listen?id=7b27dd87-37e9-49b2-9fc9-4de3f47b17b5"
+        },
+        {
+          "id": "a8e8c7cd-3106-4bd9-8469-caeffa941211",
+          "title": "Strange Vendetta — Have Gun Will Travel",
+          "url": "https://www.radioindex.org/listen?id=a8e8c7cd-3106-4bd9-8469-caeffa941211"
+        },
+        {
+          "id": "a9087b35-95f0-48b7-950d-37f2337ac8d4",
+          "title": "Road to Wickenburg — Have Gun Will Travel",
+          "url": "https://www.radioindex.org/listen?id=a9087b35-95f0-48b7-950d-37f2337ac8d4"
+        }
+      ],
+      "primaryListenUrl": "https://www.radioindex.org/listen?id=0a35a0d4-bae8-4811-bd53-5b64e457e18a",
+      "episodeId": "0a35a0d4-bae8-4811-bd53-5b64e457e18a",
+      "episodeTitle": "Audition — Have Gun Will Travel",
+      "episodeUrl": "https://www.radioindex.org/listen?id=0a35a0d4-bae8-4811-bd53-5b64e457e18a"
     }
   ],
   "headToHeadComparisons": [

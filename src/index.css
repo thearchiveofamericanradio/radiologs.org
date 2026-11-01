@@ -82,7 +82,7 @@ a {
 }
 
 .shell {
-  max-width: 1020px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 28px 20px 72px;
 }
@@ -201,7 +201,7 @@ html[data-theme="dark"] .btn-pill.primary {
   color: var(--ink-muted);
 }
 
-/* Simple Side-by-Side Comparison Table (Pivots on narrower widths <= 960px) */
+/* Simple Side-by-Side Comparison Table (Pivots on narrower widths <= 1020px) */
 .table-card {
   border: 1px solid var(--line);
   border-radius: 14px;
@@ -217,7 +217,7 @@ table.simple-table {
 
 table.simple-table th,
 table.simple-table td {
-  padding: 12px 10px;
+  padding: 11px 8px;
   border-bottom: 1px solid var(--line);
   text-align: left;
   vertical-align: middle;
@@ -231,8 +231,8 @@ table.simple-table thead th {
   background: var(--bg-subtle);
   font-size: 13px;
   font-weight: 600;
+  line-height: 16px;
   color: var(--ink-meta);
-  white-space: nowrap;
 }
 
 table.simple-table tbody tr:hover {
@@ -253,7 +253,7 @@ table.simple-table tbody tr.winner-row {
   gap: 10px;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1020px) {
   table.simple-table thead {
     display: none;
   }
@@ -354,7 +354,7 @@ html[data-theme="dark"] .winner-row .rank-num {
 
 /* Visual Show Count Bar */
 .shows-cell {
-  min-width: 170px;
+  min-width: 135px;
 }
 .shows-num {
   font-size: 16px;
@@ -476,11 +476,23 @@ html[data-theme="dark"] .winner-row .rank-num {
 .show-card-title {
   font-size: 17px;
   font-weight: 700;
-  color: var(--blue);
+  color: var(--ink);
 }
 .show-card-meta {
-  font-size: 14px;
+  font-size: 13px;
   color: var(--ink-meta);
+  margin-bottom: 4px;
+}
+.ep-link-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 2px;
+}
+.ep-link-list li {
+  font-size: 14px;
+  line-height: 19px;
 }
 .show-card-ep {
   font-size: 14px;

@@ -8,11 +8,6 @@ const backlinks = backlinksRaw as unknown as SeriesBacklinksData;
 
 type FilterMode = 'all' | 'free_clean' | 'subtitles' | 'hd_sound';
 
-const SERIES_LETTERS = [
-  'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
-  'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'num'
-];
-
 function fmt(n: number): string {
   return n.toLocaleString('en-US');
 }
@@ -80,6 +75,17 @@ export function App() {
     return <span className="badge badge-no">Old MP3 ({s.metrics.medianBitrateKbps}k)</span>;
   };
 
+  const allListenEpisodes = useMemo(() => {
+    return backlinks.seriesBenchmarks.flatMap((s) =>
+      (s.episodes || []).map((ep) => ({
+        seriesTitle: s.title,
+        network: s.network,
+        runYears: s.runYears,
+        ...ep,
+      }))
+    );
+  }, []);
+
   return (
     <div className="shell">
       {/* HEADER */}
@@ -93,10 +99,7 @@ export function App() {
           </p>
         </div>
         <div className="top-actions">
-          <a
-            href="https://www.radioindex.org/"
-            className="btn-pill primary"
-          >
+          <a href="https://www.radioindex.org/" className="btn-pill primary">
             Listen on radioindex.org ↗
           </a>
           <button
@@ -266,12 +269,15 @@ export function App() {
         <div className="info-card">
           <h3>1. Read-Along Subtitles on 231,400 Shows</h3>
           <p>
-            Every episode on{' '}
-            <a href="https://www.radioindex.org/" className="dotted-link">
-              RadioIndex
-            </a>{' '}
-            has full-length, word-by-word subtitles (`.vtt`) from start to finish. You can read
-            along while you listen or search inside the spoken dialogue of 231,400 broadcasts.
+            Every episode—like{' '}
+            <a
+              href="https://www.radioindex.org/listen?id=43766c38-39db-4bcd-b1ff-5c044c5474a9"
+              className="dotted-link"
+            >
+              The Last Days of John Dillinger (Suspense)
+            </a>
+            —has full-length, word-by-word subtitles (`.vtt`) from start to finish so you can read
+            along while you listen.
           </p>
         </div>
 
@@ -280,13 +286,12 @@ export function App() {
           <p>
             Every broadcast has its own permanent Public Recording UUID (for example,{' '}
             <a
-              href="https://www.radioindex.org/listen?id=43766c38-39db-4bcd-b1ff-5c044c5474a9"
+              href="https://www.radioindex.org/listen?id=a1e49807-e053-4959-9460-a64a77177304"
               className="dotted-link"
             >
-              Suspense: The Last Days of John Dillinger
+              The Diamond Quartet (Yours Truly, Johnny Dollar)
             </a>
-            ). Any media player, app, or catalog can resolve the cleanest audio stream and matching
-            subtitles by ID.
+            ) that resolves the cleanest audio stream and matching subtitles in any player.
           </p>
         </div>
 
@@ -294,227 +299,109 @@ export function App() {
           <h3>3. Real Air Dates from Old Newspapers &amp; Scripts</h3>
           <p>
             Old collector sites often guessed air dates or pasted the wrong actors onto episodes.
-            RadioIndex checks every broadcast against{' '}
-            <a href="https://www.radioindex.org/calendar" className="dotted-link">
-              1930s–1950s newspaper radio logs
-            </a>
-            , original studio scripts, and verified{' '}
-            <a href="https://www.radioindex.org/people" className="dotted-link">
-              actor-to-character credits
-            </a>
-            .
+            Broadcasts like{' '}
+            <a
+              href="https://www.radioindex.org/listen?id=315e4728-c436-49dc-98ae-b8b37b184893"
+              className="dotted-link"
+            >
+              Outer Limit (Dimension X)
+            </a>{' '}
+            are checked against real 1930s–1950s newspaper radio logs and studio scripts.
           </p>
         </div>
 
         <div className="info-card">
           <h3>4. 100% Free — No Paywalls, No Ads, No Sign-Up</h3>
           <p>
-            Subscription sites charge monthly fees for low-quality public-domain MP3s.{' '}
-            <a href="https://www.radioindex.org/genres" className="dotted-link">
-              RadioIndex
+            Subscription sites charge monthly fees for low-quality public-domain MP3s. Classics like{' '}
+            <a
+              href="https://www.radioindex.org/listen?id=71b09eed-d3cf-4c7a-9ef4-2d38c679a53c"
+              className="dotted-link"
+            >
+              Mark Dillon Goes to Dodge City (Gunsmoke)
             </a>{' '}
-            gives you 233,000 crystal-clear broadcasts for $0 with zero commercials.
+            stream free on RadioIndex with zero commercials.
           </p>
         </div>
       </div>
 
-      {/* POPULAR SHOWS + INDEXABLE RECORDING BACKLINKS */}
-      <h2 className="section-heading">Popular Classic Radio Series &amp; Broadcasts</h2>
+      {/* 64 VERIFIED BROADCAST RECORDING BACKLINKS (/listen?id=) ACROSS 16 SERIES */}
+      <h2 className="section-heading">Featured Broadcast Recordings on RadioIndex</h2>
       <p className="section-sub">
-        Listen free with read-along subtitles on{' '}
-        <a href="https://www.radioindex.org/" className="dotted-link">
-          www.radioindex.org
-        </a>{' '}
-        or subscribe in any podcast app:
+        Direct links to 64 verified broadcasts (`https://www.radioindex.org/listen?id=…`) with
+        full-length read-along subtitles:
       </p>
 
       <div className="shows-grid">
-        {backlinks.seriesBenchmarks.map((s) => (
-          <div className="show-card" key={s.slug}>
-            <a href={s.radioindexUrl} className="show-card-title">
-              {s.title}
-            </a>
-            <div className="show-card-meta">
-              {s.network} ({s.runYears}) · {fmt(s.verifiedBroadcasts)} episodes · 100% .vtt
-            </div>
-            {s.episodeUrl && s.episodeTitle && (
-              <div className="show-card-ep">
-                Featured broadcast:{' '}
-                <a href={s.episodeUrl} className="dotted-link">
-                  {s.episodeTitle}
-                </a>
+        {backlinks.seriesBenchmarks.map((s) => {
+          const eps = s.episodes || [];
+          const primaryUrl = eps[0]?.url || 'https://www.radioindex.org/';
+          return (
+            <div className="show-card" key={s.slug}>
+              <a href={primaryUrl} className="show-card-title">
+                {s.title}
+              </a>
+              <div className="show-card-meta">
+                {s.network} ({s.runYears}) · {fmt(s.verifiedBroadcasts)} broadcasts · 100% .vtt
               </div>
-            )}
-            <div className="show-card-links">
-              <a href={s.radioindexUrl} className="dotted-link">
-                All {s.title} episodes
-              </a>
-              <a href={s.rssUrl} className="dotted-link">
-                Podcast RSS
-              </a>
+              <ul className="ep-link-list">
+                {eps.map((ep) => (
+                  <li key={ep.id}>
+                    <a href={ep.url} className="dotted-link">
+                      {ep.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
-      {/* A-Z SERIES DIRECTORY CRAWL BAR (/search?series-letter=) */}
-      <section className="az-section" aria-label="Browse Old Time Radio Series A to Z">
-        <div className="az-title">
-          Browse All 3,054 Old Time Radio Series A–Z on RadioIndex
-        </div>
-        <div className="az-bar">
-          {SERIES_LETTERS.map((letter) => (
-            <a
-              key={letter}
-              href={`https://www.radioindex.org/search?series-letter=${letter}`}
-              className="az-pill"
-            >
-              {letter === 'num' ? '#' : letter.toUpperCase()}
-            </a>
-          ))}
-        </div>
-      </section>
-
-      {/* 4-COLUMN CANONICAL BACKLINK DIRECTORY FOOTER */}
+      {/* 4-COLUMN FOOTER OF DIRECT /listen?id= BROADCAST BACKLINKS */}
       <footer className="footer-hub">
         <div className="footer-grid">
           <div className="footer-col">
-            <h4>The Archive of American Radio</h4>
+            <h4>Suspense &amp; Mystery Broadcasts</h4>
             <ul>
-              <li>
-                <a href="https://www.radioindex.org/">
-                  RadioIndex — Free Old Time Radio Archive
-                </a>
-              </li>
-              <li>
-                <a href="https://www.radioindex.org/calendar">
-                  Historical Radio Broadcast Calendar (1926–1982)
-                </a>
-              </li>
-              <li>
-                <a href="https://www.radioindex.org/people">
-                  Old Time Radio Cast, Actors &amp; Writers Index
-                </a>
-              </li>
-              <li>
-                <a href="https://www.radioindex.org/organizations">
-                  CBS, NBC, Mutual, ABC &amp; AFRS Networks
-                </a>
-              </li>
-              <li>
-                <a href="https://www.radioindex.org/genres">
-                  Browse Old Time Radio Shows by Genre
-                </a>
-              </li>
-              <li>
-                <a href="https://www.radioindex.org/catalogs">
-                  Curated Old Time Radio Catalogs A–Z
-                </a>
-              </li>
+              {allListenEpisodes.slice(0, 12).map((ep) => (
+                <li key={ep.id}>
+                  <a href={ep.url}>{ep.title}</a>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div className="footer-col">
-            <h4>Genres &amp; Curated Shelves</h4>
+            <h4>Adventure, Western &amp; Sci-Fi Broadcasts</h4>
             <ul>
-              <li>
-                <a href="https://www.radioindex.org/search?genre=mystery">
-                  Mystery &amp; Detective Radio Shows
-                </a>
-              </li>
-              <li>
-                <a href="https://www.radioindex.org/search?genre=science-fiction">
-                  Golden Age Science Fiction Radio
-                </a>
-              </li>
-              <li>
-                <a href="https://www.radioindex.org/search?genre=western">
-                  Classic Western Radio Drama Series
-                </a>
-              </li>
-              <li>
-                <a href="https://www.radioindex.org/search?genre=horror">
-                  Horror, Thriller &amp; Supernatural Radio
-                </a>
-              </li>
-              <li>
-                <a href="https://www.radioindex.org/search?genre=comedy">
-                  Classic Radio Comedy &amp; Variety Programs
-                </a>
-              </li>
-              <li>
-                <a href="https://www.radioindex.org/search?catalog=halloween-classics">
-                  Halloween Old Time Radio Classics Shelf
-                </a>
-              </li>
+              {allListenEpisodes.slice(12, 24).map((ep) => (
+                <li key={ep.id}>
+                  <a href={ep.url}>{ep.title}</a>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div className="footer-col">
-            <h4>Featured Indexed Broadcasts (/listen?id=)</h4>
+            <h4>Detective &amp; Thriller Broadcasts</h4>
             <ul>
-              <li>
-                <a href="https://www.radioindex.org/listen?id=43766c38-39db-4bcd-b1ff-5c044c5474a9">
-                  Suspense — The Last Days of John Dillinger
-                </a>
-              </li>
-              <li>
-                <a href="https://www.radioindex.org/listen?id=a1e49807-e053-4959-9460-a64a77177304">
-                  Yours Truly, Johnny Dollar — The Diamond Quartet
-                </a>
-              </li>
-              <li>
-                <a href="https://www.radioindex.org/listen?id=ddd0f2a0-aceb-43a7-8363-0eb769f7981d">
-                  CBS Radio Mystery Theater — The Old Ones Are Hard to Kill
-                </a>
-              </li>
-              <li>
-                <a href="https://www.radioindex.org/listen?id=71b09eed-d3cf-4c7a-9ef4-2d38c679a53c">
-                  Gunsmoke — Mark Dillon Goes to Dodge City
-                </a>
-              </li>
-              <li>
-                <a href="https://www.radioindex.org/listen?id=315e4728-c436-49dc-98ae-b8b37b184893">
-                  Dimension X — The Outer Limit
-                </a>
-              </li>
-              <li>
-                <a href="https://www.radioindex.org/listen?id=4045d7d5-a0ee-412b-8685-06ea2567e33b">
-                  The Shadow — Death House Rescue
-                </a>
-              </li>
+              {allListenEpisodes.slice(24, 36).map((ep) => (
+                <li key={ep.id}>
+                  <a href={ep.url}>{ep.title}</a>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div className="footer-col">
-            <h4>Series Podcast RSS &amp; Open Data</h4>
+            <h4>Horror, Serials &amp; Comedy Broadcasts</h4>
             <ul>
-              <li>
-                <a href="https://www.radioindex.org/rss?series=suspense">
-                  Suspense Podcast RSS Feed
-                </a>
-              </li>
-              <li>
-                <a href="https://www.radioindex.org/rss?series=yours-truly-johnny-dollar">
-                  Johnny Dollar Podcast RSS Feed
-                </a>
-              </li>
-              <li>
-                <a href="https://www.radioindex.org/rss?series=cbs-radio-mystery-theater">
-                  CBS Radio Mystery Theater RSS Feed
-                </a>
-              </li>
-              <li>
-                <a href="https://www.radioindex.org/rss?series=gunsmoke">
-                  Gunsmoke Podcast RSS Feed
-                </a>
-              </li>
-              <li>
-                <a href="/llms.txt">llms.txt — AI Crawler Index</a>
-              </li>
-              <li>
-                <a href="/llms-full.txt">llms-full.txt — Full 22-Site Matrix</a>
-              </li>
+              {allListenEpisodes.slice(36, 48).map((ep) => (
+                <li key={ep.id}>
+                  <a href={ep.url}>{ep.title}</a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -528,12 +415,16 @@ export function App() {
             </a>
           </span>
           <span>
-            <a href="/sitemap.xml" className="dotted-link">
-              sitemap.xml
+            <a href="/llms.txt" className="dotted-link">
+              llms.txt
             </a>{' '}
             ·{' '}
-            <a href="/data/sources.json" className="dotted-link">
-              sources.json
+            <a href="/llms-full.txt" className="dotted-link">
+              llms-full.txt
+            </a>{' '}
+            ·{' '}
+            <a href="/sitemap.xml" className="dotted-link">
+              sitemap.xml
             </a>
           </span>
         </div>
