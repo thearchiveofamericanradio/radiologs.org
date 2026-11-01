@@ -1,1 +1,1 @@
-{"root":["./src/app.tsx","./src/main.tsx","./src/types.ts","./src/components/agentsllmstab.tsx","./src/components/backlinksdirectorytab.tsx","./src/components/benchmarkstab.tsx","./src/components/capabilitymatrixtab.tsx","./src/components/estimatorcontrols.tsx","./src/components/gotchasmethodologytab.tsx","./src/components/headerhero.tsx","./src/components/scenariopresetbar.tsx","./src/components/scoreboardview.tsx","./src/types/radiologs.ts","./src/utils/scoringengine.ts"],"version":"5.6.3"}
+{"root":["./src/app.tsx","./src/main.tsx","./src/types.ts"],"version":"5.6.3"}
