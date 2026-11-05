@@ -101,6 +101,8 @@ export function oauthServerMetadata(site: AgentSite) {
       skill: `${o}/auth.md`,
       register_uri: `${o}/oauth/register`,
       revocation_uri: `${o}/oauth/revoke`,
+      claim_uri: `${o}/oauth/claim`,
+      claim_endpoint: `${o}/oauth/claim`,
       identity_types_supported: ['anonymous'],
       anonymous: { credential_types_supported: ['oauth_client', 'access_token'], claim_uri: `${o}/oauth/claim` },
     },
@@ -132,7 +134,23 @@ If your client insists on OAuth, registration is anonymous and instant:
 2. Get a token: \`POST ${o}/oauth/token\` with \`grant_type=client_credentials\` and your \`client_id\`, or use the authorization code flow at \`${o}/oauth/authorize\` with PKCE.
 3. Send it as \`Authorization: Bearer <token>\`. The token grants scope \`read\`, the same access as an anonymous request.
 
-Discovery documents:
+## Supported registration and identity flows
+
+- Identity type: \`anonymous\`. No sign-in, no email, no account.
+- Credential types: \`oauth_client\` (from registration) and \`access_token\` (from the token endpoint).
+- Scope: \`read\`.
+
+## Endpoints
+
+- Registration endpoint: \`POST ${o}/oauth/register\`
+- Token endpoint: \`POST ${o}/oauth/token\`
+- Authorization endpoint: \`GET ${o}/oauth/authorize\`
+- Revocation endpoint: \`POST ${o}/oauth/revoke\`
+- Claim URI: \`${o}/oauth/claim\`
+- MCP server: \`POST ${o}/mcp\`
+
+## Discovery documents
+
 
 - Protected resource metadata: ${o}/.well-known/oauth-protected-resource
 - Authorization server metadata: ${o}/.well-known/oauth-authorization-server
