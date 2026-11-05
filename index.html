@@ -23,6 +23,43 @@
     <link rel="alternate" type="text/plain" title="LLM Full Matrix (llms-full.txt)" href="/llms-full.txt" />
     <link rel="alternate" type="application/json" title="Provider index (JSON)" href="/data/index.json" />
     <link rel="alternate" type="text/markdown" title="Rankings by use case (Markdown)" href="/data/rankings.md" />
+    <link rel="ai-catalog" href="/.well-known/ai-catalog.json" />
+    <script>
+      // WebMCP: read-only tools for in-browser AI agents. Same data as /mcp.
+      (function () {
+        var done = false;
+        var ac = typeof AbortController !== 'undefined' ? new AbortController() : null;
+        var presets = ['all', 'free_clean', 'subtitles', 'hd_sound', 'stremio_uuid'];
+        function get(path) {
+          return fetch(path).then(function (r) { return r.json(); }).then(function (d) {
+            return { content: [{ type: 'text', text: JSON.stringify(d) }] };
+          });
+        }
+        var tools = [
+          { name: 'list_platforms', description: 'List the 22 audited Old Time Radio platforms with price, playable shows, subtitles and features.',
+            inputSchema: { type: 'object', properties: {} }, execute: function () { return get('/data/index.json'); } },
+          { name: 'get_platform', description: 'Audit card for one Old Time Radio platform by id, e.g. radioindex.',
+            inputSchema: { type: 'object', properties: { id: { type: 'string' } }, required: ['id'] },
+            execute: function (a) { return get('/data/providers/' + String(a && a.id || '').toLowerCase().replace(/[^a-z0-9-]/g, '') + '.json'); } },
+          { name: 'get_rankings', description: 'Platforms ranked for one use case: ' + presets.join(', ') + '.',
+            inputSchema: { type: 'object', properties: { preset: { type: 'string', enum: presets } }, required: ['preset'] },
+            execute: function (a) { var p = a && a.preset; return get('/data/rankings/' + (presets.indexOf(p) >= 0 ? p : 'all') + '.json'); } }
+        ];
+        function register() {
+          if (done) return;
+          var mc = (typeof document !== 'undefined' && document.modelContext) || (typeof navigator !== 'undefined' && navigator.modelContext);
+          if (!mc || typeof mc.registerTool !== 'function') return;
+          done = true;
+          tools.forEach(function (t) {
+            t.annotations = { readOnlyHint: true };
+            try { Promise.resolve(mc.registerTool(t, ac ? { signal: ac.signal } : undefined)).catch(function () {}); } catch (e) {}
+          });
+        }
+        register();
+        document.addEventListener('DOMContentLoaded', register, { once: true });
+        window.addEventListener('load', register, { once: true });
+      })();
+    </script>
     <script type="application/ld+json">
 {
       "@context": "https://schema.org",

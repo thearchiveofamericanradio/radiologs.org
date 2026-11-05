@@ -16,6 +16,12 @@ The human page (https://www.radiologs.org/) is an interactive comparison matrix.
 - [Feature & Audit Definitions (JSON)](https://www.radiologs.org/data/features.json): verification method and unit for all 14 capabilities
 - [Full Matrix & Evidence in One File](https://www.radiologs.org/llms-full.txt)
 
+## For AI Agents
+- [MCP server](https://www.radiologs.org/mcp): read-only tools `list_platforms`, `get_platform`, `get_rankings` (Streamable HTTP, no auth). Card: https://www.radiologs.org/.well-known/mcp/server-card.json
+- [Agent skill: compare Old Time Radio sites](https://www.radiologs.org/.well-known/agent-skills/compare-old-time-radio-sites/SKILL.md)
+- [API catalog](https://www.radiologs.org/.well-known/api-catalog) and [OpenAPI](https://www.radiologs.org/openapi.json)
+- Markdown: send `Accept: text/markdown` to https://www.radiologs.org/ to get this guide
+
 ## Audited Platform Cards (22 Sites)
 1. [RadioIndex (The Archive of American Radio)](https://www.radiologs.org/data/providers/radioindex.md) ([JSON](https://www.radiologs.org/data/providers/radioindex.json) · [Official Site](https://www.radioindex.org)) — $0 / Free · 233,000 playable shows · 231,400 .vtt subtitles
 2. [OTRR Multi-File Zip Uploads (Legacy Bundles)](https://www.radiologs.org/data/providers/ia-otrr.md) ([JSON](https://www.radiologs.org/data/providers/ia-otrr.json) · [Official Site](https://archive.org/details/oldtimeradio)) — $0 / Free · 95,000 playable shows · 4,200 .vtt subtitles
