@@ -107,6 +107,7 @@ export function App() {
         </div>
       </header>
 
+      <main>
       {/* 4 SIMPLE FILTER PILLS + SEARCH */}
       <div className="controls-row">
         <div className="pill-tabs" role="group" aria-label="Quick filters">
@@ -479,6 +480,8 @@ export function App() {
           </div>
         </div>
       </div>
+
+      </main>
 
       {/* 4-COLUMN FOOTER OF 48 ADDITIONAL UNIQUE /listen?id= BROADCAST BACKLINKS */}
       <footer className="footer-hub">
