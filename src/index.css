@@ -102,6 +102,14 @@ a {
   min-width: 0;
 }
 
+/* The h1 around the wordmark adds no box styles of its own. */
+.wordmark-heading {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
 .wordmark {
   font-size: 34px;
   font-weight: 800;
