@@ -84,9 +84,11 @@ export function App() {
       {/* HEADER */}
       <header className="topbar">
         <div>
-          <a href="https://www.radioindex.org/" className="wordmark">
-            radio logs
-          </a>
+          <h1 className="wordmark-heading">
+            <a href="https://www.radioindex.org/" className="wordmark">
+              radio logs
+            </a>
+          </h1>
           <p className="subtitle">
             Every major Old Time Radio website compared side-by-side.
           </p>
